@@ -1,0 +1,6 @@
+{
+  "name": "Thời Khóa Biểu",
+  "description": "Ứng dụng hiển thị và đồng bộ thời khóa biểu thời gian thực cho giáo viên và học sinh theo lớp, hỗ trợ nhập xuất file Excel .xlsx chuẩn mẫu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
