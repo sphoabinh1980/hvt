@@ -1,0 +1,953 @@
+1
+00:00:00,000 --> 00:00:02,233
+Chào mừng các em đến với Bài 2:
+
+2
+00:00:02,273 --> 00:00:03,993
+Quy hoạch động trên dãy.
+
+3
+00:00:04,033 --> 00:00:09,104
+Học xong bài này, em sẽ biết hai kiểu
+trạng thái quan trọng nhất trên dãy:
+
+4
+00:00:09,144 --> 00:00:11,660
+kết thúc tại i, và xét i phần tử đầu.
+
+5
+00:00:11,700 --> 00:00:16,586
+Em sẽ giải bài đoạn con có tổng lớn nhất
+trong O của n bằng thuật toán Kadane,
+
+6
+00:00:16,626 --> 00:00:20,754
+giải bài chọn các phần tử không
+kề nhau bằng lập luận chọn hay bỏ,
+
+7
+00:00:20,794 --> 00:00:25,427
+và biết cách thêm một chiều vào trạng
+thái khi trạng thái thiếu thông tin.
+
+8
+00:00:26,667 --> 00:00:30,883
+Một cửa hàng ghi lại lãi, là
+số dương, hoặc lỗ, là số âm,
+
+9
+00:00:30,923 --> 00:00:33,048
+của từng ngày trong tám ngày:
+
+10
+00:00:33,088 --> 00:00:35,960
+trừ 2, 3, trừ 1, 4, trừ 7, 2, 5, trừ 3.
+
+11
+00:00:36,000 --> 00:00:41,275
+Chủ cửa hàng muốn chọn một chuỗi ngày liên
+tiếp để viết báo cáo thời kì kinh doanh
+
+12
+00:00:41,315 --> 00:00:44,127
+tốt nhất, tức là chuỗi có tổng lãi lớn nhất.
+
+13
+00:00:44,167 --> 00:00:45,293
+Em chọn chuỗi nào?
+
+14
+00:00:45,333 --> 00:00:50,993
+Nhiều bạn sẽ khoanh từ ngày 2 đến ngày
+4, tổng bằng 6, vì có hai số dương lớn.
+
+15
+00:00:51,033 --> 00:00:53,032
+Nhưng hãy nhìn kĩ cuối dãy!
+
+16
+00:00:53,072 --> 00:00:57,260
+Ngày 6 và ngày 7 cho tổng 2
+cộng 5, bằng 7, còn lớn hơn.
+
+17
+00:00:58,500 --> 00:01:01,460
+Phát biểu tổng quát, ta
+có bài toán LOINHUAN:
+
+18
+00:01:01,500 --> 00:01:04,193
+cho dãy n số nguyên là lãi lỗ của n ngày.
+
+19
+00:01:04,233 --> 00:01:08,127
+Hãy tìm một đoạn ngày liên tiếp
+khác rỗng có tổng lớn nhất.
+
+20
+00:01:08,167 --> 00:01:09,460
+n lên tới một triệu.
+
+21
+00:01:09,500 --> 00:01:12,660
+Ví dụ một là dãy vừa rồi, đáp án 7.
+
+22
+00:01:12,700 --> 00:01:15,583
+Ví dụ hai nhắc ta một chi tiết dễ quên:
+
+23
+00:01:15,623 --> 00:01:18,656
+dãy trừ 5, trừ 1, trừ 8, đáp án là trừ 1.
+
+24
+00:01:18,696 --> 00:01:21,879
+Đoạn phải khác rỗng, nên khi mọi số đều âm,
+
+25
+00:01:21,919 --> 00:01:25,027
+đáp án là số âm lớn nhất chứ không phải 0.
+
+26
+00:01:26,267 --> 00:01:30,812
+Một đoạn được xác định bởi ngày
+bắt đầu l và ngày kết thúc r.
+
+27
+00:01:30,852 --> 00:01:33,893
+Cách đơn giản nhất là thử mọi cặp l và r.
+
+28
+00:01:33,933 --> 00:01:35,250
+Khéo hơn một chút:
+
+29
+00:01:35,290 --> 00:01:41,431
+khi cố định l và tăng dần r, tổng đoạn từ
+l đến r bằng tổng đoạn từ l đến r trừ 1,
+
+30
+00:01:41,471 --> 00:01:42,487
+cộng thêm a r.
+
+31
+00:01:42,527 --> 00:01:45,427
+Nhờ vậy mỗi đoạn chỉ tốn một phép cộng.
+
+32
+00:01:45,467 --> 00:01:49,193
+Đây là code thử mọi đoạn
+trong O của n bình phương.
+
+33
+00:01:49,833 --> 00:01:51,140
+Đếm số phép tính:
+
+34
+00:01:51,180 --> 00:01:53,993
+với l bằng 1, vòng trong chạy n lần;
+
+35
+00:01:54,033 --> 00:01:56,370
+với l bằng 2 chạy n trừ 1 lần;
+
+36
+00:01:56,410 --> 00:01:58,827
+cứ thế đến l bằng n chạy 1 lần.
+
+37
+00:01:58,867 --> 00:02:03,510
+Tổng cộng n nhân n cộng 1 chia
+2 lần, cỡ n bình phương chia 2.
+
+38
+00:02:03,550 --> 00:02:05,927
+Độ phức tạp O của n bình phương.
+
+39
+00:02:05,967 --> 00:02:09,617
+Với n bằng mười nghìn, khoảng
+năm mươi triệu phép, chạy kịp.
+
+40
+00:02:09,657 --> 00:02:13,860
+Nhưng với n bằng một triệu, khoảng
+năm trăm tỉ phép, cần gần một giờ!
+
+41
+00:02:14,500 --> 00:02:14,926
+Bế tắc!
+
+42
+00:02:14,966 --> 00:02:17,918
+Có tới n nhân n cộng 1
+chia 2 đoạn khác nhau,
+
+43
+00:02:17,958 --> 00:02:20,579
+và cách làm trên chạm vào từng đoạn một.
+
+44
+00:02:20,619 --> 00:02:25,434
+Muốn nhanh hơn, ta phải tìm được đáp
+án mà không cần xét riêng từng đoạn.
+
+45
+00:02:25,474 --> 00:02:28,493
+Nhưng làm sao biết đoạn
+nào tốt nếu không thử?
+
+46
+00:02:29,733 --> 00:02:30,363
+Bước một:
+
+47
+00:02:30,403 --> 00:02:32,150
+theo thói quen từ Bài 1,
+
+48
+00:02:32,190 --> 00:02:37,360
+ta thử đặt F của i là tổng lớn nhất
+của một đoạn nằm trong i ngày đầu.
+
+49
+00:02:37,400 --> 00:02:39,143
+Để tính F của i, ta hỏi:
+
+50
+00:02:39,183 --> 00:02:43,006
+đoạn tốt nhất trong i ngày
+đầu có chứa ngày i không?
+
+51
+00:02:43,046 --> 00:02:46,127
+Nếu không chứa, nó chính là F của i trừ 1.
+
+52
+00:02:46,167 --> 00:02:49,944
+Nếu có chứa, nó là một đoạn
+kết thúc đúng tại ngày i.
+
+53
+00:02:49,984 --> 00:02:55,634
+Nhưng F của i trừ 1 không cho ta biết gì
+về các đoạn kết thúc tại ngày i trừ 1,
+
+54
+00:02:55,674 --> 00:03:00,460
+vì đoạn tốt nhất có thể nằm tận
+đầu dãy, không nối được với ngày i!
+
+55
+00:03:00,500 --> 00:03:02,445
+Trạng thái F thiếu thông tin:
+
+56
+00:03:02,485 --> 00:03:06,142
+nó nhớ đoạn tốt nhất nhưng
+quên mất đoạn ấy nằm ở đâu.
+
+57
+00:03:06,182 --> 00:03:08,127
+Đây là lúc ta đổi trạng thái.
+
+58
+00:03:09,367 --> 00:03:09,976
+Bước hai:
+
+59
+00:03:10,016 --> 00:03:15,027
+đặt best của i là tổng lớn nhất của
+một đoạn kết thúc đúng tại ngày i.
+
+60
+00:03:15,067 --> 00:03:18,893
+Một đoạn kết thúc tại ngày
+i chỉ có hai dạng. Cách A:
+
+61
+00:03:18,933 --> 00:03:20,498
+đoạn dài hơn một ngày,
+
+62
+00:03:20,538 --> 00:03:25,020
+tức là một đoạn kết thúc tại
+ngày i trừ 1 rồi nối thêm ngày i.
+
+63
+00:03:25,060 --> 00:03:29,032
+Tốt nhất là nối vào đoạn tốt
+nhất kết thúc tại i trừ 1,
+
+64
+00:03:29,072 --> 00:03:31,293
+được best của i trừ 1 cộng a i.
+
+65
+00:03:31,333 --> 00:03:31,854
+Cách B:
+
+66
+00:03:31,894 --> 00:03:35,060
+đoạn chỉ gồm đúng ngày i, tổng bằng a i.
+
+67
+00:03:35,100 --> 00:03:38,067
+Ta được công thức của thuật toán Kadane:
+
+68
+00:03:38,107 --> 00:03:42,427
+best của i bằng max của a i,
+và best của i trừ 1 cộng a i.
+
+69
+00:03:42,467 --> 00:03:43,737
+Diễn giải bằng lời:
+
+70
+00:03:43,777 --> 00:03:48,357
+nếu đoạn tốt nhất kết thúc tại ngày
+trước có tổng âm thì vứt nó đi,
+
+71
+00:03:48,397 --> 00:03:49,874
+bắt đầu lại từ ngày i;
+
+72
+00:03:49,914 --> 00:03:51,460
+ngược lại thì nối tiếp.
+
+73
+00:03:51,500 --> 00:03:54,658
+Vì mọi đoạn đều kết thúc
+tại một ngày nào đó,
+
+74
+00:03:54,698 --> 00:03:59,136
+đoạn tốt nhất của cả dãy là đoạn
+tốt nhất trong các best của i.
+
+75
+00:03:59,176 --> 00:04:03,827
+Đó là lí do đáp án là max của cả
+bảng, chứ không phải ô cuối cùng.
+
+76
+00:04:05,067 --> 00:04:05,583
+Bước ba:
+
+77
+00:04:05,623 --> 00:04:06,972
+chạy tay trên ví dụ.
+
+78
+00:04:07,012 --> 00:04:09,960
+Hàng trên là dãy a, hàng dưới là bảng best.
+
+79
+00:04:10,000 --> 00:04:14,060
+Màu xanh lá là bắt đầu đoạn
+mới, màu xanh dương là nối dài.
+
+80
+00:04:14,100 --> 00:04:16,993
+best của 1 bằng a 1, bằng trừ 2.
+
+81
+00:04:17,033 --> 00:04:20,939
+best của 2 bằng max của 3,
+và trừ 2 cộng 3. Bằng 3:
+
+82
+00:04:20,979 --> 00:04:25,193
+đoạn trước có tổng âm nên bỏ
+đi, bắt đầu lại từ ngày 2.
+
+83
+00:04:25,233 --> 00:04:30,060
+best của 3 bằng max của trừ 1,
+và 3 trừ 1. Bằng 2, nối dài.
+
+84
+00:04:30,100 --> 00:04:33,167
+best của 4 bằng max của 4, và 2 cộng 4.
+
+85
+00:04:33,207 --> 00:04:36,593
+Bằng 6, nối dài, ứng với đoạn ngày 2 đến 4.
+
+86
+00:04:36,633 --> 00:04:40,949
+best của 5 bằng max của trừ
+7, và 6 trừ 7. Bằng trừ 1:
+
+87
+00:04:40,989 --> 00:04:43,127
+vẫn nối dài, dù tổng đã âm.
+
+88
+00:04:43,167 --> 00:04:47,087
+best của 6 bằng max của 2,
+và trừ 1 cộng 2. Bằng 2:
+
+89
+00:04:47,127 --> 00:04:49,960
+đoạn trước âm, bắt đầu lại từ ngày 6.
+
+90
+00:04:50,000 --> 00:04:53,723
+best của 7 bằng max của
+5, và 2 cộng 5. Bằng 7:
+
+91
+00:04:53,763 --> 00:04:57,327
+đây là ô lớn nhất, ứng
+với đoạn ngày 6 đến 7.
+
+92
+00:04:57,367 --> 00:05:01,660
+best của 8 bằng max của
+trừ 3, và 7 trừ 3, bằng 4.
+
+93
+00:05:01,700 --> 00:05:04,740
+Đáp án là max của cả bảng: 7, ở ngày 7.
+
+94
+00:05:04,780 --> 00:05:10,427
+Chú ý ô cuối best của 8 chỉ bằng 4,
+nên không thể lấy ô cuối làm đáp án.
+
+95
+00:05:11,667 --> 00:05:13,377
+Vì sao best của i đúng?
+
+96
+00:05:13,417 --> 00:05:15,584
+Xét đoạn tốt nhất từ l đến i.
+
+97
+00:05:15,624 --> 00:05:21,824
+Nếu l nhỏ hơn i, phần từ l đến i trừ 1
+phải là đoạn tốt nhất kết thúc tại i trừ 1,
+
+98
+00:05:21,864 --> 00:05:26,847
+vì nếu có đoạn tổng lớn hơn, thay
+vào sẽ được đoạn tốt hơn, vô lí.
+
+99
+00:05:26,887 --> 00:05:29,054
+Nếu l bằng i thì tổng là a i.
+
+100
+00:05:29,094 --> 00:05:31,793
+Vậy lấy max của hai giá trị là đúng.
+
+101
+00:05:31,833 --> 00:05:36,783
+Ô best của i chỉ phụ thuộc best của
+i trừ 1, nên ta chỉ cần một biến,
+
+102
+00:05:36,823 --> 00:05:38,591
+vừa đọc dữ liệu vừa tính.
+
+103
+00:05:38,631 --> 00:05:44,160
+Ngày đầu tiên được xử lí riêng, để đáp
+án khởi đầu bằng a 1 chứ không phải 0.
+
+104
+00:05:44,200 --> 00:05:47,752
+Độ phức tạp O của n thời
+gian và O của 1 bộ nhớ.
+
+105
+00:05:47,792 --> 00:05:52,093
+Tổng có thể tới mười mũ mười
+lăm, nên phải dùng long long.
+
+106
+00:05:53,333 --> 00:05:58,102
+Kiểu trạng thái thứ hai trên dãy là
+xét i phần tử đầu, đi kèm câu hỏi:
+
+107
+00:05:58,142 --> 00:06:01,606
+phần tử thứ i được chọn
+hay bị bỏ? Bài toán HAINAM:
+
+108
+00:06:01,646 --> 00:06:04,560
+trên một luống có n cây nấm xếp thành hàng.
+
+109
+00:06:04,600 --> 00:06:10,348
+Em được hái bao nhiêu cây cũng được, nhưng
+không được hái hai cây đứng cạnh nhau,
+
+110
+00:06:10,388 --> 00:06:11,921
+để nấm còn lan bào tử.
+
+111
+00:06:11,961 --> 00:06:14,993
+Ví dụ bảy cây nặng 3, 4, 3, 1, 5, 9, 5 gam.
+
+112
+00:06:15,033 --> 00:06:16,454
+Chiến lược tham lam:
+
+113
+00:06:16,494 --> 00:06:18,792
+hái cây nặng nhất còn được phép.
+
+114
+00:06:18,832 --> 00:06:23,760
+Chọn cây 6, nặng 9 gam, rồi cây 2,
+4 gam, rồi cây 4, 1 gam. Tổng 14.
+
+115
+00:06:23,800 --> 00:06:27,272
+Nhưng đáp án là 16, hái các cây 1, 3, 5, 7.
+
+116
+00:06:27,312 --> 00:06:30,293
+Và đáp án ấy không hái cây nặng nhất!
+
+117
+00:06:30,933 --> 00:06:32,113
+Ý tưởng ngây thơ:
+
+118
+00:06:32,153 --> 00:06:36,778
+mỗi cây có hai lựa chọn, hái hoặc
+không, nên có 2 mũ n cách chọn.
+
+119
+00:06:36,818 --> 00:06:40,294
+Duyệt mọi tập con, bỏ các
+tập có hai cây kề nhau.
+
+120
+00:06:40,334 --> 00:06:42,160
+Chỉ chạy được n khoảng 20.
+
+121
+00:06:42,200 --> 00:06:45,447
+Với n bằng 40 đã có hơn
+một nghìn tỉ tập con.
+
+122
+00:06:45,487 --> 00:06:48,588
+Nhưng để quyết định có hái cây i hay không,
+
+123
+00:06:48,628 --> 00:06:53,993
+ta có thật sự cần biết toàn bộ các cây
+trước đó đã được chọn ra sao không?
+
+124
+00:06:55,233 --> 00:07:01,045
+Đặt dp của i là tổng lớn nhất khi chỉ
+xét i cây đầu tiên. Hỏi về cây thứ i:
+
+125
+00:07:01,085 --> 00:07:02,293
+có hai khả năng.
+
+126
+00:07:02,333 --> 00:07:03,123
+Bỏ cây i:
+
+127
+00:07:03,163 --> 00:07:08,560
+các cây từ 1 đến i trừ 1 tùy
+ý, tốt nhất là dp của i trừ 1.
+
+128
+00:07:08,600 --> 00:07:09,425
+Hái cây i:
+
+129
+00:07:09,465 --> 00:07:15,311
+thì cây i trừ 1 chắc chắn bị bỏ,
+còn các cây từ 1 đến i trừ 2 tùy ý,
+
+130
+00:07:15,351 --> 00:07:18,427
+tốt nhất là dp của i trừ 2 cộng a i.
+
+131
+00:07:18,467 --> 00:07:20,078
+Công thức chọn hay bỏ:
+
+132
+00:07:20,118 --> 00:07:24,955
+dp của i bằng max của dp của i
+trừ 1, và dp của i trừ 2 cộng a i.
+
+133
+00:07:24,995 --> 00:07:30,734
+Khác với bài Kadane, ở đây trạng thái
+i phần tử đầu đã bao trùm mọi lựa chọn,
+
+134
+00:07:30,774 --> 00:07:32,760
+nên ô cuối chính là đáp án.
+
+135
+00:07:34,800 --> 00:07:36,593
+dp của 1 bằng 3.
+
+136
+00:07:36,633 --> 00:07:40,093
+dp của 2 bằng max của 3 và 4, bằng 4.
+
+137
+00:07:40,133 --> 00:07:40,833
+dp của 3:
+
+138
+00:07:40,873 --> 00:07:44,449
+bỏ thì được 4, hái thì được 3 cộng 3 bằng 6.
+
+139
+00:07:44,489 --> 00:07:46,093
+Chọn hái, dp bằng 6.
+
+140
+00:07:46,133 --> 00:07:46,843
+dp của 4:
+
+141
+00:07:46,883 --> 00:07:50,510
+bỏ thì được 6, hái thì được 4 cộng 1 bằng 5.
+
+142
+00:07:50,550 --> 00:07:52,093
+Chọn bỏ, dp bằng 6.
+
+143
+00:07:52,133 --> 00:07:52,877
+dp của 5:
+
+144
+00:07:52,917 --> 00:07:56,797
+bỏ thì được 6, hái thì
+được 6 cộng 5 bằng 11.
+
+145
+00:07:56,837 --> 00:07:58,627
+Chọn hái, dp bằng 11.
+
+146
+00:07:58,667 --> 00:07:59,436
+dp của 6:
+
+147
+00:07:59,476 --> 00:08:03,572
+bỏ thì được 11, hái thì
+được 6 cộng 9 bằng 15.
+
+148
+00:08:03,612 --> 00:08:05,460
+Chọn hái, dp bằng 15.
+
+149
+00:08:05,500 --> 00:08:06,290
+dp của 7:
+
+150
+00:08:06,330 --> 00:08:10,624
+bỏ thì được 15, hái thì
+được 11 cộng 5 bằng 16.
+
+151
+00:08:10,664 --> 00:08:12,560
+Chọn hái, dp bằng 16.
+
+152
+00:08:12,600 --> 00:08:16,593
+Đáp án dp của 7 bằng
+16, đúng như ta đã thấy.
+
+153
+00:08:17,833 --> 00:08:21,220
+Nếu em thấy công thức dp
+của i trừ 2 khó nghĩ ra,
+
+154
+00:08:21,260 --> 00:08:25,067
+có một cách máy móc hơn và
+dùng được cho rất nhiều bài:
+
+155
+00:08:25,107 --> 00:08:28,493
+ghi luôn trạng thái của
+phần tử i vào trạng thái.
+
+156
+00:08:28,533 --> 00:08:32,136
+Hai của i là tổng lớn
+nhất khi cây i được hái:
+
+157
+00:08:32,176 --> 00:08:36,491
+cây trước phải bị bỏ, nên
+bằng bo của i trừ 1 cộng a i.
+
+158
+00:08:36,531 --> 00:08:38,709
+Bo của i là khi cây i bị bỏ:
+
+159
+00:08:38,749 --> 00:08:42,827
+cây trước tùy ý, bằng max
+của hai và bo tại i trừ 1.
+
+160
+00:08:42,867 --> 00:08:47,427
+Điền hai hàng song song, ta được
+hàng hai và hàng bo như thế này.
+
+161
+00:08:47,467 --> 00:08:54,260
+Đáp án là max của hai của n và bo của
+n, bằng max của 16 và 15, bằng 16.
+
+162
+00:08:54,300 --> 00:08:56,780
+Đây là kĩ thuật thêm chiều trạng thái:
+
+163
+00:08:56,820 --> 00:09:00,759
+khi điều kiện của bài phụ thuộc
+vào phần tử trước đó ra sao,
+
+164
+00:09:00,799 --> 00:09:03,080
+ta đưa thông tin ấy vào trạng thái.
+
+165
+00:09:03,120 --> 00:09:06,927
+Kĩ thuật này sẽ được dùng lại
+rất nhiều lần ở các bài sau.
+
+166
+00:09:08,167 --> 00:09:11,240
+So sánh hai kiểu trạng thái. Kết thúc tại i:
+
+167
+00:09:11,280 --> 00:09:14,778
+lời giải bắt buộc dùng
+phần tử i làm phần tử cuối.
+
+168
+00:09:14,818 --> 00:09:16,052
+Xét i phần tử đầu:
+
+169
+00:09:16,092 --> 00:09:20,227
+lời giải chỉ dùng các phần tử
+1 đến i, có thể không dùng i.
+
+170
+00:09:20,267 --> 00:09:24,105
+Kết thúc tại i dùng khi lời
+giải là một đoạn liên tiếp,
+
+171
+00:09:24,145 --> 00:09:26,150
+hoặc một dãy con có nối tiếp.
+
+172
+00:09:26,190 --> 00:09:31,227
+Xét i phần tử đầu dùng khi lời giải
+là một tập con với điều kiện cục bộ.
+
+173
+00:09:31,267 --> 00:09:31,791
+Đáp án:
+
+174
+00:09:31,831 --> 00:09:34,776
+với kết thúc tại i là max trên mọi i;
+
+175
+00:09:34,816 --> 00:09:37,760
+với xét i phần tử đầu là ô cuối cùng.
+
+176
+00:09:37,800 --> 00:09:38,212
+Ví dụ:
+
+177
+00:09:38,252 --> 00:09:40,626
+Kadane và dãy con tăng dài nhất;
+
+178
+00:09:40,666 --> 00:09:42,360
+hái nấm và bài cái túi.
+
+179
+00:09:43,600 --> 00:09:44,360
+Mở rộng một:
+
+180
+00:09:44,400 --> 00:09:47,960
+muốn in ra đoạn tốt nhất,
+lưu thêm ngày bắt đầu start.
+
+181
+00:09:48,000 --> 00:09:51,427
+Chọn cách B thì start bằng
+i, cách A thì giữ nguyên.
+
+182
+00:09:51,467 --> 00:09:53,427
+Đây là dạng truy vết đơn giản.
+
+183
+00:09:53,467 --> 00:09:54,337
+Mở rộng hai:
+
+184
+00:09:54,377 --> 00:09:56,081
+gọi S là mảng cộng dồn.
+
+185
+00:09:56,121 --> 00:09:59,190
+Tổng đoạn l đến r bằng S r trừ S l trừ 1.
+
+186
+00:09:59,230 --> 00:10:03,741
+Muốn đoạn kết thúc tại r tốt
+nhất, trừ đi S nhỏ nhất đã gặp.
+
+187
+00:10:03,781 --> 00:10:07,760
+Cách này giải được biến thể
+đoạn có độ dài ít nhất L.
+
+188
+00:10:07,800 --> 00:10:08,477
+Mở rộng ba:
+
+189
+00:10:08,517 --> 00:10:13,107
+các biến thể như không chọn quá k
+phần tử liên tiếp, dãy xếp vòng tròn,
+
+190
+00:10:13,147 --> 00:10:18,193
+hay được xóa tối đa một phần tử, đều
+giải bằng cách thêm chiều vào trạng thái.
+
+191
+00:10:19,433 --> 00:10:19,975
+Bẫy một:
+
+192
+00:10:20,015 --> 00:10:24,560
+khởi tạo đáp án bằng 0 trong bài
+Kadane, sai khi mọi số đều âm.
+
+193
+00:10:24,600 --> 00:10:25,193
+Bẫy hai:
+
+194
+00:10:25,233 --> 00:10:27,252
+lấy best của n làm đáp án.
+
+195
+00:10:27,292 --> 00:10:30,260
+Sai, đáp án là max của mọi best của i.
+
+196
+00:10:30,300 --> 00:10:30,755
+Bẫy ba:
+
+197
+00:10:30,795 --> 00:10:34,860
+dùng kiểu int, trong khi tổng
+có thể tới mười mũ mười lăm.
+
+198
+00:10:34,900 --> 00:10:35,442
+Bẫy bốn:
+
+199
+00:10:35,482 --> 00:10:40,027
+quên trường hợp n bằng 1 trong
+bài hái nấm, truy cập chỉ số âm.
+
+200
+00:10:41,267 --> 00:10:41,723
+Ghi nhớ:
+
+201
+00:10:41,763 --> 00:10:45,388
+trạng thái phải đủ thông tin
+để viết được công thức chuyển.
+
+202
+00:10:45,428 --> 00:10:49,548
+Nếu thiếu, hãy đổi trạng thái, như
+kết thúc tại i, hoặc thêm chiều,
+
+203
+00:10:49,588 --> 00:10:51,660
+như phần tử i được chọn hay không.
+
+204
+00:10:51,700 --> 00:10:55,060
+Kết thúc tại i thì đáp án là max trên mọi i;
+
+205
+00:10:55,100 --> 00:10:57,997
+xét i phần tử đầu thì đáp án ở ô cuối.
+
+206
+00:10:58,037 --> 00:10:59,543
+Và câu hỏi thần chú:
+
+207
+00:10:59,583 --> 00:11:02,093
+phần tử cuối được chọn hay bị bỏ?
+
+208
+00:11:03,333 --> 00:11:04,754
+Câu hỏi tự kiểm tra:
+
+209
+00:11:04,794 --> 00:11:09,354
+chạy thuật toán Kadane cho dãy
+4, trừ 5, 3, trừ 1, 2, trừ 6, 5.
+
+210
+00:11:09,394 --> 00:11:10,960
+Dừng video và thử nhé!
+
+211
+00:11:11,000 --> 00:11:15,151
+Bảng best lần lượt là 4,
+trừ 1, 3, 2, 4, trừ 2, 5.
+
+212
+00:11:15,191 --> 00:11:16,660
+Max của bảng là 5.
+
+213
+00:11:16,700 --> 00:11:17,633
+Bài tiếp theo:
+
+214
+00:11:17,673 --> 00:11:20,206
+quy hoạch động trên lưới và truy vết.
+
+215
+00:11:20,246 --> 00:11:21,527
+Hẹn gặp lại các em!
