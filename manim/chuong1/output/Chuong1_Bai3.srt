@@ -4,7 +4,8 @@ Chào mừng các em đến với Bài 3:
 
 2
 00:00:02,219 --> 00:00:04,827
-Quy hoạch động trên lưới và truy vết.
+Quy hoạch động trên
+lưới và truy vết.
 
 3
 00:00:04,867 --> 00:00:09,204
@@ -17,845 +18,946 @@ chọn đúng thứ tự điền bảng, và xử
 lí ô cấm bằng giá trị âm vô cùng.
 
 5
-00:00:13,900 --> 00:00:16,226
+00:00:13,900 --> 00:00:16,239
 Quan trọng hơn, em sẽ học truy vết:
 
 6
-00:00:16,266 --> 00:00:21,634
-không chỉ tính được giá trị tốt nhất mà
-còn chỉ ra được đường đi đạt giá trị đó.
+00:00:16,279 --> 00:00:20,862
+không chỉ tính được giá trị tốt
+nhất mà còn chỉ ra được đường đi đạt
 
 7
-00:00:21,674 --> 00:00:25,960
+00:00:20,902 --> 00:00:21,609
+giá trị đó.
+
+8
+00:00:21,649 --> 00:00:25,960
 Cuối cùng là đếm số đường đi và
 mối liên hệ với tam giác Pascal.
 
-8
-00:00:27,200 --> 00:00:32,679
-Một chú robot nông trại đứng ở góc trên
-bên trái của một vườn táo hình chữ nhật,
-
 9
-00:00:32,719 --> 00:00:35,093
-cần đi tới kho ở góc dưới bên phải.
+00:00:27,200 --> 00:00:31,989
+Một chú robot nông trại đứng ở góc
+trên bên trái của một vườn táo hình
 
 10
-00:00:35,133 --> 00:00:37,959
-Robot chỉ biết sang phải hoặc đi xuống.
+00:00:32,029 --> 00:00:35,093
+chữ nhật, cần đi tới
+kho ở góc dưới bên phải.
 
 11
-00:00:37,999 --> 00:00:41,046
-Ô nào nó đi qua thì nó hái hết táo ở ô đó.
+00:00:35,133 --> 00:00:37,959
+Robot chỉ biết sang
+phải hoặc đi xuống.
 
 12
+00:00:37,999 --> 00:00:41,046
+Ô nào nó đi qua thì
+nó hái hết táo ở ô đó.
+
+13
 00:00:41,086 --> 00:00:44,427
 Một vài ô có tảng đá,
 robot không đi vào được.
 
-13
-00:00:44,467 --> 00:00:47,000
+14
+00:00:44,467 --> 00:00:47,023
 Nếu em là người lập trình cho robot,
 
-14
-00:00:47,040 --> 00:00:52,360
-em có dám để nó mỗi bước chọn ô kế bên
-có nhiều táo hơn không? Hãy thử xem.
-
 15
+00:00:47,063 --> 00:00:51,495
+em có dám để nó mỗi bước chọn ô
+kế bên có nhiều táo hơn không?
+
+16
+00:00:51,535 --> 00:00:52,360
+Hãy thử xem.
+
+17
 00:00:52,400 --> 00:00:56,777
 Ở ô 1 1, ô dưới có 8 quả
 hấp dẫn hơn ô phải có 3 quả.
 
-16
+18
 00:00:56,817 --> 00:01:00,193
-Ở ô 2 1, ô dưới có 9 quả lại hấp dẫn hơn.
+Ở ô 2 1, ô dưới có 9
+quả lại hấp dẫn hơn.
 
-17
+19
 00:01:00,233 --> 00:01:05,027
 Robot bị dụ xuống cột 1, rồi
 phải đi qua hàng 4 nghèo táo.
 
-18
+20
 00:01:05,067 --> 00:01:07,393
 Tham lam chỉ được 41 quả.
 
-19
+21
 00:01:07,433 --> 00:01:12,425
 Đường tốt nhất phải chịu thiệt ở
 ô 3 1 bằng cách không xuống tiếp,
 
-20
+22
 00:01:12,465 --> 00:01:16,160
 để đi qua dải táo 7, 5,
 7, 8, 7. Kết quả: 50 quả!
 
-21
-00:01:17,400 --> 00:01:20,755
+23
+00:01:17,400 --> 00:01:20,774
 Phát biểu tổng quát, ta
 có bài toán THUHOACH.
 
-22
-00:01:20,795 --> 00:01:22,415
+24
+00:01:20,814 --> 00:01:22,442
 Vườn có m hàng, n cột.
 
-23
-00:01:22,455 --> 00:01:25,810
+25
+00:01:22,482 --> 00:01:25,856
 Ô i j có a i j quả táo,
 hoặc trừ 1 nếu có đá.
 
-24
-00:01:25,850 --> 00:01:31,393
-Robot xuất phát từ ô 1 1, mỗi bước
-sang phải hoặc đi xuống, cần tới ô m n.
-
-25
-00:01:31,433 --> 00:01:34,505
-Hãy tìm số táo lớn nhất robot hái được,
-
 26
-00:01:34,545 --> 00:01:40,489
-và chỉ ra một đường đi bằng xâu gồm
-các kí tự R, sang phải, và D, đi xuống.
+00:01:25,896 --> 00:01:30,331
+Robot xuất phát từ ô 1 1, mỗi
+bước sang phải hoặc đi xuống,
 
 27
-00:01:40,529 --> 00:01:41,287
-Với ví dụ:
+00:01:30,371 --> 00:01:31,393
+cần tới ô m n.
 
 28
+00:01:31,433 --> 00:01:34,505
+Hãy tìm số táo lớn
+nhất robot hái được,
+
+29
+00:01:34,545 --> 00:01:39,691
+và chỉ ra một đường đi bằng xâu
+gồm các kí tự R, sang phải, và D,
+
+30
+00:01:39,731 --> 00:01:41,287
+đi xuống. Với ví dụ:
+
+31
 00:01:41,327 --> 00:01:43,760
 50 quả, đường đi D R R R D D R.
 
-29
-00:01:45,000 --> 00:01:50,112
-Từ mỗi ô, robot có hai lựa chọn, nên
-ta viết một hàm quay lui thử cả hai:
-
-30
-00:01:50,152 --> 00:01:51,664
-đi xuống và sang phải.
-
-31
-00:01:51,704 --> 00:01:53,993
-Khi tới đích thì cập nhật đáp án.
-
 32
-00:01:54,033 --> 00:01:55,351
-Đếm số phép tính:
+00:01:45,000 --> 00:01:47,236
+Từ mỗi ô, robot có hai lựa chọn,
 
 33
-00:01:55,391 --> 00:02:01,660
-mỗi đường đi gồm đúng m trừ 1 bước D và
-n trừ 1 bước R, xếp theo thứ tự bất kì.
+00:01:47,276 --> 00:01:50,081
+nên ta viết một hàm
+quay lui thử cả hai:
 
 34
+00:01:50,121 --> 00:01:51,646
+đi xuống và sang phải.
+
+35
+00:01:51,686 --> 00:01:53,993
+Khi tới đích thì cập nhật đáp án.
+
+36
+00:01:54,033 --> 00:01:55,365
+Đếm số phép tính:
+
+37
+00:01:55,405 --> 00:01:59,804
+mỗi đường đi gồm đúng m trừ
+1 bước D và n trừ 1 bước R,
+
+38
+00:01:59,844 --> 00:02:01,660
+xếp theo thứ tự bất kì.
+
+39
 00:02:01,700 --> 00:02:04,023
 Số đường đi, khi không có đá,
 
-35
+40
 00:02:04,063 --> 00:02:09,482
 là số cách chọn vị trí cho m trừ
 1 chữ D trong m cộng n trừ 2 bước:
 
-36
+41
 00:02:09,522 --> 00:02:12,660
-tổ hợp chập m trừ 1 của m cộng n trừ 2.
+tổ hợp chập m trừ 1
+của m cộng n trừ 2.
 
-37
+42
 00:02:12,700 --> 00:02:14,721
 Lưới 4 nhân 5 có 35 đường.
 
-38
+43
 00:02:14,761 --> 00:02:19,635
 Lưới 10 nhân 10 có bốn mươi tám
 nghìn sáu trăm hai mươi đường.
 
-39
+44
 00:02:19,675 --> 00:02:23,360
 Lưới 20 nhân 20 có khoảng
 ba mươi lăm tỉ đường.
 
-40
+45
 00:02:23,400 --> 00:02:28,014
 Còn lưới 1000 nhân 1000,
 con số có gần 600 chữ số.
 
-41
+46
 00:02:28,054 --> 00:02:33,227
 Quay lui chỉ chạy được khi m
 cộng n không quá khoảng 25.
 
-42
+47
 00:02:34,467 --> 00:02:35,850
 Có quá nhiều đường đi.
 
-43
+48
 00:02:35,890 --> 00:02:38,760
 Nhưng các đường đi dùng
 chung rất nhiều đoạn.
 
-44
+49
 00:02:38,800 --> 00:02:43,656
 Mọi đường đi qua ô 3 4 đều có
 chung phần đường từ ô 3 4 tới đích.
 
-45
+50
 00:02:43,696 --> 00:02:48,627
 Quay lui tính lại phần đường chung
 ấy cho từng đường đi tới ô 3 4.
 
-46
+51
 00:02:48,667 --> 00:02:52,127
-Làm sao để mỗi ô chỉ phải xử lí một lần?
+Làm sao để mỗi ô chỉ
+phải xử lí một lần?
 
-47
-00:02:53,367 --> 00:02:54,027
+52
+00:02:53,367 --> 00:02:54,033
 Bước một:
 
-48
-00:02:54,067 --> 00:02:57,375
-đặt trạng thái và hỏi bước cuối cùng là gì.
+53
+00:02:54,073 --> 00:02:57,406
+đặt trạng thái và hỏi
+bước cuối cùng là gì.
 
-49
-00:02:57,415 --> 00:03:03,760
-Đặt best của i j là số táo lớn nhất hái
-được trên một đường đi từ ô 1 1 tới ô i j.
+54
+00:02:57,446 --> 00:03:02,819
+Đặt best của i j là số táo lớn nhất
+hái được trên một đường đi từ ô 1
 
-50
+55
+00:03:02,859 --> 00:03:03,760
+1 tới ô i j.
+
+56
 00:03:03,800 --> 00:03:08,520
 Robot chỉ có thể tới ô i j từ ô
 phía trên, bằng một bước đi xuống,
 
-51
+57
 00:03:08,560 --> 00:03:11,693
-hoặc từ ô bên trái, bằng một bước sang phải.
+hoặc từ ô bên trái,
+bằng một bước sang phải.
 
-52
-00:03:11,733 --> 00:03:18,227
-Vậy best của i j bằng max của best ô trên
-và best ô trái, cộng số táo của ô i j.
+58
+00:03:11,733 --> 00:03:16,407
+Vậy best của i j bằng max của
+best ô trên và best ô trái,
 
-53
+59
+00:03:16,447 --> 00:03:18,227
+cộng số táo của ô i j.
+
+60
 00:03:18,267 --> 00:03:18,715
 Cơ sở:
 
-54
+61
 00:03:18,755 --> 00:03:20,670
 best của 1 1 bằng a 1 1.
 
-55
+62
 00:03:20,710 --> 00:03:25,801
 Ô ngoài lưới, ô đá và ô không
 tới được mang giá trị âm vô cùng.
 
-56
+63
 00:03:25,841 --> 00:03:30,687
 Nếu cả hai ô nguồn đều âm vô
 cùng thì ô i j cũng âm vô cùng.
 
-57
+64
 00:03:30,727 --> 00:03:32,560
 Đáp án là best của m n.
 
-58
-00:03:33,800 --> 00:03:34,394
+65
+00:03:33,800 --> 00:03:34,397
 Bước hai:
 
-59
-00:03:34,434 --> 00:03:35,944
+66
+00:03:34,437 --> 00:03:35,955
 chọn thứ tự điền bảng.
 
-60
-00:03:35,984 --> 00:03:38,481
+67
+00:03:35,995 --> 00:03:38,503
 Ô i j cần ô phía trên và ô bên trái.
 
-61
-00:03:38,521 --> 00:03:43,413
+68
+00:03:38,543 --> 00:03:43,459
 Nếu ta điền từng hàng từ trên xuống,
 trong mỗi hàng từ trái sang phải,
 
-62
-00:03:43,453 --> 00:03:48,627
-giống như đọc sách, thì khi tới ô i
-j, cả hai ô cần dùng đều đã được điền.
+69
+00:03:43,499 --> 00:03:46,149
+giống như đọc sách,
+thì khi tới ô i j,
 
-63
+70
+00:03:46,189 --> 00:03:48,627
+cả hai ô cần dùng đều đã được điền.
+
+71
 00:03:48,667 --> 00:03:51,467
-Điền từng cột từ trái sang phải cũng đúng.
+Điền từng cột từ trái
+sang phải cũng đúng.
 
-64
+72
 00:03:51,507 --> 00:03:55,727
 Nhưng điền từ dưới lên thì sai,
 vì ô phía trên chưa có giá trị.
 
-65
+73
 00:03:56,767 --> 00:03:57,489
 Bắt đầu:
 
-66
+74
 00:03:57,529 --> 00:03:59,393
 best của 1 1 bằng 2.
 
-67
+75
 00:03:59,433 --> 00:04:00,021
 Hàng 1:
 
-68
+76
 00:04:00,061 --> 00:04:03,160
 best của 1 2 bằng 2 cộng 3, bằng 5.
 
-69
+77
 00:04:03,200 --> 00:04:06,360
-Các ô còn lại trong đoạn này điền tương tự.
+Các ô còn lại trong
+đoạn này điền tương tự.
 
-70
-00:04:06,400 --> 00:04:11,936
-Hai ô đá chặn đường, nên ô 1 5 không
-tới được dù không có đá: âm vô cùng.
+78
+00:04:06,400 --> 00:04:11,085
+Hai ô đá chặn đường, nên ô 1 5
+không tới được dù không có đá:
 
-71
-00:04:11,976 --> 00:04:17,360
-Đây là lí do ta phải đánh dấu âm vô
-cùng chứ không thể coi ô ấy bằng 0.
+79
+00:04:11,125 --> 00:04:11,937
+âm vô cùng.
 
-72
+80
+00:04:11,977 --> 00:04:17,205
+Đây là lí do ta phải đánh dấu âm
+vô cùng chứ không thể coi ô ấy bằng
+
+81
+00:04:17,245 --> 00:04:17,360
+0.
+
+82
 00:04:17,400 --> 00:04:20,560
-Các ô còn lại trong đoạn này điền tương tự.
+Các ô còn lại trong
+đoạn này điền tương tự.
 
-73
+83
 00:04:20,600 --> 00:04:25,427
 best của 2 2 bằng max của
 5 và 10, cộng 7, bằng 17.
 
-74
+84
 00:04:25,467 --> 00:04:26,544
 best của 2 3:
 
-75
+85
 00:04:26,584 --> 00:04:30,413
 ô phía trên là đá, chỉ
 còn đường từ bên trái:
 
-76
+86
 00:04:30,453 --> 00:04:31,960
 17 cộng 5 bằng 22.
 
-77
-00:04:32,000 --> 00:04:37,127
-Cứ thế điền hết từng hàng, mỗi ô chỉ
-cần một phép max và một phép cộng.
+87
+00:04:32,000 --> 00:04:33,879
+Cứ thế điền hết từng hàng,
 
-78
+88
+00:04:33,919 --> 00:04:37,127
+mỗi ô chỉ cần một phép
+max và một phép cộng.
+
+89
 00:04:37,167 --> 00:04:37,803
 Ô đích:
 
-79
+90
 00:04:37,843 --> 00:04:42,827
 best của 4 5 bằng max của
 43 và 44, cộng 6, bằng 50!
 
-80
+91
 00:04:44,067 --> 00:04:44,906
 Vì sao đúng?
 
-81
+92
 00:04:44,946 --> 00:04:49,965
 Lấy một đường tốt nhất tới ô i j,
 giả sử bước cuối đi từ ô phía trên.
 
-82
+93
 00:04:50,005 --> 00:04:54,437
 Phần đường từ 1 1 tới ô trên
 phải là đường tốt nhất tới ô đó,
 
-83
+94
 00:04:54,477 --> 00:04:59,128
 vì nếu có đường tốt hơn, thay vào
 sẽ được đường tới i j tốt hơn.
 
-84
+95
 00:04:59,168 --> 00:05:00,888
 Tương tự với ô bên trái.
 
-85
+96
 00:05:00,928 --> 00:05:03,893
-Đây lại là cấu trúc con tối ưu như Bài 1.
+Đây lại là cấu trúc
+con tối ưu như Bài 1.
 
-86
-00:05:03,933 --> 00:05:04,861
+97
+00:05:03,933 --> 00:05:04,868
 Độ phức tạp:
 
-87
-00:05:04,901 --> 00:05:11,397
-mỗi ô tính bằng một phép max và một phép
-cộng, có m nhân n ô, nên O của m nhân n.
+98
+00:05:04,908 --> 00:05:09,821
+mỗi ô tính bằng một phép max và
+một phép cộng, có m nhân n ô,
 
-88
-00:05:11,437 --> 00:05:16,560
+99
+00:05:09,861 --> 00:05:11,363
+nên O của m nhân n.
+
+100
+00:05:11,403 --> 00:05:16,560
 Với lưới 1000 nhân 1000 chỉ khoảng
 một triệu phép, chạy tức thì.
 
-89
+101
 00:05:17,798 --> 00:05:21,958
 Bảng best cho biết giá trị tốt
 nhất, nhưng đề còn hỏi đường đi.
 
-90
+102
 00:05:21,998 --> 00:05:25,958
 Kĩ thuật lấy lại lời giải từ
 bảng phương án gọi là truy vết.
 
-91
+103
 00:05:25,998 --> 00:05:26,574
 Ý tưởng:
 
-92
+104
 00:05:26,614 --> 00:05:29,886
-đi ngược từ đích về xuất phát, ở mỗi ô hỏi:
+đi ngược từ đích về
+xuất phát, ở mỗi ô hỏi:
 
-93
+105
 00:05:29,926 --> 00:05:31,658
 mình đã tới đây từ đâu?
 
-94
+106
 00:05:31,698 --> 00:05:36,544
 Tại ô i j, ta biết best của i j
 bằng best của ô trước cộng a i j.
 
-95
+107
 00:05:36,584 --> 00:05:41,130
 Vậy ô trước phải có giá trị đúng
 bằng best của i j trừ a i j.
 
-96
+108
 00:05:41,170 --> 00:05:42,709
 Kiểm tra ô phía trên:
 
-97
+109
 00:05:42,749 --> 00:05:45,566
-nếu bằng thì robot đã đi xuống, ghi D;
+nếu bằng thì robot
+đã đi xuống, ghi D;
 
-98
+110
 00:05:45,606 --> 00:05:49,324
 ngược lại thì robot đã
 sang phải từ ô trái, ghi R.
 
-99
+111
 00:05:49,364 --> 00:05:54,027
 Tại ô 4 5, cần ô trước có
 giá trị 50 trừ 6 bằng 44.
 
-100
+112
 00:05:54,067 --> 00:05:56,517
 Ô trên là 43, ô trái là 44:
 
-101
+113
 00:05:56,557 --> 00:05:59,191
 robot đến từ bên trái, ghi R.
 
-102
+114
 00:05:59,231 --> 00:06:04,891
 Tại ô 4 4, cần 44 trừ 7 bằng
 37. Ô trên là 37: ghi D.
 
-103
+115
 00:06:04,931 --> 00:06:06,662
 Tại ô 3 4, cần 29:
 
-104
+116
 00:06:06,702 --> 00:06:08,924
 khớp với ô trên, ghi D.
 
-105
+117
 00:06:08,964 --> 00:06:10,695
 Tại ô 2 4, cần 22:
 
-106
+118
 00:06:10,735 --> 00:06:12,958
 khớp với ô trái, ghi R.
 
-107
+119
 00:06:12,998 --> 00:06:14,728
 Tại ô 2 3, cần 17:
 
-108
+120
 00:06:14,768 --> 00:06:16,991
 khớp với ô trái, ghi R.
 
-109
+121
 00:06:17,031 --> 00:06:18,762
 Tại ô 2 2, cần 10:
 
-110
+122
 00:06:18,802 --> 00:06:21,024
 khớp với ô trái, ghi R.
 
-111
+123
 00:06:21,064 --> 00:06:22,625
 Tại ô 2 1, cần 2:
 
-112
+124
 00:06:22,665 --> 00:06:24,791
 khớp với ô trên, ghi D.
 
-113
-00:06:24,831 --> 00:06:28,022
-Tới ô 1 1, ta ghi được R D D R R R D.
+125
+00:06:24,831 --> 00:06:28,051
+Tới ô 1 1, ta ghi
+được R D D R R R D.
 
-114
-00:06:28,062 --> 00:06:34,658
-Vì đi ngược nên xâu cũng ngược, cuối
-cùng cần đảo ngược thành D R R R D D R.
+126
+00:06:28,091 --> 00:06:30,782
+Vì đi ngược nên xâu cũng ngược,
 
-115
+127
+00:06:30,822 --> 00:06:34,658
+cuối cùng cần đảo ngược
+thành D R R R D D R.
+
+128
 00:06:35,898 --> 00:06:37,241
 Có hai cách truy vết.
 
-116
+129
 00:06:37,281 --> 00:06:40,141
-Cách một, tính lại khi truy vết như vừa làm:
+Cách một, tính lại khi
+truy vết như vừa làm:
 
-117
+130
 00:06:40,181 --> 00:06:44,358
 không tốn thêm bộ nhớ, nhưng phải
 cẩn thận so sánh đúng giá trị.
 
-118
+131
 00:06:44,398 --> 00:06:47,556
 Cách hai, lưu mảng từ đâu
 tới ngay khi điền bảng:
 
-119
+132
 00:06:47,596 --> 00:06:50,167
-dễ viết, dễ kiểm tra, tốn thêm một bảng.
+dễ viết, dễ kiểm tra,
+tốn thêm một bảng.
 
-120
+133
 00:06:50,207 --> 00:06:53,691
 Khi công thức có nhiều lựa
 chọn, cách này an toàn hơn.
 
-121
+134
 00:06:53,731 --> 00:06:55,471
 Đây là đoạn code truy vết.
 
-122
+135
 00:06:55,511 --> 00:06:59,236
 Điều kiện row lớn hơn 1 đảm
 bảo không đi ra ngoài lưới,
 
-123
+136
 00:06:59,276 --> 00:07:01,358
 và cuối cùng nhớ đảo ngược xâu.
 
-124
+137
 00:07:02,598 --> 00:07:03,441
 Đổi câu hỏi:
 
-125
+138
 00:07:03,481 --> 00:07:07,565
 có bao nhiêu đường đi từ ô 1
 1 tới ô m n tránh các ô đá?
 
-126
+139
 00:07:07,605 --> 00:07:12,424
 Lập luận bước cuối vẫn y nguyên,
 chỉ đổi phép max thành phép cộng.
 
-127
+140
 00:07:12,464 --> 00:07:13,969
 Điền bảng theo hàng:
 
-128
+141
 00:07:14,009 --> 00:07:17,291
-mỗi ô bằng ô trên cộng ô trái, ô đá bằng 0.
+mỗi ô bằng ô trên cộng
+ô trái, ô đá bằng 0.
 
-129
+142
 00:07:17,331 --> 00:07:18,947
 Ô đích có giá trị 25:
 
-130
+143
 00:07:18,987 --> 00:07:20,839
 có 25 đường đi tránh đá.
 
-131
+144
 00:07:20,879 --> 00:07:25,491
 Thường bài đếm sẽ yêu cầu lấy
 dư cho mười mũ chín cộng bảy.
 
-132
+145
 00:07:26,731 --> 00:07:30,817
 Nếu không có đá, bảng ways chính
 là tam giác Pascal đặt nghiêng:
 
-133
+146
 00:07:30,857 --> 00:07:33,524
-mỗi số bằng số phía trên cộng số bên trái.
+mỗi số bằng số phía
+trên cộng số bên trái.
 
-134
+147
 00:07:33,564 --> 00:07:37,104
 Công thức là tổ hợp chập i
 trừ 1 của i cộng j trừ 2.
 
-135
+148
 00:07:37,144 --> 00:07:41,509
 Nhưng chỉ cần một tảng đá, công
 thức tổ hợp không còn dùng được,
 
-136
+149
 00:07:41,549 --> 00:07:44,262
-còn quy hoạch động vẫn chạy đúng như cũ.
+còn quy hoạch động
+vẫn chạy đúng như cũ.
 
-137
+150
 00:07:44,302 --> 00:07:47,291
-Đó là sức mạnh của cách nghĩ bước cuối cùng.
+Đó là sức mạnh của cách
+nghĩ bước cuối cùng.
 
-138
-00:07:48,531 --> 00:07:51,389
-Khi điền hàng i, ta chỉ cần hàng i trừ 1.
+151
+00:07:48,531 --> 00:07:51,415
+Khi điền hàng i, ta
+chỉ cần hàng i trừ 1.
 
-139
-00:07:51,429 --> 00:07:56,691
-Hơn nữa, có thể dùng một mảng một chiều
-tên line, điền j từ trái sang phải.
+152
+00:07:51,455 --> 00:07:54,908
+Hơn nữa, có thể dùng một
+mảng một chiều tên line,
 
-140
+153
+00:07:54,948 --> 00:07:56,691
+điền j từ trái sang phải.
+
+154
 00:07:56,731 --> 00:08:00,654
 Trước khi ghi đè, line j đang
 giữ giá trị của hàng trên,
 
-141
+155
 00:08:00,694 --> 00:08:05,182
 còn line j trừ 1 vừa được cập
 nhật là giá trị của hàng hiện tại.
 
-142
+156
 00:08:05,222 --> 00:08:08,791
 Lấy max của hai ô này, cộng
 số táo, ta được hàng 3.
 
-143
+157
 00:08:08,831 --> 00:08:13,391
 Bộ nhớ cho bảng giảm từ O
 của m nhân n xuống O của n.
 
-144
+158
 00:08:13,431 --> 00:08:14,646
 Cái giá phải trả:
 
-145
+159
 00:08:14,686 --> 00:08:18,558
 không còn truy vết được, vì
 các hàng cũ đã bị ghi đè.
 
-146
+160
 00:08:19,794 --> 00:08:20,571
 Mở rộng một:
 
-147
+161
 00:08:20,611 --> 00:08:25,340
 nếu robot được đi thêm chéo xuống
 phải, chỉ cần thêm best của i trừ 1,
 
-148
+162
 00:08:25,380 --> 00:08:26,770
 j trừ 1 vào phép max.
 
-149
+163
 00:08:26,810 --> 00:08:30,517
 Nếu được đi sang trái nữa
 thì lưới có thể có chu trình,
 
-150
+164
 00:08:30,557 --> 00:08:33,787
 khi ấy bài toán trở thành
 tìm đường trên đồ thị.
 
-151
-00:08:33,827 --> 00:08:34,644
+165
+00:08:33,827 --> 00:08:34,650
 Mở rộng hai:
 
-152
-00:08:34,684 --> 00:08:39,073
+166
+00:08:34,690 --> 00:08:39,107
 nếu được xuất phát ở bất kì ô
 nào của cột đầu, cơ sở thay đổi.
 
-153
-00:08:39,113 --> 00:08:44,787
-Mỗi lần đổi đề, hãy trả lời lại bốn câu
-hỏi thay vì sửa công thức theo cảm tính.
+167
+00:08:39,147 --> 00:08:40,186
+Mỗi lần đổi đề,
 
-154
-00:08:44,827 --> 00:08:45,542
+168
+00:08:40,226 --> 00:08:44,787
+hãy trả lời lại bốn câu hỏi thay
+vì sửa công thức theo cảm tính.
+
+169
+00:08:44,827 --> 00:08:45,547
 Mở rộng ba:
 
-155
-00:08:45,582 --> 00:08:51,239
-bài hình vuông lớn nhất toàn số 1 dùng
-trạng thái hình vuông có góc dưới phải tại i
+170
+00:08:45,587 --> 00:08:50,177
+bài hình vuông lớn nhất toàn số 1
+dùng trạng thái hình vuông có góc
 
-156
-00:08:51,279 --> 00:08:55,220
-j, tức là kiểu kết thúc tại
-của Bài 2 mang sang hai chiều.
+171
+00:08:50,217 --> 00:08:51,420
+dưới phải tại i j,
 
-157
-00:08:55,260 --> 00:08:56,029
+172
+00:08:51,460 --> 00:08:55,220
+tức là kiểu kết thúc tại của
+Bài 2 mang sang hai chiều.
+
+173
+00:08:55,260 --> 00:08:56,036
 Mở rộng bốn:
 
-158
-00:08:56,069 --> 00:08:58,928
-hai robot cùng đi, ô chung chỉ hái một lần.
+174
+00:08:56,076 --> 00:08:58,956
+hai robot cùng đi, ô
+chung chỉ hái một lần.
 
-159
-00:08:58,968 --> 00:09:04,254
-Cho hai robot đi đồng thời, trạng thái
-gồm số bước đã đi và hàng của hai robot.
+175
+00:08:58,996 --> 00:09:00,790
+Cho hai robot đi đồng thời,
 
-160
+176
+00:09:00,830 --> 00:09:04,254
+trạng thái gồm số bước đã
+đi và hàng của hai robot.
+
+177
 00:09:05,494 --> 00:09:06,113
 Bẫy một:
 
-161
+178
 00:09:06,153 --> 00:09:08,422
 coi ô không tới được bằng 0.
 
-162
+179
 00:09:08,462 --> 00:09:11,720
-Ô 1 5 trong ví dụ sẽ bị coi là tới được.
+Ô 1 5 trong ví dụ sẽ
+bị coi là tới được.
 
-163
+180
 00:09:11,760 --> 00:09:12,259
 Bẫy hai:
 
-164
+181
 00:09:12,299 --> 00:09:13,605
 cộng vào âm vô cùng.
 
-165
-00:09:13,645 --> 00:09:18,787
-Âm mười mũ mười tám cộng một triệu vẫn
-rất âm nhưng khác âm mười mũ mười tám,
+182
+00:09:13,645 --> 00:09:18,114
+Âm mười mũ mười tám cộng một triệu
+vẫn rất âm nhưng khác âm mười mũ
 
-166
-00:09:18,827 --> 00:09:20,469
-phép so sánh bằng sẽ sai.
+183
+00:09:18,154 --> 00:09:20,469
+mười tám, phép so sánh bằng sẽ sai.
 
-167
+184
 00:09:20,509 --> 00:09:22,420
 Luôn kiểm tra trước khi cộng.
 
-168
+185
 00:09:22,460 --> 00:09:22,954
 Bẫy ba:
 
-169
+186
 00:09:22,994 --> 00:09:25,087
 quên đảo ngược xâu truy vết.
 
-170
+187
 00:09:25,127 --> 00:09:26,924
 Bẫy bốn: đọc nhầm m và n.
 
-171
+188
 00:09:26,964 --> 00:09:28,834
 m là số hàng, n là số cột.
 
-172
+189
 00:09:28,874 --> 00:09:31,920
-Hãy thử chương trình với lưới không vuông.
+Hãy thử chương trình
+với lưới không vuông.
 
-173
-00:09:33,160 --> 00:09:33,651
+190
+00:09:33,160 --> 00:09:33,654
 Ghi nhớ:
 
-174
-00:09:33,691 --> 00:09:39,090
-trên lưới, trạng thái là i j, thứ tự điền
-theo hàng từ trên xuống, trái sang phải.
+191
+00:09:33,694 --> 00:09:38,054
+trên lưới, trạng thái là i j, thứ
+tự điền theo hàng từ trên xuống,
 
-175
-00:09:39,130 --> 00:09:43,931
-Ô không tới được mang giá trị âm vô
-cùng với bài max, hoặc 0 với bài đếm,
+192
+00:09:38,094 --> 00:09:39,054
+trái sang phải.
 
-176
-00:09:43,971 --> 00:09:46,054
-và phải kiểm tra trước khi cộng.
+193
+00:09:39,094 --> 00:09:42,587
+Ô không tới được mang giá
+trị âm vô cùng với bài max,
 
-177
+194
+00:09:42,627 --> 00:09:46,054
+hoặc 0 với bài đếm, và phải
+kiểm tra trước khi cộng.
+
+195
 00:09:46,094 --> 00:09:49,226
 Truy vết là đi ngược từ
 đáp án, ở mỗi bước hỏi:
 
-178
+196
 00:09:49,266 --> 00:09:52,532
 mình đã tới đây bằng lựa
 chọn nào, rồi đảo ngược.
 
-179
+197
 00:09:52,572 --> 00:09:57,054
 Giữ một hàng giúp tiết kiệm bộ nhớ
 nhưng làm mất khả năng truy vết.
 
-180
+198
 00:09:58,294 --> 00:09:59,706
 Câu hỏi tự kiểm tra:
 
-181
+199
 00:09:59,746 --> 00:10:03,190
 lưới 3 nhân 3 không có
 đá có bao nhiêu đường đi?
 
-182
+200
 00:10:03,230 --> 00:10:04,787
 Dừng video và thử nhé!
 
-183
+201
 00:10:04,827 --> 00:10:08,750
 Điền tam giác Pascal: 1,
 1, 1; 1, 2, 3; 1, 3, 6.
 
-184
+202
 00:10:08,790 --> 00:10:11,887
-Đáp án là 6, bằng tổ hợp chập 2 của 4.
+Đáp án là 6, bằng
+tổ hợp chập 2 của 4.
 
-185
+203
 00:10:13,027 --> 00:10:15,695
-Chúc mừng các em đã hoàn thành Chương 1:
+Chúc mừng các em đã
+hoàn thành Chương 1:
 
-186
+204
 00:10:15,735 --> 00:10:17,320
 Nền tảng quy hoạch động!
 
-187
+205
 00:10:17,360 --> 00:10:17,744
 Bài 1:
 
-188
+206
 00:10:17,784 --> 00:10:22,397
 con đường nâng cấp từ đệ quy, đệ
 quy có nhớ, đến điền bảng. Bài 2:
 
-189
+207
 00:10:22,437 --> 00:10:26,417
 hai kiểu trạng thái kết thúc
 tại i và chọn hay bỏ. Bài 3:
 
-190
+208
 00:10:26,457 --> 00:10:28,320
 lưới hai chiều và truy vết.
 
-191
+209
 00:10:28,360 --> 00:10:30,814
 Và hãy luôn nhớ câu hỏi then chốt:
 
-192
+210
 00:10:30,854 --> 00:10:32,354
 bước cuối cùng là gì?
 
-193
+211
 00:10:32,394 --> 00:10:34,681
 Hẹn gặp lại các em ở Chương 2:
 
-194
+212
 00:10:34,721 --> 00:10:36,387
 Các mô hình kinh điển!

@@ -66,7 +66,7 @@ def duration(path):
 
 
 # ---------------------------------------------------------------------------- phụ đề
-def split_caption(text, max_chars=84):
+def split_caption(text, max_chars=70):
     """Chia một câu thuyết minh dài thành các mẩu ≤ max_chars ký tự, ưu tiên ngắt ở dấu câu."""
     parts = re.split(r"(?<=[.!?:;])\s+", text.strip())
     chunks = []
@@ -105,7 +105,7 @@ def split_caption(text, max_chars=84):
     return merged
 
 
-def two_lines(text, width=44):
+def two_lines(text, width=36):
     """Bẻ một mẩu phụ đề thành tối đa 2 dòng cân đối."""
     if len(text) <= width:
         return text

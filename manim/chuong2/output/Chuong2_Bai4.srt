@@ -1,0 +1,1258 @@
+1
+00:00:00,000 --> 00:00:00,799
+Chào các em!
+
+2
+00:00:00,839 --> 00:00:02,756
+Chúng ta bước sang Chương 2:
+
+3
+00:00:02,796 --> 00:00:04,293
+Các mô hình kinh điển.
+
+4
+00:00:04,333 --> 00:00:08,291
+Phần lớn các bài quy hoạch động
+trong đề thi không mới hoàn toàn.
+
+5
+00:00:08,331 --> 00:00:12,227
+Chúng là những mô hình kinh điển
+được khoác một câu chuyện khác.
+
+6
+00:00:12,267 --> 00:00:16,070
+Bài chia kẹo là cái túi, bài
+xếp hàng là dãy con tăng,
+
+7
+00:00:16,110 --> 00:00:19,060
+bài so sánh hai đoạn
+ADN là dãy con chung.
+
+8
+00:00:19,100 --> 00:00:23,393
+Nhận ra mô hình ẩn sau câu
+chuyện là đã đi được nửa đường.
+
+9
+00:00:24,033 --> 00:00:27,117
+Chương này giới thiệu bốn
+mô hình quan trọng nhất:
+
+10
+00:00:27,157 --> 00:00:29,990
+cái túi, trong hai bài,
+dãy con tăng dài nhất,
+
+11
+00:00:30,030 --> 00:00:31,927
+và quy hoạch động trên hai xâu.
+
+12
+00:00:32,567 --> 00:00:33,040
+Bài 4:
+
+13
+00:00:33,080 --> 00:00:36,293
+Cái túi 0/1 và cái
+túi không giới hạn.
+
+14
+00:00:36,333 --> 00:00:37,490
+Học xong bài này,
+
+15
+00:00:37,530 --> 00:00:42,136
+em sẽ mô hình hóa bài toán chọn
+đồ vật với giới hạn sức chứa thành
+
+16
+00:00:42,176 --> 00:00:46,993
+bảng hai chiều f của i, c, và truy
+vết để biết chọn những đồ vật nào.
+
+17
+00:00:47,033 --> 00:00:50,097
+Em sẽ hiểu sâu vì sao
+khi dùng mảng một chiều,
+
+18
+00:00:50,137 --> 00:00:52,863
+cái túi 0/1 phải duyệt
+sức chứa giảm dần,
+
+19
+00:00:52,903 --> 00:00:55,697
+còn cái túi không giới
+hạn duyệt tăng dần.
+
+20
+00:00:55,737 --> 00:01:00,419
+Và phân biệt đếm tổ hợp với đếm chỉnh
+hợp chỉ bằng cách đổi thứ tự hai
+
+21
+00:01:00,459 --> 00:01:01,027
+vòng lặp.
+
+22
+00:01:02,267 --> 00:01:05,759
+Một xe cứu trợ chở được
+tối đa 10 ki lô gam.
+
+23
+00:01:05,799 --> 00:01:07,927
+Trong kho có bốn kiện hàng.
+
+24
+00:01:07,967 --> 00:01:11,070
+Kiện 1 nặng 6 ki lô gam, giá trị 30.
+
+25
+00:01:11,110 --> 00:01:13,340
+Kiện 2 nặng 5, giá trị 20.
+
+26
+00:01:13,380 --> 00:01:15,610
+Kiện 3 nặng 5, giá trị 22.
+
+27
+00:01:15,650 --> 00:01:17,793
+Kiện 4 nặng 3, giá trị 9.
+
+28
+00:01:17,833 --> 00:01:21,060
+Mỗi kiện chỉ có một, chở
+cả kiện hoặc không chở.
+
+29
+00:01:21,100 --> 00:01:24,327
+Em chọn những kiện nào
+để tổng giá trị lớn nhất?
+
+30
+00:01:24,367 --> 00:01:26,233
+Kiện 1 có giá trị lớn nhất,
+
+31
+00:01:26,273 --> 00:01:30,963
+lại có giá trị trên mỗi ki lô gam
+cao nhất, 5 đơn vị một ki lô gam.
+
+32
+00:01:31,003 --> 00:01:34,493
+Chọn nó trước chắc chắn
+là khôn ngoan, phải không?
+
+33
+00:01:34,533 --> 00:01:36,266
+Thử tham lam theo tỉ số:
+
+34
+00:01:36,306 --> 00:01:37,596
+chọn kiện 1 trước.
+
+35
+00:01:37,636 --> 00:01:42,693
+Xe còn trống 4 ki lô gam, chỉ nhét
+thêm được kiện 4. Tổng giá trị 39.
+
+36
+00:01:42,733 --> 00:01:46,527
+Nhưng hai kiện 5 ki lô
+gam, dù tỉ số thấp hơn,
+
+37
+00:01:46,567 --> 00:01:50,360
+ghép lại vừa khít 10 ki
+lô gam và cho tổng 42!
+
+38
+00:01:50,400 --> 00:01:54,423
+Vấn đề của tham lam ở đây là
+sức chứa còn thừa bị lãng phí.
+
+39
+00:01:54,463 --> 00:01:56,283
+Đồ vật không chia nhỏ được,
+
+40
+00:01:56,323 --> 00:02:00,002
+nên giá trị trên ki lô gam
+không còn là thước đo đúng.
+
+41
+00:02:00,042 --> 00:02:03,169
+Nếu được cắt nhỏ kiện
+hàng, tham lam lại đúng:
+
+42
+00:02:03,209 --> 00:02:04,960
+đó là bài cái túi phân số.
+
+43
+00:02:06,200 --> 00:02:09,427
+Phát biểu tổng quát, ta
+có bài toán BALOCUUTRO:
+
+44
+00:02:09,467 --> 00:02:12,694
+n kiện hàng, kiện i nặng
+w i và có giá trị v i.
+
+45
+00:02:12,734 --> 00:02:14,501
+Xe chở tối đa W ki lô gam.
+
+46
+00:02:14,541 --> 00:02:17,420
+Chọn một số kiện, mỗi
+kiện tối đa một lần,
+
+47
+00:02:17,460 --> 00:02:21,661
+có tổng khối lượng không vượt
+quá W và tổng giá trị lớn nhất,
+
+48
+00:02:21,701 --> 00:02:24,093
+đồng thời in ra các kiện được chọn.
+
+49
+00:02:24,133 --> 00:02:28,427
+Với ví dụ, đáp án là 42,
+chọn kiện 2 và kiện 3.
+
+50
+00:02:29,667 --> 00:02:32,312
+Mỗi kiện có hai lựa
+chọn: bỏ hoặc lấy.
+
+51
+00:02:32,352 --> 00:02:34,857
+Ta viết hàm thử với trạng thái i, c:
+
+52
+00:02:34,897 --> 00:02:38,814
+đã quyết định xong i kiện
+đầu, xe còn trống c ki lô gam.
+
+53
+00:02:38,854 --> 00:02:42,560
+Thử bỏ kiện tiếp theo, rồi
+thử lấy nó nếu còn đủ chỗ.
+
+54
+00:02:42,600 --> 00:02:43,834
+Nhìn tầng thứ ba:
+
+55
+00:02:43,874 --> 00:02:46,381
+trạng thái 3, 5 xuất hiện hai lần.
+
+56
+00:02:46,421 --> 00:02:48,854
+Một lần là lấy kiện 2, bỏ kiện 3.
+
+57
+00:02:48,894 --> 00:02:51,327
+Lần kia là bỏ kiện 2, lấy kiện 3.
+
+58
+00:02:51,367 --> 00:02:55,781
+Từ đây trở đi, hai nhánh này đối
+mặt đúng cùng một bài toán con:
+
+59
+00:02:55,821 --> 00:02:59,261
+chọn trong các kiện còn
+lại với 5 ki lô gam trống.
+
+60
+00:02:59,301 --> 00:03:03,993
+Quay lui giải bài toán con đó hai
+lần, và với n lớn thì hàng tỉ lần.
+
+61
+00:03:04,633 --> 00:03:06,027
+Đếm số phép tính:
+
+62
+00:03:06,067 --> 00:03:07,798
+số tập con là 2 mũ n.
+
+63
+00:03:07,838 --> 00:03:11,340
+Với n bằng 30 đã có
+khoảng một tỉ tập con,
+
+64
+00:03:11,380 --> 00:03:14,460
+n bằng 100 có khoảng
+mười mũ ba mươi.
+
+65
+00:03:14,500 --> 00:03:18,620
+Nhưng mỗi nút của cây chỉ
+được mô tả bởi hai số i và c.
+
+66
+00:03:18,660 --> 00:03:23,309
+Vậy chỉ có tối đa n cộng 1 nhân
+W cộng 1 trạng thái khác nhau:
+
+67
+00:03:23,349 --> 00:03:27,393
+với n bằng 100, W bằng mười
+nghìn là khoảng một triệu.
+
+68
+00:03:27,433 --> 00:03:29,164
+Mười mũ ba mươi nút trên cây,
+
+69
+00:03:29,204 --> 00:03:31,667
+nhưng chỉ một triệu
+trạng thái khác nhau:
+
+70
+00:03:31,707 --> 00:03:33,927
+các nút trùng nhau
+nhiều không tưởng.
+
+71
+00:03:33,967 --> 00:03:37,693
+Làm sao để giải mỗi trạng
+thái i, c đúng một lần?
+
+72
+00:03:38,933 --> 00:03:40,423
+Bước một: đặt f của i,
+
+73
+00:03:40,463 --> 00:03:44,735
+c là tổng giá trị lớn nhất khi
+chỉ được chọn trong i kiện đầu,
+
+74
+00:03:44,775 --> 00:03:47,238
+và tổng khối lượng không vượt quá c.
+
+75
+00:03:47,278 --> 00:03:49,185
+Nhìn vào kiện thứ i, và hỏi:
+
+76
+00:03:49,225 --> 00:03:50,993
+kiện cuối được lấy hay bỏ?
+
+77
+00:03:51,033 --> 00:03:51,848
+Bỏ kiện i:
+
+78
+00:03:51,888 --> 00:03:57,827
+chỉ còn i trừ 1 kiện đầu, sức chứa
+vẫn là c, giá trị f của i trừ 1, c.
+
+79
+00:03:57,867 --> 00:04:01,520
+Lấy kiện i, chỉ khi c
+lớn hơn hoặc bằng w i:
+
+80
+00:04:01,560 --> 00:04:03,787
+kiện i chiếm w i ki lô gam,
+
+81
+00:04:03,827 --> 00:04:07,984
+i trừ 1 kiện đầu chia nhau
+phần còn lại c trừ w i.
+
+82
+00:04:08,024 --> 00:04:11,593
+Giá trị f của i trừ 1,
+c trừ w i, cộng v i.
+
+83
+00:04:11,633 --> 00:04:13,418
+Công thức cái túi 0/1:
+
+84
+00:04:13,458 --> 00:04:17,316
+f của i, c bằng max của
+hai khả năng đó. Cơ sở:
+
+85
+00:04:17,356 --> 00:04:19,638
+f của 0, c bằng 0 với mọi c.
+
+86
+00:04:19,678 --> 00:04:21,379
+Đáp án là f của n, W.
+
+87
+00:04:21,419 --> 00:04:25,360
+Điền i tăng dần, vì hàng
+i chỉ cần hàng i trừ 1.
+
+88
+00:04:25,400 --> 00:04:27,215
+So với bài hái nấm ở Bài 2:
+
+89
+00:04:27,255 --> 00:04:29,482
+cùng là chọn hay bỏ phần tử cuối,
+
+90
+00:04:29,522 --> 00:04:32,161
+nhưng ràng buộc giờ
+là tổng khối lượng,
+
+91
+00:04:32,201 --> 00:04:36,627
+nên trạng thái cần thêm chiều thứ
+hai c để nhớ còn bao nhiêu chỗ.
+
+92
+00:04:37,867 --> 00:04:38,534
+Bước hai:
+
+93
+00:04:38,574 --> 00:04:41,440
+chạy tay trên ví
+dụ. Hàng 0 là cơ sở:
+
+94
+00:04:41,480 --> 00:04:46,860
+không có kiện nào thì giá trị bằng
+0, với mọi sức chứa c từ 0 đến 10.
+
+95
+00:04:46,900 --> 00:04:49,502
+Hàng kiện 1, nặng 6, giá trị 30:
+
+96
+00:04:49,542 --> 00:04:52,886
+với c nhỏ hơn 6 không
+lấy được, f bằng 0.
+
+97
+00:04:52,926 --> 00:04:56,105
+Với c từ 6 trở lên
+lấy được, f bằng 30.
+
+98
+00:04:56,145 --> 00:05:00,893
+Ô xanh lá là ô có lấy kiện i,
+ô xanh dương là ô bỏ kiện i.
+
+99
+00:05:00,933 --> 00:05:03,843
+Hàng kiện 2, nặng 5, giá trị 20:
+
+100
+00:05:03,883 --> 00:05:09,927
+f của 2, 5 bằng max của f 1, 5
+bằng 0, và f 1, 0 cộng 20. Bằng 20.
+
+101
+00:05:09,967 --> 00:05:11,467
+Với c từ 6 đến 10:
+
+102
+00:05:11,507 --> 00:05:15,747
+lấy kiện 2 thì phần còn
+lại không quá 5 ki lô gam,
+
+103
+00:05:15,787 --> 00:05:20,627
+không đủ cho kiện 1, nên chỉ
+được 20, nhỏ hơn 30. Giữ 30.
+
+104
+00:05:20,667 --> 00:05:23,560
+Hàng kiện 3, nặng 5, giá trị 22.
+
+105
+00:05:23,600 --> 00:05:25,180
+Ô đáng chú ý nhất:
+
+106
+00:05:25,220 --> 00:05:30,040
+f của 3, 10 bằng max của ô
+xanh dương f 2, 10 bằng 30,
+
+107
+00:05:30,080 --> 00:05:33,370
+và ô xanh lá f 2,
+5 cộng 22, bằng 42.
+
+108
+00:05:33,410 --> 00:05:37,060
+Đây là lúc hai kiện
+5 ki lô gam gặp nhau!
+
+109
+00:05:37,500 --> 00:05:40,327
+Hàng kiện 4, nặng 3, giá trị 9:
+
+110
+00:05:40,367 --> 00:05:45,228
+f của 4, 9 bằng max của 30,
+và f 3, 6 cộng 9 bằng 39,
+
+111
+00:05:45,268 --> 00:05:47,262
+là kiện 1 cùng kiện 4.
+
+112
+00:05:47,302 --> 00:05:51,793
+Còn f của 4, 10 bằng max
+của 42 và 39, vẫn là 42.
+
+113
+00:05:53,033 --> 00:05:53,871
+Vì sao đúng?
+
+114
+00:05:53,911 --> 00:05:56,506
+Xét một cách chọn tốt nhất cho i, c.
+
+115
+00:05:56,546 --> 00:05:58,335
+Nếu nó không chứa kiện i,
+
+116
+00:05:58,375 --> 00:06:02,507
+nó là cách chọn hợp lệ trong
+i trừ 1 kiện với sức chứa c,
+
+117
+00:06:02,547 --> 00:06:04,409
+nên bằng f của i trừ 1, c.
+
+118
+00:06:04,449 --> 00:06:05,800
+Nếu nó chứa kiện i,
+
+119
+00:06:05,840 --> 00:06:10,776
+phần còn lại là cách chọn trong i
+trừ 1 kiện với sức chứa c trừ w i,
+
+120
+00:06:10,816 --> 00:06:12,678
+và phần này phải tốt nhất.
+
+121
+00:06:12,718 --> 00:06:15,093
+Lấy max hai trường hợp ra đúng f.
+
+122
+00:06:15,133 --> 00:06:16,057
+Độ phức tạp:
+
+123
+00:06:16,097 --> 00:06:21,517
+bảng có n cộng 1 nhân W cộng 1 ô,
+mỗi ô O của 1, nên O của n nhân W.
+
+124
+00:06:21,557 --> 00:06:26,093
+Với n bằng 100, W bằng mười
+nghìn, khoảng một triệu phép.
+
+125
+00:06:26,133 --> 00:06:26,526
+Chú ý:
+
+126
+00:06:26,566 --> 00:06:28,908
+O của n nhân W trông như đa thức,
+
+127
+00:06:28,948 --> 00:06:32,877
+nhưng W là giá trị của dữ
+liệu chứ không phải số lượng.
+
+128
+00:06:32,917 --> 00:06:37,279
+Nếu W bằng một tỉ, bảng có một
+trăm tỉ ô, không thể điền nổi.
+
+129
+00:06:37,319 --> 00:06:40,960
+Khi ấy phải đổi vai khối
+lượng và giá trị, ở Bài 5.
+
+130
+00:06:42,200 --> 00:06:44,551
+Bảng f cho biết giá trị tốt nhất.
+
+131
+00:06:44,591 --> 00:06:47,883
+Muốn biết đã chọn những
+kiện nào, ta truy vết:
+
+132
+00:06:47,923 --> 00:06:49,260
+đi ngược từ ô n, W.
+
+133
+00:06:49,300 --> 00:06:50,119
+Tại ô i, c:
+
+134
+00:06:50,159 --> 00:06:53,009
+nếu f của i, c bằng
+f của i trừ 1, c,
+
+135
+00:06:53,049 --> 00:06:58,164
+thì có một cách tốt nhất bỏ kiện
+i, ta lên hàng trên giữ nguyên c.
+
+136
+00:06:58,204 --> 00:07:01,055
+Ngược lại, kiện i
+chắc chắn được lấy:
+
+137
+00:07:01,095 --> 00:07:04,960
+ghi nhận kiện i, và nhảy
+tới ô i trừ 1, c trừ w i.
+
+138
+00:07:05,400 --> 00:07:06,540
+Tại ô 4, 10:
+
+139
+00:07:06,580 --> 00:07:09,590
+f bằng 42, ô trên cũng bằng 42.
+
+140
+00:07:09,630 --> 00:07:11,360
+Bỏ kiện 4, đi lên.
+
+141
+00:07:11,400 --> 00:07:12,480
+Tại ô 3, 10:
+
+142
+00:07:12,520 --> 00:07:17,427
+f bằng 42, ô trên chỉ bằng
+30. Khác nhau: lấy kiện 3!
+
+143
+00:07:17,467 --> 00:07:20,693
+Nhảy tới ô 2, 10 trừ 5, tức ô 2, 5.
+
+144
+00:07:20,733 --> 00:07:21,709
+Tại ô 2, 5:
+
+145
+00:07:21,749 --> 00:07:26,693
+f bằng 20, ô trên bằng 0.
+Lấy kiện 2! Nhảy tới ô 1, 0.
+
+146
+00:07:26,733 --> 00:07:27,685
+Tại ô 1, 0:
+
+147
+00:07:27,725 --> 00:07:31,293
+f bằng 0, ô trên cũng
+bằng 0. Bỏ kiện 1.
+
+148
+00:07:31,333 --> 00:07:31,913
+Kết quả:
+
+149
+00:07:31,953 --> 00:07:34,933
+chọn kiện 2 và kiện
+3, tổng giá trị 42.
+
+150
+00:07:34,973 --> 00:07:38,960
+Vì đi ngược, nhớ đảo lại
+để in theo thứ tự tăng dần.
+
+151
+00:07:40,200 --> 00:07:42,205
+Trong chương trình hoàn chỉnh,
+
+152
+00:07:42,245 --> 00:07:44,933
+chú ý câu lệnh best
+i bằng best i trừ 1:
+
+153
+00:07:44,973 --> 00:07:47,046
+nó sao chép cả hàng trên xuống,
+
+154
+00:07:47,086 --> 00:07:50,251
+tức là điền sẵn trường
+hợp bỏ kiện i cho mọi c.
+
+155
+00:07:50,291 --> 00:07:53,660
+Vòng lặp sau đó chỉ cần
+xét trường hợp lấy kiện i.
+
+156
+00:07:53,700 --> 00:07:56,723
+Phần truy vết đi từ
+kiện cuối về kiện đầu:
+
+157
+00:07:56,763 --> 00:08:01,027
+nếu ô khác ô phía trên thì ghi
+nhận kiện i và trừ sức chứa.
+
+158
+00:08:02,267 --> 00:08:04,437
+Hàng i chỉ cần hàng i trừ 1.
+
+159
+00:08:04,477 --> 00:08:08,464
+Hãy thử dùng một mảng một
+chiều g thay cho cả bảng.
+
+160
+00:08:08,504 --> 00:08:12,490
+Trước khi xét kiện i, g c
+đang là f của i trừ 1, c.
+
+161
+00:08:12,530 --> 00:08:15,727
+Sau khi xét xong, g
+c phải là f của i, c.
+
+162
+00:08:15,767 --> 00:08:19,211
+Công thức cần g c cũ,
+và g c trừ w i cũ,
+
+163
+00:08:19,251 --> 00:08:22,260
+tức là ô bên trái chưa bị cập nhật.
+
+164
+00:08:22,300 --> 00:08:26,575
+Nếu duyệt c giảm dần từ W
+xuống w i, thì khi tính g c,
+
+165
+00:08:26,615 --> 00:08:30,490
+ô g c trừ w i nằm bên trái
+và chưa được đụng tới:
+
+166
+00:08:30,530 --> 00:08:33,527
+nó vẫn là giá trị
+cũ. Đúng như ta cần!
+
+167
+00:08:33,567 --> 00:08:37,468
+Ô 10 đọc ô 5 khi ô 5 còn
+mang giá trị cũ bằng 0,
+
+168
+00:08:37,508 --> 00:08:39,850
+nên không lấy kiện 2 hai lần.
+
+169
+00:08:39,890 --> 00:08:42,560
+Kết quả chính là hàng 2 của bảng.
+
+170
+00:08:43,800 --> 00:08:46,333
+Nếu lỡ duyệt c tăng dần thì sao?
+
+171
+00:08:46,373 --> 00:08:50,593
+Thử với một kiện 3 ki lô
+gam, giá trị 9, sức chứa 10.
+
+172
+00:08:50,633 --> 00:08:51,786
+Duyệt giảm dần:
+
+173
+00:08:51,826 --> 00:08:53,773
+mọi ô từ 3 trở đi bằng 9.
+
+174
+00:08:53,813 --> 00:08:55,760
+Đúng, vì chỉ có một kiện.
+
+175
+00:08:55,800 --> 00:08:57,017
+Duyệt tăng dần:
+
+176
+00:08:57,057 --> 00:09:01,627
+ô 3 bằng 9, rồi ô 6 đọc ô 3
+đã được cập nhật, thành 18.
+
+177
+00:09:01,667 --> 00:09:03,472
+Ô 9 đọc ô 6, thành 27.
+
+178
+00:09:03,512 --> 00:09:05,902
+Ô g c trừ w i đã chứa kiện i,
+
+179
+00:09:05,942 --> 00:09:10,093
+cộng thêm lần nữa nghĩa
+là lấy kiện i hai, ba lần!
+
+180
+00:09:10,133 --> 00:09:14,313
+Vậy cái túi 0/1 với một mảng
+phải duyệt sức chứa giảm dần.
+
+181
+00:09:14,353 --> 00:09:17,513
+Bộ nhớ giảm từ O của n
+nhân W xuống O của W.
+
+182
+00:09:17,553 --> 00:09:22,460
+Cái giá phải trả, như ở Bài 3, là
+không truy vết trực tiếp được nữa.
+
+183
+00:09:23,695 --> 00:09:26,931
+Điều gì xảy ra nếu mỗi
+loại kiện có vô số chiếc?
+
+184
+00:09:26,971 --> 00:09:29,729
+Khi ấy lấy kiện i
+nhiều lần là được phép,
+
+185
+00:09:29,769 --> 00:09:33,551
+và vòng lặp tăng dần vừa rồi
+lại chính là lời giải đúng!
+
+186
+00:09:33,591 --> 00:09:35,189
+Lỗi trở thành tính năng.
+
+187
+00:09:35,229 --> 00:09:37,449
+Công thức cái túi không giới hạn:
+
+188
+00:09:37,489 --> 00:09:41,079
+vế lấy dùng f của i, c trừ
+w i, tức là hàng hiện tại:
+
+189
+00:09:41,119 --> 00:09:44,846
+sau khi lấy một chiếc loại
+i, vẫn được lấy tiếp loại i.
+
+190
+00:09:44,886 --> 00:09:48,955
+Trên mảng một chiều, điều đó
+tương ứng với duyệt c tăng dần.
+
+191
+00:09:48,995 --> 00:09:49,491
+So sánh:
+
+192
+00:09:49,531 --> 00:09:53,847
+cái túi 0/1, mỗi loại dùng tối đa
+một lần, vế lấy dùng hàng trên,
+
+193
+00:09:53,887 --> 00:09:55,455
+một mảng thì c giảm dần.
+
+194
+00:09:55,495 --> 00:09:58,738
+Cái túi không giới hạn,
+dùng bao nhiêu cũng được,
+
+195
+00:09:58,778 --> 00:10:02,155
+vế lấy dùng hàng hiện tại,
+một mảng thì c tăng dần.
+
+196
+00:10:03,395 --> 00:10:04,431
+Bài toán DOITEM:
+
+197
+00:10:04,471 --> 00:10:07,321
+bưu điện có k loại tem,
+mỗi loại vô số tem.
+
+198
+00:10:07,361 --> 00:10:11,017
+Có bao nhiêu cách dán tem để
+tổng mệnh giá đúng bằng S?
+
+199
+00:10:11,057 --> 00:10:15,722
+Hai cách giống nhau nếu số tem mỗi
+loại như nhau, không kể thứ tự dán.
+
+200
+00:10:15,762 --> 00:10:21,179
+Ví dụ tem 1, 2, 5 và S bằng 5:
+có 4 cách. 5; 2 cộng 2 cộng 1;
+
+201
+00:10:21,219 --> 00:10:24,489
+2 cộng 1 cộng 1 cộng
+1; và năm tem 1.
+
+202
+00:10:24,529 --> 00:10:28,157
+Nhưng nếu kể thứ tự dán
+thì có tới 9 dãy khác nhau.
+
+203
+00:10:28,197 --> 00:10:31,322
+Hai câu hỏi khác nhau,
+hai đáp số khác nhau.
+
+204
+00:10:32,562 --> 00:10:35,694
+Đây là cái túi không
+giới hạn phiên bản đếm.
+
+205
+00:10:35,734 --> 00:10:40,308
+Đặt ways của i, s là số cách tạo
+tổng s chỉ dùng i loại tem đầu.
+
+206
+00:10:40,348 --> 00:10:41,390
+Xét loại tem i:
+
+207
+00:10:41,430 --> 00:10:46,076
+hoặc không dùng tem loại i nào,
+hoặc dùng ít nhất một tem loại i.
+
+208
+00:10:46,116 --> 00:10:49,969
+Bỏ đi một tem đó, ta được
+một cách tạo tổng s trừ c i,
+
+209
+00:10:50,009 --> 00:10:51,555
+vẫn từ i loại tem đầu.
+
+210
+00:10:51,595 --> 00:10:54,030
+Ban đầu chỉ có ways của 0 bằng 1:
+
+211
+00:10:54,070 --> 00:10:57,255
+tổng 0 có đúng một
+cách, không dán tem nào.
+
+212
+00:10:57,295 --> 00:10:58,158
+Thêm tem 1:
+
+213
+00:10:58,198 --> 00:11:00,455
+mọi tổng đều có đúng 1 cách.
+
+214
+00:11:00,495 --> 00:11:01,375
+Thêm tem 2:
+
+215
+00:11:01,415 --> 00:11:04,884
+mỗi ô cộng thêm ô cách
+nó 2 bước bên trái.
+
+216
+00:11:04,924 --> 00:11:06,722
+Được 1, 1, 2, 2, 3, 3.
+
+217
+00:11:06,762 --> 00:11:07,654
+Thêm tem 5:
+
+218
+00:11:07,694 --> 00:11:10,364
+chỉ ô 5 thay đổi, cộng thêm ô 0.
+
+219
+00:11:10,404 --> 00:11:11,889
+ways của 5 bằng 4.
+
+220
+00:11:11,929 --> 00:11:14,255
+Đáp số 4, đúng như liệt kê.
+
+221
+00:11:15,495 --> 00:11:16,923
+Đây là code đếm tổ hợp:
+
+222
+00:11:16,963 --> 00:11:20,622
+vòng ngoài duyệt loại tem,
+vòng trong duyệt tổng tăng dần.
+
+223
+00:11:20,662 --> 00:11:24,889
+Nếu đổi lại, vòng ngoài là tổng,
+vòng trong là các loại tem,
+
+224
+00:11:24,929 --> 00:11:27,308
+thì ways s bằng tổng ways s trừ c,
+
+225
+00:11:27,348 --> 00:11:30,223
+nghĩa là tem cuối cùng
+được dán là tem c.
+
+226
+00:11:30,263 --> 00:11:33,211
+Đây đúng là công thức
+bài nhảy đá ở Bài 1:
+
+227
+00:11:33,251 --> 00:11:36,055
+nó đếm các dãy có thứ
+tự, cho kết quả 9.
+
+228
+00:11:36,095 --> 00:11:36,861
+Quy tắc nhớ:
+
+229
+00:11:36,901 --> 00:11:40,419
+vòng ngoài là đồ vật, vòng
+trong là tổng: đếm tổ hợp.
+
+230
+00:11:40,459 --> 00:11:43,172
+Vòng ngoài là tổng,
+vòng trong là đồ vật:
+
+231
+00:11:43,212 --> 00:11:45,655
+đếm dãy có thứ tự,
+tức chỉnh hợp lặp.
+
+232
+00:11:46,888 --> 00:11:47,748
+Mở rộng một:
+
+233
+00:11:47,788 --> 00:11:52,323
+nếu đề yêu cầu tổng khối lượng
+đúng bằng W, khởi tạo f của 0,
+
+234
+00:11:52,363 --> 00:11:56,448
+0 bằng 0 và f của 0, c bằng
+âm vô cùng với c lớn hơn 0.
+
+235
+00:11:56,488 --> 00:12:00,348
+Nhớ kiểm tra ô nguồn khác
+âm vô cùng trước khi cộng.
+
+236
+00:12:00,388 --> 00:12:01,221
+Mở rộng hai:
+
+237
+00:12:01,261 --> 00:12:04,712
+hỏi có chọn được tập con
+tổng đúng bằng S không,
+
+238
+00:12:04,752 --> 00:12:07,330
+là cái túi 0/1 với giá trị đúng sai,
+
+239
+00:12:07,370 --> 00:12:09,948
+có thể tăng tốc bằng bitset ở Bài 5.
+
+240
+00:12:09,988 --> 00:12:10,686
+Mở rộng ba:
+
+241
+00:12:10,726 --> 00:12:15,382
+hai giới hạn khối lượng và thể tích
+thì thêm một chiều vào trạng thái.
+
+242
+00:12:15,422 --> 00:12:16,129
+Mở rộng bốn:
+
+243
+00:12:16,169 --> 00:12:19,057
+đồ vật chia nhóm, mỗi
+nhóm chọn tối đa một món.
+
+244
+00:12:19,097 --> 00:12:22,172
+Vòng ngoài duyệt nhóm,
+vòng giữa duyệt c giảm dần,
+
+245
+00:12:22,212 --> 00:12:24,415
+vòng trong duyệt các món trong nhóm.
+
+246
+00:12:25,655 --> 00:12:26,148
+Bẫy một:
+
+247
+00:12:26,188 --> 00:12:28,548
+duyệt sai chiều trên mảng một chiều.
+
+248
+00:12:28,588 --> 00:12:29,106
+Bẫy hai:
+
+249
+00:12:29,146 --> 00:12:32,176
+tham lam theo tỉ số giá
+trị trên khối lượng,
+
+250
+00:12:32,216 --> 00:12:34,548
+chỉ đúng khi được chia nhỏ đồ vật.
+
+251
+00:12:34,588 --> 00:12:35,030
+Bẫy ba:
+
+252
+00:12:35,070 --> 00:12:37,368
+nhầm không vượt quá với đúng bằng.
+
+253
+00:12:37,408 --> 00:12:39,982
+Hai yêu cầu khác
+nhau ở phần khởi tạo.
+
+254
+00:12:40,022 --> 00:12:41,267
+Bẫy bốn: tràn bộ nhớ.
+
+255
+00:12:41,307 --> 00:12:45,305
+Bảng một trăm nhân một triệu kiểu
+long long cần tám trăm megabyte.
+
+256
+00:12:45,345 --> 00:12:48,182
+Hãy dùng mảng một chiều
+khi không cần truy vết.
+
+257
+00:12:48,222 --> 00:12:48,777
+Bẫy năm:
+
+258
+00:12:48,817 --> 00:12:51,682
+đổi nhầm thứ tự vòng
+lặp trong bài đếm.
+
+259
+00:12:52,922 --> 00:12:53,561
+Ghi nhớ:
+
+260
+00:12:53,601 --> 00:12:58,907
+cái túi 0/1, f của i, c bằng max
+của f i trừ 1, c và f i trừ 1,
+
+261
+00:12:58,947 --> 00:13:00,519
+c trừ w i cộng v i;
+
+262
+00:13:00,559 --> 00:13:02,556
+một mảng thì c giảm dần.
+
+263
+00:13:02,596 --> 00:13:06,545
+Cái túi không giới hạn
+dùng f của i, c trừ w i;
+
+264
+00:13:06,585 --> 00:13:08,582
+một mảng thì c tăng dần.
+
+265
+00:13:08,622 --> 00:13:09,161
+Bài đếm:
+
+266
+00:13:09,201 --> 00:13:13,358
+vòng ngoài đồ vật là tổ hợp,
+vòng ngoài tổng là chỉnh hợp.
+
+267
+00:13:13,398 --> 00:13:17,266
+Và độ phức tạp O của n nhân
+W phụ thuộc vào giá trị W:
+
+268
+00:13:17,306 --> 00:13:19,582
+luôn kiểm tra W có đủ nhỏ không.
+
+269
+00:13:20,822 --> 00:13:22,339
+Câu hỏi tự kiểm tra:
+
+270
+00:13:22,379 --> 00:13:23,974
+với ví dụ xe cứu trợ,
+
+271
+00:13:24,014 --> 00:13:28,102
+nếu xe chở được 11 ki lô
+gam thì đáp án là bao nhiêu?
+
+272
+00:13:28,142 --> 00:13:29,815
+Dừng video và thử nhé!
+
+273
+00:13:29,855 --> 00:13:30,738
+Đáp án 52:
+
+274
+00:13:30,778 --> 00:13:34,982
+chọn kiện 1 và kiện 3,
+nặng đúng 11 ki lô gam.
+
+275
+00:13:35,022 --> 00:13:35,965
+Bài tiếp theo:
+
+276
+00:13:36,005 --> 00:13:40,180
+cái túi mở rộng, với số lượng
+giới hạn và sức chứa khổng lồ.
+
+277
+00:13:40,220 --> 00:13:41,515
+Hẹn gặp lại các em!

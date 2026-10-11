@@ -16,1307 +16,1491 @@ Có một câu nói:
 
 5
 00:00:05,873 --> 00:00:08,783
-Người không nhớ quá khứ sẽ phải sống lại nó.
+Người không nhớ quá khứ
+sẽ phải sống lại nó.
 
 6
 00:00:08,823 --> 00:00:10,527
 Một chương trình cũng vậy.
 
 7
-00:00:10,567 --> 00:00:16,217
-Nếu không ghi lại những gì đã tính, nó sẽ
-giải đi giải lại cùng một bài toán con,
+00:00:10,567 --> 00:00:12,985
+Nếu không ghi lại những gì đã tính,
 
 8
-00:00:16,257 --> 00:00:17,060
-hàng tỉ lần.
+00:00:13,025 --> 00:00:17,060
+nó sẽ giải đi giải lại cùng
+một bài toán con, hàng tỉ lần.
 
 9
-00:00:17,100 --> 00:00:21,504
+00:00:17,100 --> 00:00:21,535
 Quy hoạch động là nghệ thuật chia
 bài toán lớn thành các bài toán con,
 
 10
-00:00:21,544 --> 00:00:26,393
-giải mỗi bài toán con đúng một lần, ghi
-kết quả vào bảng, rồi ghép chúng lại.
+00:00:21,575 --> 00:00:25,179
+giải mỗi bài toán con đúng
+một lần, ghi kết quả vào bảng,
 
 11
+00:00:25,219 --> 00:00:26,393
+rồi ghép chúng lại.
+
+12
 00:00:27,033 --> 00:00:28,963
 Chương này gồm ba bài. Bài 1:
 
-12
+13
 00:00:29,003 --> 00:00:31,408
 Từ đệ quy đến bảng phương án. Bài 2:
 
-13
+14
 00:00:31,448 --> 00:00:33,514
 Quy hoạch động trên dãy. Bài 3:
 
-14
-00:00:33,554 --> 00:00:36,027
-Quy hoạch động trên lưới và truy vết.
-
 15
-00:00:36,067 --> 00:00:41,310
-Em sẽ tự tay biến một chương trình đệ quy
-chạy hàng giờ thành một chương trình chạy
+00:00:33,554 --> 00:00:36,027
+Quy hoạch động trên
+lưới và truy vết.
 
 16
-00:00:41,350 --> 00:00:45,893
-trong chớp mắt, rồi học bốn câu hỏi
-giúp em giải mọi bài quy hoạch động.
+00:00:36,067 --> 00:00:40,191
+Em sẽ tự tay biến một chương trình
+đệ quy chạy hàng giờ thành một
 
 17
-00:00:47,133 --> 00:00:53,088
-Trước mặt em là một dãy đá bắc qua suối,
-đánh số từ 0, là bờ bên này, đến 5,
+00:00:40,231 --> 00:00:42,305
+chương trình chạy trong chớp mắt,
 
 18
-00:00:53,128 --> 00:00:54,193
-là bờ bên kia.
+00:00:42,345 --> 00:00:45,893
+rồi học bốn câu hỏi giúp em
+giải mọi bài quy hoạch động.
 
 19
+00:00:47,133 --> 00:00:52,536
+Trước mặt em là một dãy đá bắc qua
+suối, đánh số từ 0, là bờ bên này,
+
+20
+00:00:52,576 --> 00:00:54,193
+đến 5, là bờ bên kia.
+
+21
 00:00:54,233 --> 00:00:57,959
 Mỗi lần, em nhảy tới trước
 một, hai, hoặc ba hòn đá.
 
-20
+22
 00:00:57,999 --> 00:01:01,993
 Hòn đá số 3 phủ rêu rất
 trơn, đặt chân lên là ngã.
 
-21
+23
 00:01:02,033 --> 00:01:04,598
 Ví dụ, đây là một cách qua suối:
 
-22
+24
 00:01:04,638 --> 00:01:07,693
-từ 0 nhảy tới 2, rồi tới 4, rồi tới 5.
+từ 0 nhảy tới 2, rồi
+tới 4, rồi tới 5.
 
-23
+25
 00:01:07,733 --> 00:01:08,257
 Câu hỏi:
 
-24
+26
 00:01:08,297 --> 00:01:10,162
 có bao nhiêu cách qua suối?
 
-25
-00:01:10,202 --> 00:01:13,126
-Em hãy thử liệt kê trước khi xem tiếp nhé.
-
-26
-00:01:13,166 --> 00:01:16,037
-Còn nếu dãy có một triệu hòn đá thì sao?
-
 27
+00:01:10,202 --> 00:01:13,126
+Em hãy thử liệt kê
+trước khi xem tiếp nhé.
+
+28
+00:01:13,166 --> 00:01:16,037
+Còn nếu dãy có một
+triệu hòn đá thì sao?
+
+29
 00:01:16,077 --> 00:01:21,059
 Liệt kê là vô vọng, vì số cách còn
 lớn hơn số nguyên tử trong vũ trụ.
 
-28
+30
 00:01:21,099 --> 00:01:24,959
 Thế nhưng cuối bài này, em
 sẽ tính ra con số đó, lấy dư,
 
-29
+31
 00:01:24,999 --> 00:01:27,326
 trong chưa đầy một phần mười giây.
 
-30
-00:01:28,566 --> 00:01:31,890
-Phát biểu tổng quát, ta có bài toán NHAYDA.
-
-31
-00:01:31,930 --> 00:01:34,864
-Có n cộng 1 hòn đá đánh số từ 0 đến n.
-
 32
+00:01:28,566 --> 00:01:31,890
+Phát biểu tổng quát,
+ta có bài toán NHAYDA.
+
+33
+00:01:31,930 --> 00:01:34,864
+Có n cộng 1 hòn đá
+đánh số từ 0 đến n.
+
+34
 00:01:34,904 --> 00:01:39,793
 Mỗi bước nhảy từ đá i tới đá i
 cộng 1, i cộng 2, hoặc i cộng 3.
 
-33
-00:01:39,833 --> 00:01:42,826
-Có m hòn đá trơn không được đặt chân lên.
-
-34
-00:01:42,866 --> 00:01:48,746
-Hãy đếm số cách đi từ đá 0 tới đá n, lấy
-dư cho mười mũ chín cộng bảy. Giới hạn:
-
 35
-00:01:48,786 --> 00:01:50,226
-n lên tới một triệu.
+00:01:39,833 --> 00:01:42,848
+Có m hòn đá trơn không
+được đặt chân lên.
 
 36
+00:01:42,888 --> 00:01:48,065
+Hãy đếm số cách đi từ đá 0 tới đá
+n, lấy dư cho mười mũ chín cộng bảy.
+
+37
+00:01:48,105 --> 00:01:48,736
+Giới hạn:
+
+38
+00:01:48,776 --> 00:01:50,226
+n lên tới một triệu.
+
+39
 00:01:50,266 --> 00:01:51,054
 Hai ví dụ:
 
-37
-00:01:51,094 --> 00:01:54,116
-n bằng 5 với đá 3 trơn thì có 5 cách.
-
-38
-00:01:54,156 --> 00:01:57,593
-n bằng 4, không có đá trơn, thì có 7 cách.
-
-39
-00:01:58,833 --> 00:02:01,525
-Cách tự nhiên nhất là thử mọi khả năng:
-
 40
-00:02:01,565 --> 00:02:04,608
-từ đá đang đứng, thử nhảy một, hai, ba bước.
+00:01:51,094 --> 00:01:54,116
+n bằng 5 với đá 3
+trơn thì có 5 cách.
 
 41
-00:02:04,648 --> 00:02:07,270
-Gặp đá trơn hoặc vượt quá đá n thì bỏ.
+00:01:54,156 --> 00:01:57,593
+n bằng 4, không có đá
+trơn, thì có 7 cách.
 
 42
+00:01:58,833 --> 00:02:01,525
+Cách tự nhiên nhất
+là thử mọi khả năng:
+
+43
+00:02:01,565 --> 00:02:04,608
+từ đá đang đứng, thử
+nhảy một, hai, ba bước.
+
+44
+00:02:04,648 --> 00:02:07,270
+Gặp đá trơn hoặc
+vượt quá đá n thì bỏ.
+
+45
 00:02:07,310 --> 00:02:09,793
 Tới được đá n thì đếm thêm một cách.
 
-43
-00:02:09,833 --> 00:02:13,249
-Với ví dụ thứ nhất, ta
-liệt kê được đúng năm cách.
+46
+00:02:09,833 --> 00:02:14,217
+Với ví dụ thứ nhất, ta liệt kê
+được đúng năm cách. Để không sót,
 
-44
-00:02:13,289 --> 00:02:18,296
-Để không sót, ta xếp chúng theo hòn
-đá đứng ngay trước khi nhảy lên đá 5,
+47
+00:02:14,257 --> 00:02:18,296
+ta xếp chúng theo hòn đá đứng
+ngay trước khi nhảy lên đá 5,
 
-45
+48
 00:02:18,336 --> 00:02:19,126
 tô màu vàng.
 
-46
+49
 00:02:19,166 --> 00:02:22,678
 Ba cách đầu kết thúc bằng
 bước nhảy từ 4 sang 5.
 
-47
+50
 00:02:22,718 --> 00:02:26,304
 Hai cách sau kết thúc bằng
 bước nhảy từ 2 sang 5.
 
-48
-00:02:26,344 --> 00:02:29,559
-Không có cách nào đi qua đá 3, vì đá 3 trơn.
-
-49
-00:02:31,399 --> 00:02:34,554
-Đây là quan sát quan trọng nhất của cả bài.
-
-50
-00:02:34,594 --> 00:02:39,830
-Mọi cách tới đá 5 đều phải đặt chân
-lần cuối lên đá 4, đá 3, hoặc đá 2,
-
 51
-00:02:39,870 --> 00:02:42,059
-vì mỗi bước nhảy tối đa ba đá.
+00:02:26,344 --> 00:02:29,559
+Không có cách nào đi
+qua đá 3, vì đá 3 trơn.
 
 52
+00:02:31,399 --> 00:02:34,554
+Đây là quan sát quan
+trọng nhất của cả bài.
+
+53
+00:02:34,594 --> 00:02:39,013
+Mọi cách tới đá 5 đều phải đặt
+chân lần cuối lên đá 4, đá 3,
+
+54
+00:02:39,053 --> 00:02:42,059
+hoặc đá 2, vì mỗi bước
+nhảy tối đa ba đá.
+
+55
 00:02:42,099 --> 00:02:46,791
 Bỏ bước cuối đi, ba cách đầu trở
 thành đúng tất cả các cách tới đá 4,
 
-53
+56
 00:02:46,831 --> 00:02:48,368
 không thừa không thiếu.
 
-54
+57
 00:02:48,408 --> 00:02:51,659
 Hai cách sau trở thành
 tất cả các cách tới đá 2.
 
-55
+58
 00:02:51,699 --> 00:02:55,320
 Vậy số cách tới đá 5 bằng
 3 cộng 0 cộng 2, bằng 5.
 
-56
+59
 00:02:55,360 --> 00:02:59,859
 Bài toán lớn được ghép từ ba bài
 toán cùng dạng nhưng nhỏ hơn!
 
-57
+60
 00:02:59,899 --> 00:03:00,669
 Tổng quát:
 
-58
+61
 00:03:00,709 --> 00:03:04,151
-gọi f của i là số cách đi từ đá 0 tới đá i.
+gọi f của i là số cách
+đi từ đá 0 tới đá i.
 
-59
+62
 00:03:04,191 --> 00:03:08,200
 Xét bước nhảy cuối cùng,
 ta có công thức truy hồi:
 
-60
+63
 00:03:08,240 --> 00:03:13,626
 f của i bằng f của i trừ 1, cộng
 f của i trừ 2, cộng f của i trừ 3.
 
-61
+64
 00:03:13,666 --> 00:03:15,320
 Kèm theo các quy ước:
 
-62
+65
 00:03:15,360 --> 00:03:19,516
 f của 0 bằng 1, vì đứng yên
 ở đá 0 cũng là một cách.
 
-63
+66
 00:03:19,556 --> 00:03:23,793
 f của chỉ số âm bằng 0, và
 f tại đá trơn cũng bằng 0.
 
-64
+67
 00:03:25,033 --> 00:03:29,593
 Công thức trên có thể chép gần như
 nguyên văn thành một hàm đệ quy.
 
-65
+68
 00:03:29,633 --> 00:03:32,297
 Ba dòng đầu là trường hợp cơ sở:
 
-66
+69
 00:03:32,337 --> 00:03:36,693
 chỉ số âm trả về 0, đá trơn
 trả về 0, đá 0 trả về 1.
 
-67
+70
 00:03:36,733 --> 00:03:41,469
 Ba dòng tiếp theo là ba lời
 gọi đệ quy, đúng như công thức:
 
-68
+71
 00:03:41,509 --> 00:03:44,059
 f của i trừ 1, i trừ 2, i trừ 3.
 
-69
+72
 00:03:44,099 --> 00:03:45,202
 Hàm chạy đúng:
 
-70
+73
 00:03:45,242 --> 00:03:49,446
 với ví dụ thứ nhất trả về
 5, ví dụ thứ hai trả về 7.
 
-71
+74
 00:03:49,486 --> 00:03:51,159
 Vậy vấn đề nằm ở đâu?
 
-72
-00:03:51,799 --> 00:03:53,678
+75
+00:03:51,799 --> 00:03:53,689
 Hãy đếm số lời gọi hàm.
 
-73
-00:03:53,718 --> 00:03:57,265
-Gọi C của i là số lời gọi khi tính f của i.
-
-74
-00:03:57,305 --> 00:04:03,939
-Lời gọi f của i sinh thêm ba lời gọi con,
-nên C của i bằng 1 cộng C của i trừ 1,
-
-75
-00:04:03,979 --> 00:04:07,193
-cộng C của i trừ 2, cộng C của i trừ 3.
-
 76
+00:03:53,729 --> 00:03:57,295
+Gọi C của i là số lời
+gọi khi tính f của i.
+
+77
+00:03:57,335 --> 00:04:00,734
+Lời gọi f của i sinh
+thêm ba lời gọi con,
+
+78
+00:04:00,774 --> 00:04:05,599
+nên C của i bằng 1 cộng C của
+i trừ 1, cộng C của i trừ 2,
+
+79
+00:04:05,639 --> 00:04:07,193
+cộng C của i trừ 3.
+
+80
 00:04:07,233 --> 00:04:09,638
 Dãy này tăng giống dãy Tribonacci:
 
-77
+81
 00:04:09,678 --> 00:04:13,594
 mỗi khi i tăng 1, số lời gọi
 tăng khoảng 1 phẩy 84 lần.
 
-78
+82
 00:04:13,634 --> 00:04:15,393
 Đó là độ phức tạp hàm mũ.
 
-79
+83
 00:04:15,433 --> 00:04:16,207
 Đo thực tế:
 
-80
+84
 00:04:16,247 --> 00:04:20,057
 n bằng 20 cần khoảng bốn
 trăm ba mươi nghìn lời gọi.
 
-81
+85
 00:04:20,097 --> 00:04:24,426
 n bằng 30 cần gần hai trăm
 triệu lời gọi, đã vượt một giây.
 
-82
+86
 00:04:24,466 --> 00:04:29,593
 n bằng 40 cần tám mươi lăm tỉ lời
 gọi, tức là khoảng mười lăm phút!
 
-83
+87
 00:04:30,233 --> 00:04:30,669
 Bế tắc!
 
-84
+88
 00:04:30,709 --> 00:04:35,359
 Với n bằng một triệu, chương trình
 đệ quy sẽ không bao giờ chạy xong.
 
-85
-00:04:35,399 --> 00:04:36,821
+89
+00:04:35,399 --> 00:04:36,831
 Thế nhưng nhìn lại:
 
-86
-00:04:36,861 --> 00:04:42,436
-chỉ có n cộng 1 đại lượng khác nhau
-là f của 0, f của 1, cho tới f của n.
+90
+00:04:36,871 --> 00:04:41,169
+chỉ có n cộng 1 đại lượng
+khác nhau là f của 0, f của 1,
 
-87
-00:04:42,476 --> 00:04:46,359
+91
+00:04:41,209 --> 00:04:42,409
+cho tới f của n.
+
+92
+00:04:42,449 --> 00:04:46,359
 Vậy máy tính đã làm gì với
 hàng tỉ lời gọi còn lại?
 
-88
-00:04:47,599 --> 00:04:53,984
-Mỗi lời gọi f của i sinh ra các lời gọi
-con f của i trừ 1, i trừ 2, i trừ 3.
+93
+00:04:47,599 --> 00:04:53,298
+Mỗi lời gọi f của i sinh ra các
+lời gọi con f của i trừ 1, i trừ 2,
 
-89
-00:04:54,024 --> 00:05:00,493
-Hãy vẽ hết ra cho ví dụ n bằng 5, đá 3
-trơn, bỏ qua các lời gọi có chỉ số âm.
+94
+00:04:53,338 --> 00:04:53,983
+i trừ 3.
 
-90
+95
+00:04:54,023 --> 00:04:57,752
+Hãy vẽ hết ra cho ví
+dụ n bằng 5, đá 3 trơn,
+
+96
+00:04:57,792 --> 00:05:00,493
+bỏ qua các lời gọi có chỉ số âm.
+
+97
 00:05:00,533 --> 00:05:04,826
 Chỉ với 5 hòn đá mà f
 của 2 đã bị tính hai lần.
 
-91
+98
 00:05:04,866 --> 00:05:07,193
 f của 1 bị tính ba lần.
 
-92
+99
 00:05:07,233 --> 00:05:10,126
 Còn f của 0 bị gọi tới năm lần.
 
-93
-00:05:10,166 --> 00:05:11,155
+100
+00:05:10,166 --> 00:05:11,161
 Quan trọng hơn:
 
-94
-00:05:11,195 --> 00:05:16,299
-mỗi lần tính lại f của 2 là một lần
-dựng lại nguyên cả cây con bên dưới nó.
+101
+00:05:11,201 --> 00:05:15,718
+mỗi lần tính lại f của 2 là một
+lần dựng lại nguyên cả cây con bên
 
-95
-00:05:16,339 --> 00:05:20,826
+102
+00:05:15,758 --> 00:05:16,270
+dưới nó.
+
+103
+00:05:16,310 --> 00:05:20,826
 Với n lớn, các cây con trùng nhau
 chồng lên nhau theo cấp số nhân.
 
-96
-00:05:20,866 --> 00:05:24,293
+104
+00:05:20,866 --> 00:05:24,316
 Đây là dấu hiệu nhận biết
 số một của quy hoạch động:
 
-97
-00:05:24,333 --> 00:05:25,759
+105
+00:05:24,356 --> 00:05:25,793
 bài toán con gối nhau.
 
-98
-00:05:25,799 --> 00:05:30,693
-Số bài toán con khác nhau thì ít, nhưng
-số lần gặp lại chúng thì khổng lồ.
+106
+00:05:25,833 --> 00:05:28,008
+Số bài toán con khác nhau thì ít,
 
-99
+107
+00:05:28,048 --> 00:05:30,693
+nhưng số lần gặp lại
+chúng thì khổng lồ.
+
+108
 00:05:32,433 --> 00:05:34,065
 Ý tưởng rất đời thường:
 
-100
+109
 00:05:34,105 --> 00:05:37,772
 tính xong f của i thì ghi
 vào sổ, gọi là mảng memo.
 
-101
+110
 00:05:37,812 --> 00:05:41,261
 Lần sau cần f của i, ta
 tra sổ thay vì tính lại.
 
-102
+111
 00:05:41,301 --> 00:05:43,659
 Giá trị trừ 1 nghĩa là chưa tính.
 
-103
+112
 00:05:43,699 --> 00:05:46,644
 Bây giờ chạy lại hàm với sổ ghi nhớ.
 
-104
+113
 00:05:46,684 --> 00:05:48,302
 Theo dõi thứ tự gọi:
 
-105
+114
 00:05:48,342 --> 00:05:53,526
 f của 5 gọi f của 4, f của 4 gọi
 f của 3, là đá trơn, trả về 0.
 
-106
+115
 00:05:53,566 --> 00:05:56,854
-Tiếp tục xuống f của 2, f của 1, f của 0.
+Tiếp tục xuống f của
+2, f của 1, f của 0.
 
-107
+116
 00:05:56,894 --> 00:05:59,856
-Tính xong f của 1 bằng 1, ghi vào sổ.
+Tính xong f của 1
+bằng 1, ghi vào sổ.
 
-108
+117
 00:05:59,896 --> 00:06:02,859
-Tính xong f của 2 bằng 2, ghi vào sổ.
+Tính xong f của 2
+bằng 2, ghi vào sổ.
 
-109
+118
 00:06:02,899 --> 00:06:05,820
-Đến lượt f của 4 cần f của 1: sổ đã có!
+Đến lượt f của 4 cần
+f của 1: sổ đã có!
 
-110
+119
 00:06:05,860 --> 00:06:08,630
-Tra sổ ngay, không cần gọi xuống nữa.
+Tra sổ ngay, không
+cần gọi xuống nữa.
 
-111
+120
 00:06:08,670 --> 00:06:11,059
 Cả nhánh con bên dưới bị cắt bỏ.
 
-112
+121
 00:06:11,099 --> 00:06:16,317
 f của 4 bằng 0 cộng 2 cộng 1, bằng
 3, ghi vào sổ. Quay về f của 5:
 
-113
+122
 00:06:16,357 --> 00:06:19,982
 f của 3 trơn, còn f của
 2 lại có sẵn trong sổ.
 
-114
+123
 00:06:20,022 --> 00:06:23,726
 Cây con thứ hai của f
 của 2 không cần dựng lại!
 
-115
-00:06:23,766 --> 00:06:29,726
-Kết quả f của 5 bằng 5, và những nút mờ
-đi là những lời gọi đã được tiết kiệm.
+124
+00:06:23,766 --> 00:06:25,518
+Kết quả f của 5 bằng 5,
 
-116
+125
+00:06:25,558 --> 00:06:29,726
+và những nút mờ đi là những
+lời gọi đã được tiết kiệm.
+
+126
 00:06:30,965 --> 00:06:32,871
 Đây là code đệ quy có nhớ.
 
-117
+127
 00:06:32,911 --> 00:06:35,791
-So với bản ngây thơ, chỉ thêm hai dòng.
+So với bản ngây thơ,
+chỉ thêm hai dòng.
 
-118
+128
 00:06:35,831 --> 00:06:36,899
 Dòng thứ nhất:
 
-119
+129
 00:06:36,939 --> 00:06:39,825
-nếu sổ đã có giá trị thì trả về ngay.
+nếu sổ đã có giá
+trị thì trả về ngay.
 
-120
+130
 00:06:39,865 --> 00:06:40,796
 Dòng thứ hai:
 
-121
+131
 00:06:40,836 --> 00:06:44,158
 tính xong thì ghi vào
 sổ, nhớ lấy dư cho MOD.
 
-122
+132
 00:06:44,198 --> 00:06:48,294
 Mỗi giá trị f của i giờ chỉ
 được tính thật đúng một lần.
 
-123
+133
 00:06:48,334 --> 00:06:52,578
 Có n cộng 1 giá trị, mỗi giá
 trị tính bằng ba lời gọi con,
 
-124
+134
 00:06:52,618 --> 00:06:55,163
 nên tổng số lời gọi chỉ khoảng 3 n.
 
-125
+135
 00:06:55,203 --> 00:06:58,191
-Độ phức tạp giảm từ hàm mũ xuống O của n.
+Độ phức tạp giảm từ
+hàm mũ xuống O của n.
 
-126
+136
 00:06:58,231 --> 00:06:59,236
 Với n bằng 40,
 
-127
+137
 00:06:59,276 --> 00:07:04,458
 số lời gọi giảm từ tám mươi lăm tỉ
 xuống còn khoảng một trăm hai mươi!
 
-128
-00:07:05,698 --> 00:07:07,926
+138
+00:07:05,698 --> 00:07:07,939
 Tuy nhiên, khi gọi f của một triệu,
 
-129
-00:07:07,966 --> 00:07:12,656
-hàm sẽ gọi f của chín trăm chín mươi
-chín nghìn chín trăm chín mươi chín,
+139
+00:07:07,979 --> 00:07:12,304
+hàm sẽ gọi f của chín trăm chín
+mươi chín nghìn chín trăm chín mươi
 
-130
-00:07:12,696 --> 00:07:17,191
+140
+00:07:12,344 --> 00:07:12,630
+chín,
+
+141
+00:07:12,670 --> 00:07:17,191
 rồi tiếp tục chồng lên nhau một triệu
 tầng trước khi chạm tới f của 0.
 
-131
+142
 00:07:17,231 --> 00:07:19,718
-Mỗi tầng chiếm một phần bộ nhớ ngăn xếp,
+Mỗi tầng chiếm một
+phần bộ nhớ ngăn xếp,
 
-132
+143
 00:07:19,758 --> 00:07:23,382
 mà ngăn xếp trên nhiều máy
 chấm chỉ vài megabyte. Kết quả:
 
-133
+144
 00:07:23,422 --> 00:07:26,225
 chương trình bị lỗi tràn
 ngăn xếp ở test lớn.
 
-134
+145
 00:07:27,465 --> 00:07:28,222
 Hãy để ý:
 
-135
+146
 00:07:28,262 --> 00:07:33,535
 để tính f của i, ta chỉ cần f
 của i trừ 1, i trừ 2, i trừ 3,
 
-136
+147
 00:07:33,575 --> 00:07:36,458
 đều là những ô có chỉ số nhỏ hơn.
 
-137
-00:07:36,498 --> 00:07:42,130
-Vậy nếu ta tính lần lượt f của 0, f
-của 1, f của 2, theo thứ tự tăng dần,
+148
+00:07:36,498 --> 00:07:40,448
+Vậy nếu ta tính lần lượt
+f của 0, f của 1, f của 2,
 
-138
-00:07:42,170 --> 00:07:46,093
-thì khi tới ô i, ba ô cần
-dùng chắc chắn đã có sẵn.
+149
+00:07:40,488 --> 00:07:43,421
+theo thứ tự tăng
+dần, thì khi tới ô i,
 
-139
-00:07:46,133 --> 00:07:47,725
+150
+00:07:43,461 --> 00:07:46,082
+ba ô cần dùng chắc chắn đã có sẵn.
+
+151
+00:07:46,122 --> 00:07:47,725
 Không cần đệ quy nữa!
 
-140
+152
 00:07:47,765 --> 00:07:48,408
 Bắt đầu:
 
-141
+153
 00:07:48,448 --> 00:07:52,591
 f của 0 bằng 1, đứng yên
 ở đá 0 cũng là một cách.
 
-142
+154
 00:07:52,631 --> 00:07:56,358
-f của 1 bằng f của 0, tức là 1, bằng 1.
+f của 1 bằng f của
+0, tức là 1, bằng 1.
 
-143
+155
 00:07:56,398 --> 00:08:01,791
 f của 2 bằng f của 1, cộng f
 của 0, tức là 1 cộng 1, bằng 2.
 
-144
+156
 00:08:01,831 --> 00:08:03,449
 Ô số 3 là đá trơn:
 
-145
+157
 00:08:03,489 --> 00:08:05,291
 luôn bằng 0, bỏ qua.
 
-146
-00:08:05,331 --> 00:08:12,391
-f của 4 bằng f của 3, cộng f của 2, cộng
-f của 1, tức là 0 cộng 2 cộng 1, bằng 3.
+158
+00:08:05,331 --> 00:08:09,640
+f của 4 bằng f của 3, cộng
+f của 2, cộng f của 1,
 
-147
-00:08:12,431 --> 00:08:19,491
-f của 5 bằng f của 4, cộng f của 3, cộng
-f của 2, tức là 3 cộng 0 cộng 2, bằng 5.
+159
+00:08:09,680 --> 00:08:12,391
+tức là 0 cộng 2 cộng 1, bằng 3.
 
-148
+160
+00:08:12,431 --> 00:08:16,740
+f của 5 bằng f của 4, cộng
+f của 3, cộng f của 2,
+
+161
+00:08:16,780 --> 00:08:19,491
+tức là 3 cộng 0 cộng 2, bằng 5.
+
+162
 00:08:19,531 --> 00:08:23,825
 Ô cuối cùng f của 5 bằng
 5, đúng như ta đã liệt kê!
 
-149
+163
 00:08:24,665 --> 00:08:26,223
 Code điền bảng rất gọn:
 
-150
-00:08:26,263 --> 00:08:31,921
-đặt ways của 0 bằng 1, rồi duyệt từng hòn
-đá theo thứ tự tăng dần, bỏ qua đá trơn,
+164
+00:08:26,263 --> 00:08:30,809
+đặt ways của 0 bằng 1, rồi duyệt
+từng hòn đá theo thứ tự tăng dần,
 
-151
-00:08:31,961 --> 00:08:33,658
-cộng dồn ba ô phía trước.
+165
+00:08:30,849 --> 00:08:33,658
+bỏ qua đá trơn, cộng
+dồn ba ô phía trước.
 
-152
+166
 00:08:33,698 --> 00:08:36,061
-Bảng ways được gọi là bảng phương án.
+Bảng ways được gọi
+là bảng phương án.
 
-153
+167
 00:08:36,101 --> 00:08:40,282
 Vòng ngoài chạy n lần, vòng trong
 3 lần, nên độ phức tạp O của n.
 
-154
-00:08:40,322 --> 00:08:45,542
-Với n bằng một triệu chỉ cần khoảng ba
-triệu phép cộng, chạy trong vài mili giây,
+168
+00:08:40,322 --> 00:08:43,853
+Với n bằng một triệu chỉ cần
+khoảng ba triệu phép cộng,
 
-155
-00:08:45,582 --> 00:08:47,425
-và không còn tầng đệ quy nào.
+169
+00:08:43,893 --> 00:08:47,425
+chạy trong vài mili giây, và
+không còn tầng đệ quy nào.
 
-156
-00:08:48,665 --> 00:08:54,891
-Khi tính tới ô i, các ô từ i trừ 4 trở
-về trước không bao giờ được dùng lại nữa.
+170
+00:08:48,665 --> 00:08:49,973
+Khi tính tới ô i,
 
-157
+171
+00:08:50,013 --> 00:08:54,891
+các ô từ i trừ 4 trở về trước
+không bao giờ được dùng lại nữa.
+
+172
 00:08:54,931 --> 00:08:58,425
 Vậy ta chỉ cần giữ ba giá
 trị gần nhất trong ba biến,
 
-158
+173
 00:08:58,465 --> 00:09:02,825
 và trượt chúng sang phải sau mỗi
 bước, giống như một cửa sổ trượt.
 
-159
+174
 00:09:02,865 --> 00:09:07,425
 Bộ nhớ cho bảng phương án
 giảm từ O của n xuống O của 1.
 
-160
+175
 00:09:07,465 --> 00:09:12,244
 Ở bài này cải tiến đó chưa thật cần,
 vì mảng đá trơn vẫn tốn O của n.
 
-161
+176
 00:09:12,284 --> 00:09:14,549
 Nhưng ở những bài bảng hai chiều,
 
-162
-00:09:14,589 --> 00:09:20,345
-kĩ thuật chỉ giữ vài hàng gần nhất có thể
-là ranh giới giữa được điểm và bị tràn bộ
+177
+00:09:14,589 --> 00:09:19,368
+kĩ thuật chỉ giữ vài hàng gần nhất
+có thể là ranh giới giữa được điểm
 
-163
-00:09:20,385 --> 00:09:20,625
-nhớ.
+178
+00:09:19,408 --> 00:09:20,625
+và bị tràn bộ nhớ.
 
-164
+179
 00:09:21,865 --> 00:09:24,605
-Tóm lại bốn cách làm. Đệ quy ngây thơ:
+Tóm lại bốn cách
+làm. Đệ quy ngây thơ:
 
-165
+180
 00:09:24,645 --> 00:09:27,825
-thời gian hàm mũ, chỉ chạy được n khoảng 25.
+thời gian hàm mũ, chỉ
+chạy được n khoảng 25.
 
-166
+181
 00:09:27,865 --> 00:09:28,935
 Đệ quy có nhớ:
 
-167
+182
 00:09:28,975 --> 00:09:32,425
-O của n, dễ viết nhưng có thể tràn ngăn xếp.
+O của n, dễ viết nhưng
+có thể tràn ngăn xếp.
 
-168
+183
 00:09:32,465 --> 00:09:33,178
 Điền bảng:
 
-169
+184
 00:09:33,218 --> 00:09:36,191
-O của n, không đệ quy, là cách nên dùng.
+O của n, không đệ
+quy, là cách nên dùng.
 
-170
+185
 00:09:36,231 --> 00:09:37,300
 Ba biến trượt:
 
-171
+186
 00:09:37,340 --> 00:09:41,891
 thời gian O của n, bộ nhớ O
 của 1, dùng khi bộ nhớ eo hẹp.
 
-172
+187
 00:09:41,931 --> 00:09:44,054
 Hãy nhớ con đường nâng cấp này:
 
-173
+188
 00:09:44,094 --> 00:09:47,891
 đệ quy, đệ quy có nhớ, điền
 bảng, rồi tiết kiệm bộ nhớ.
 
-174
-00:09:49,131 --> 00:09:51,802
-Điều em vừa làm có tên là quy hoạch động:
+189
+00:09:49,131 --> 00:09:51,817
+Điều em vừa làm có
+tên là quy hoạch động:
 
-175
-00:09:51,842 --> 00:09:55,834
+190
+00:09:51,857 --> 00:09:55,872
 chia bài toán thành các bài toán
 con cùng dạng nhưng nhỏ hơn,
 
-176
-00:09:55,874 --> 00:10:00,925
-giải mỗi bài toán con đúng một lần, lưu
-kết quả vào bảng và dùng lại khi cần.
+191
+00:09:55,912 --> 00:09:58,199
+giải mỗi bài toán con đúng một lần,
 
-177
+192
+00:09:58,239 --> 00:10:00,925
+lưu kết quả vào bảng
+và dùng lại khi cần.
+
+193
 00:10:00,965 --> 00:10:04,925
 Mọi lời giải quy hoạch động đều
 được xây từ bốn câu trả lời.
 
-178
-00:10:04,965 --> 00:10:10,191
-Hãy tập thói quen viết bốn câu trả lời
-này ra giấy trước khi viết dòng code đầu
+194
+00:10:04,965 --> 00:10:09,591
+Hãy tập thói quen viết bốn câu trả
+lời này ra giấy trước khi viết dòng
 
-179
-00:10:10,231 --> 00:10:10,525
-tiên.
+195
+00:10:09,631 --> 00:10:10,525
+code đầu tiên.
 
-180
+196
 00:10:11,265 --> 00:10:13,891
 Câu một, trạng thái: f nghĩa là gì?
 
-181
+197
 00:10:13,931 --> 00:10:17,853
 Phải phát biểu thành một
 câu rõ ràng, đầy đủ. Ở đây:
 
-182
+198
 00:10:17,893 --> 00:10:20,825
-f của i là số cách đi từ đá 0 tới đá i.
+f của i là số cách
+đi từ đá 0 tới đá i.
 
-183
-00:10:20,865 --> 00:10:21,924
+199
+00:10:20,865 --> 00:10:21,932
 Câu hai, cơ sở:
 
-184
-00:10:21,964 --> 00:10:27,200
+200
+00:10:21,972 --> 00:10:26,732
 những trạng thái nhỏ nhất nào biết
-ngay đáp án mà không cần tính? Ở đây:
+ngay đáp án mà không cần tính?
 
-185
-00:10:27,240 --> 00:10:30,425
-f của 0 bằng 1, chỉ số âm và đá trơn bằng 0.
+201
+00:10:26,772 --> 00:10:27,175
+Ở đây:
 
-186
+202
+00:10:27,215 --> 00:10:30,425
+f của 0 bằng 1, chỉ số
+âm và đá trơn bằng 0.
+
+203
 00:10:30,465 --> 00:10:32,085
 Câu ba, công thức chuyển:
 
-187
+204
 00:10:32,125 --> 00:10:35,804
 tính một trạng thái từ những
 trạng thái nhỏ hơn thế nào?
 
-188
+205
 00:10:35,844 --> 00:10:37,530
 Câu hỏi gợi ý tốt nhất là:
 
-189
+206
 00:10:37,570 --> 00:10:38,925
 bước cuối cùng là gì?
 
-190
-00:10:38,965 --> 00:10:41,408
+207
+00:10:38,965 --> 00:10:41,425
 Câu bốn, đáp án và thứ tự tính:
 
-191
-00:10:41,448 --> 00:10:44,371
-đáp án nằm ở ô nào, ở đây là f của n.
+208
+00:10:41,465 --> 00:10:44,409
+đáp án nằm ở ô nào,
+ở đây là f của n.
 
-192
-00:10:44,411 --> 00:10:50,458
-Và điền bảng theo thứ tự nào để ô cần
-dùng luôn có sẵn, ở đây là i tăng dần.
+209
+00:10:44,449 --> 00:10:48,845
+Và điền bảng theo thứ tự nào
+để ô cần dùng luôn có sẵn,
 
-193
-00:10:51,698 --> 00:10:56,875
-Một công thức đếm bằng cách cộng các nhóm
-chỉ đúng khi hai điều kiện cùng thỏa mãn.
+210
+00:10:48,885 --> 00:10:50,458
+ở đây là i tăng dần.
 
-194
-00:10:56,915 --> 00:10:58,258
+211
+00:10:51,698 --> 00:10:55,957
+Một công thức đếm bằng cách cộng
+các nhóm chỉ đúng khi hai điều kiện
+
+212
+00:10:55,997 --> 00:10:56,842
+cùng thỏa mãn.
+
+213
+00:10:56,882 --> 00:10:58,233
 Thứ nhất, không trùng:
 
-195
-00:10:58,298 --> 00:11:02,658
+214
+00:10:58,273 --> 00:11:02,658
 mỗi cách đi có đúng một bước nhảy
 cuối, nên chỉ rơi vào đúng một nhóm.
 
-196
-00:11:02,698 --> 00:11:03,965
+215
+00:11:02,698 --> 00:11:03,979
 Thứ hai, không sót:
 
-197
-00:11:04,005 --> 00:11:09,191
-bước nhảy cuối chỉ có thể dài 1, 2 hoặc
-3, nên cách nào cũng thuộc một nhóm.
+216
+00:11:04,019 --> 00:11:06,898
+bước nhảy cuối chỉ có
+thể dài 1, 2 hoặc 3,
 
-198
+217
+00:11:06,938 --> 00:11:09,191
+nên cách nào cũng thuộc một nhóm.
+
+218
 00:11:09,231 --> 00:11:13,438
 Ngoài ra, mỗi cách tới đá i
 trừ d, ghép thêm bước nhảy d,
 
-199
+219
 00:11:13,478 --> 00:11:17,015
 luôn cho một cách hợp lệ
 tới đá i, và ngược lại.
 
-200
+220
 00:11:17,055 --> 00:11:21,858
 Đó là một song ánh, nên nhóm thứ
 d có đúng f của i trừ d phần tử.
 
-201
+221
 00:11:23,098 --> 00:11:25,540
-Quy hoạch động không chỉ dùng để đếm.
+Quy hoạch động không
+chỉ dùng để đếm.
 
-202
+222
 00:11:25,580 --> 00:11:28,223
-Hãy giữ nguyên dãy đá nhưng đổi câu hỏi.
+Hãy giữ nguyên dãy
+đá nhưng đổi câu hỏi.
 
-203
+223
 00:11:28,263 --> 00:11:31,778
 Mỗi khi đặt chân lên đá i,
 em phải trả một khoản phí.
 
-204
+224
 00:11:31,818 --> 00:11:34,058
 Tìm tổng phí nhỏ nhất để qua suối.
 
-205
+225
 00:11:34,098 --> 00:11:34,587
 Ví dụ:
 
-206
+226
 00:11:34,627 --> 00:11:40,058
 sáu hòn đá với phí lần lượt là
 2, 7, 3, đá 4 trơn, rồi 1 và 4.
 
-207
-00:11:40,098 --> 00:11:42,972
-Ý tưởng đầu tiên của nhiều bạn là tham lam:
+227
+00:11:40,098 --> 00:11:42,996
+Ý tưởng đầu tiên của
+nhiều bạn là tham lam:
 
-208
-00:11:43,012 --> 00:11:48,258
-mỗi bước, nhảy tới hòn đá có phí rẻ nhất
-trong ba hòn phía trước. Hãy thử xem.
+228
+00:11:43,036 --> 00:11:47,438
+mỗi bước, nhảy tới hòn đá có phí
+rẻ nhất trong ba hòn phía trước.
 
-209
+229
+00:11:47,478 --> 00:11:48,258
+Hãy thử xem.
+
+230
 00:11:48,598 --> 00:11:49,364
 Từ đá 0:
 
-210
+231
 00:11:49,404 --> 00:11:52,891
 chọn đá 1, phí 2, vì rẻ hơn 7 và 3.
 
-211
+232
 00:11:52,931 --> 00:11:53,669
 Từ đá 1:
 
-212
+233
 00:11:53,709 --> 00:11:56,391
 đá 4 trơn, chọn đá 3, phí 3.
 
-213
+234
 00:11:56,431 --> 00:11:59,058
 Từ đá 3: chọn đá 5, phí 1.
 
-214
+235
 00:11:59,098 --> 00:11:59,867
 Từ đá 5:
 
-215
+236
 00:11:59,907 --> 00:12:01,991
 nhảy lên đá 6, phí 4.
 
-216
+237
 00:12:02,031 --> 00:12:04,358
 Tham lam được tổng phí 10.
 
-217
-00:12:04,398 --> 00:12:10,625
-Nhưng đi từ 0 nhảy thẳng tới 3, rồi từ
-3 nhảy tới 6, chỉ tốn 3 cộng 4, bằng 7!
+238
+00:12:04,398 --> 00:12:10,055
+Nhưng đi từ 0 nhảy thẳng tới 3, rồi
+từ 3 nhảy tới 6, chỉ tốn 3 cộng 4,
 
-218
-00:12:10,665 --> 00:12:15,280
-Chính lựa chọn rẻ trước mắt buộc em
-phải đi thêm nhiều bước sau. Bài học:
+239
+00:12:10,095 --> 00:12:10,625
+bằng 7!
 
-219
-00:12:15,320 --> 00:12:19,872
+240
+00:12:10,665 --> 00:12:14,757
+Chính lựa chọn rẻ trước mắt buộc
+em phải đi thêm nhiều bước sau.
+
+241
+00:12:14,797 --> 00:12:15,274
+Bài học:
+
+242
+00:12:15,314 --> 00:12:19,536
 một quyết định tốt ở hiện tại chưa
-chắc dẫn tới kết quả tốt nhất ở cuối.
+chắc dẫn tới kết quả tốt nhất ở
 
-220
-00:12:19,912 --> 00:12:21,530
+243
+00:12:19,576 --> 00:12:19,859
+cuối.
+
+244
+00:12:19,899 --> 00:12:21,538
 Quy hoạch động không đoán,
 
-221
-00:12:21,570 --> 00:12:26,058
-nó xét mọi khả năng một cách có hệ
-thống nhưng không lặp lại công việc.
+245
+00:12:21,578 --> 00:12:25,735
+nó xét mọi khả năng một cách có
+hệ thống nhưng không lặp lại công
 
-222
+246
+00:12:25,775 --> 00:12:26,058
+việc.
+
+247
 00:12:27,298 --> 00:12:28,111
 Trạng thái:
 
-223
+248
 00:12:28,151 --> 00:12:32,143
 g của i là tổng phí nhỏ
 nhất để đi từ đá 0 tới đá i,
 
-224
+249
 00:12:32,183 --> 00:12:34,625
 bằng vô cùng nếu không tới được.
 
-225
+250
 00:12:34,665 --> 00:12:35,155
 Cơ sở:
 
-226
+251
 00:12:35,195 --> 00:12:39,225
 g của 0 bằng 0, và g
 bằng vô cùng tại đá trơn.
 
-227
+252
 00:12:39,265 --> 00:12:39,987
 Công thức:
 
-228
+253
 00:12:40,027 --> 00:12:44,710
 bước cuối tới đá i xuất phát từ
 i trừ 1, i trừ 2 hoặc i trừ 3.
 
-229
+254
 00:12:44,750 --> 00:12:48,825
 Lấy nhỏ nhất trong ba khả
 năng, rồi cộng phí của đá i.
 
-230
+255
 00:12:48,865 --> 00:12:53,991
 Đáp án là g của n, hoặc trừ 1 nếu
 bằng vô cùng. Điền i tăng dần.
 
-231
+256
 00:12:54,031 --> 00:12:55,316
 So sánh với bài đếm:
 
-232
+257
 00:12:55,356 --> 00:12:57,898
-cấu trúc giống hệt, chỉ khác phép toán.
+cấu trúc giống hệt,
+chỉ khác phép toán.
 
-233
+258
 00:12:57,938 --> 00:13:00,480
-Bài đếm dùng phép cộng để gộp các nhóm,
+Bài đếm dùng phép
+cộng để gộp các nhóm,
 
-234
+259
 00:13:00,520 --> 00:13:03,591
 bài tối ưu dùng phép min
 để chọn nhóm tốt nhất.
 
-235
+260
 00:13:04,931 --> 00:13:06,725
 g của 0 bằng 0.
 
-236
+261
 00:13:06,765 --> 00:13:10,225
 g của 1 bằng g của 0 cộng 2, bằng 2.
 
-237
+262
 00:13:10,265 --> 00:13:14,258
-g của 2 bằng min của 2 và 0, cộng 7, bằng 7.
+g của 2 bằng min của 2
+và 0, cộng 7, bằng 7.
 
-238
+263
 00:13:14,298 --> 00:13:18,291
 g của 3 bằng min của 7,
 2, 0, cộng 3, bằng 3.
 
-239
+264
 00:13:18,331 --> 00:13:19,238
 Đá 4 trơn:
 
-240
+265
 00:13:19,278 --> 00:13:21,225
 g của 4 bằng vô cùng.
 
-241
+266
 00:13:21,265 --> 00:13:25,558
 g của 5 bằng min của vô
 cùng, 3, 7, cộng 1, bằng 4.
 
-242
+267
 00:13:25,598 --> 00:13:30,991
 g của 6 bằng min của 4, vô cùng,
 3, cộng 4, bằng 7. Đáp án là 7!
 
-243
+268
 00:13:32,231 --> 00:13:37,625
 Xét một đường đi tốt nhất tới đá i,
 và giả sử bước cuối nhảy từ đá j.
 
-244
+269
 00:13:37,665 --> 00:13:42,297
 Khi đó đoạn đường từ 0 tới j cũng
 phải là đường đi tốt nhất tới j.
 
-245
+270
 00:13:42,337 --> 00:13:45,200
-Thật vậy, nếu có đường khác tới j rẻ hơn,
+Thật vậy, nếu có đường
+khác tới j rẻ hơn,
 
-246
+271
 00:13:45,240 --> 00:13:49,306
 ta thay đoạn đầu bằng đường
 rẻ hơn đó rồi nhảy từ j tới i,
 
-247
+272
 00:13:49,346 --> 00:13:53,625
 sẽ được đường tới i rẻ hơn, mâu
 thuẫn với giả thiết tốt nhất.
 
-248
-00:13:53,665 --> 00:13:59,334
-Tính chất lời giải tốt nhất của bài lớn
-chứa lời giải tốt nhất của bài con được gọi
+273
+00:13:53,665 --> 00:13:58,440
+Tính chất lời giải tốt nhất của bài
+lớn chứa lời giải tốt nhất của bài
 
-249
-00:13:59,374 --> 00:14:00,917
-là cấu trúc con tối ưu.
+274
+00:13:58,480 --> 00:14:00,917
+con được gọi là cấu trúc con tối ưu.
 
-250
-00:14:00,957 --> 00:14:06,626
-Cấu trúc con tối ưu và bài toán con gối
-nhau là hai dấu hiệu để dùng quy hoạch động
+275
+00:14:00,957 --> 00:14:05,594
+Cấu trúc con tối ưu và bài toán con
+gối nhau là hai dấu hiệu để dùng
 
-251
-00:14:06,666 --> 00:14:07,658
-cho bài tối ưu.
+276
+00:14:05,634 --> 00:14:07,658
+quy hoạch động cho bài tối ưu.
 
-252
+277
 00:14:08,898 --> 00:14:12,292
 Đây là phần chính của chương
 trình NHAYDA hoàn chỉnh.
 
-253
+278
 00:14:12,332 --> 00:14:13,458
 Chú ý ba chi tiết.
 
-254
-00:14:13,498 --> 00:14:19,725
-Một, mảng ways có n cộng 1 phần tử, để
-dùng chỉ số từ 0 đến n đúng như công thức.
+279
+00:14:13,498 --> 00:14:16,200
+Một, mảng ways có n cộng 1 phần tử,
 
-255
+280
+00:14:16,240 --> 00:14:19,725
+để dùng chỉ số từ 0 đến
+n đúng như công thức.
+
+281
 00:14:19,765 --> 00:14:23,705
 Hai, phép lấy dư được thực
 hiện ngay sau mỗi phép cộng.
 
-256
+282
 00:14:23,745 --> 00:14:27,396
 Nếu đợi cộng xong mới lấy
 dư, số sẽ tràn rất nhanh,
 
-257
+283
 00:14:27,436 --> 00:14:30,725
 vì f của 100 đã có khoảng
 hai mươi sáu chữ số.
 
-258
-00:14:30,765 --> 00:14:35,891
-Ba, đá trơn được bỏ qua bằng lệnh
-continue, nên ô đó giữ nguyên giá trị 0.
+284
+00:14:30,765 --> 00:14:33,768
+Ba, đá trơn được bỏ
+qua bằng lệnh continue,
 
-259
-00:14:37,131 --> 00:14:38,016
+285
+00:14:33,808 --> 00:14:35,891
+nên ô đó giữ nguyên giá trị 0.
+
+286
+00:14:37,131 --> 00:14:38,023
 Mở rộng một:
 
-260
-00:14:38,056 --> 00:14:41,559
+287
+00:14:38,063 --> 00:14:41,593
 nếu mỗi bước được nhảy
 một độ dài thuộc tập S,
 
-261
-00:14:41,599 --> 00:14:47,258
-công thức là tổng f của i trừ s với s
-thuộc S, độ phức tạp O của n nhân k.
+288
+00:14:41,633 --> 00:14:45,163
+công thức là tổng f của
+i trừ s với s thuộc S,
 
-262
-00:14:47,298 --> 00:14:48,126
+289
+00:14:45,203 --> 00:14:47,258
+độ phức tạp O của n nhân k.
+
+290
+00:14:47,298 --> 00:14:48,131
 Mở rộng hai:
 
-263
-00:14:48,166 --> 00:14:52,103
+291
+00:14:48,171 --> 00:14:52,132
 ở bài này, các cách khác thứ
 tự được tính là khác nhau.
 
-264
-00:14:52,143 --> 00:14:57,455
-Nếu đề không kể thứ tự, ta cần trạng
-thái khác, đó là bài cái túi ở Bài 4.
+292
+00:14:52,172 --> 00:14:55,551
+Nếu đề không kể thứ tự,
+ta cần trạng thái khác,
 
-265
-00:14:57,495 --> 00:14:59,625
+293
+00:14:55,591 --> 00:14:57,442
+đó là bài cái túi ở Bài 4.
+
+294
+00:14:57,482 --> 00:14:59,625
 Đọc kĩ đề là kĩ năng sống còn.
 
-266
+295
 00:14:59,665 --> 00:15:00,485
 Mở rộng ba:
 
-267
+296
 00:15:00,525 --> 00:15:05,805
 nếu n lên tới mười mũ mười tám, ta
 dùng lũy thừa ma trận ba nhân ba,
 
-268
+297
 00:15:05,845 --> 00:15:07,291
 trình bày ở Bài 14.
 
-269
-00:15:07,331 --> 00:15:08,117
+298
+00:15:07,331 --> 00:15:08,122
 Mở rộng bốn:
 
-270
-00:15:08,157 --> 00:15:11,628
+299
+00:15:08,162 --> 00:15:11,652
 đệ quy có nhớ hữu ích khi
 thứ tự tính khó xác định,
 
-271
-00:15:11,668 --> 00:15:14,588
-hoặc chỉ một phần nhỏ trạng thái được dùng.
+300
+00:15:11,692 --> 00:15:14,628
+hoặc chỉ một phần nhỏ
+trạng thái được dùng.
 
-272
-00:15:14,628 --> 00:15:19,958
-Nhớ rằng độ sâu đệ quy từ khoảng mười
-mũ năm tầng đã có nguy cơ tràn ngăn xếp.
+301
+00:15:14,668 --> 00:15:19,335
+Nhớ rằng độ sâu đệ quy từ khoảng
+mười mũ năm tầng đã có nguy cơ tràn
 
-273
+302
+00:15:19,375 --> 00:15:19,958
+ngăn xếp.
+
+303
 00:15:21,198 --> 00:15:22,553
 Bẫy một: chỉ số âm.
 
-274
+304
 00:15:22,593 --> 00:15:27,691
 Truy cập ô stone trừ 3 khi stone nhỏ
 hơn 3 là lỗi truy cập ngoài mảng.
 
-275
-00:15:27,731 --> 00:15:28,299
+305
+00:15:27,731 --> 00:15:28,307
 Bẫy hai:
 
-276
-00:15:28,339 --> 00:15:33,691
-quên lấy dư hoặc lấy dư muộn, kết
-quả tràn số, sai ngay từ n khoảng 70.
+306
+00:15:28,347 --> 00:15:31,845
+quên lấy dư hoặc lấy dư
+muộn, kết quả tràn số,
 
-277
+307
+00:15:31,885 --> 00:15:33,691
+sai ngay từ n khoảng 70.
+
+308
 00:15:33,731 --> 00:15:34,228
 Bẫy ba:
 
-278
+309
 00:15:34,268 --> 00:15:36,221
 quên cơ sở f của 0 bằng 1.
 
-279
+310
 00:15:36,261 --> 00:15:41,358
 Nhiều bạn đặt bằng 0 vì chưa nhảy
 bước nào, và toàn bộ bảng bằng 0.
 
-280
+311
 00:15:41,398 --> 00:15:41,944
 Bẫy bốn:
 
-281
+312
 00:15:41,984 --> 00:15:45,750
 ở bài tối ưu, cộng phí vào
 ô vô cùng có thể tràn số.
 
-282
+313
 00:15:45,790 --> 00:15:48,458
-Luôn kiểm tra ô nguồn trước khi cộng.
+Luôn kiểm tra ô
+nguồn trước khi cộng.
 
-283
-00:15:49,698 --> 00:15:50,188
+314
+00:15:49,698 --> 00:15:50,195
 Ghi nhớ:
 
-284
-00:15:50,228 --> 00:15:55,423
-quy hoạch động bằng chia thành bài toán
-con, giải mỗi bài một lần, và lưu bảng.
+315
+00:15:50,235 --> 00:15:54,621
+quy hoạch động bằng chia thành bài
+toán con, giải mỗi bài một lần,
 
-285
-00:15:55,463 --> 00:16:00,658
-Dấu hiệu là bài toán con gối nhau, với
-bài tối ưu thì thêm cấu trúc con tối ưu.
+316
+00:15:54,661 --> 00:15:55,426
+và lưu bảng.
 
-286
+317
+00:15:55,466 --> 00:15:57,707
+Dấu hiệu là bài toán con gối nhau,
+
+318
+00:15:57,747 --> 00:16:00,658
+với bài tối ưu thì thêm
+cấu trúc con tối ưu.
+
+319
 00:16:00,698 --> 00:16:01,969
 Con đường nâng cấp:
 
-287
+320
 00:16:02,009 --> 00:16:04,521
-đệ quy, có nhớ, điền bảng, giữ vài ô.
+đệ quy, có nhớ, điền
+bảng, giữ vài ô.
 
-288
+321
 00:16:04,561 --> 00:16:07,143
-Và câu hỏi then chốt để tìm công thức:
+Và câu hỏi then chốt
+để tìm công thức:
 
-289
+322
 00:16:07,183 --> 00:16:08,591
 bước cuối cùng là gì?
 
-290
+323
 00:16:09,831 --> 00:16:11,310
 Câu hỏi tự kiểm tra:
 
-291
+324
 00:16:11,350 --> 00:16:15,410
 tính f của 6 trong bài nhảy
 đá, khi đá 2 và đá 4 trơn.
 
-292
+325
 00:16:15,450 --> 00:16:17,991
 Em hãy dừng video và thử tính nhé!
 
-293
+326
 00:16:18,031 --> 00:16:18,638
 Đáp án:
 
-294
+327
 00:16:18,678 --> 00:16:22,238
-bảng f lần lượt là 1, 1, 0, 2, 0, 2, 4.
+bảng f lần lượt là
+1, 1, 0, 2, 0, 2, 4.
 
-295
+328
 00:16:22,278 --> 00:16:23,991
 Vậy f của 6 bằng 4.
 
-296
+329
 00:16:24,031 --> 00:16:27,831
 Bài tiếp theo, chúng ta sẽ
 học quy hoạch động trên dãy.
 
-297
+330
 00:16:27,871 --> 00:16:29,158
 Hẹn gặp lại các em!

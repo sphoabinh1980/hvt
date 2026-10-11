@@ -7,463 +7,510 @@ Chào mừng các em đến với Bài 2:
 Quy hoạch động trên dãy.
 
 3
-00:00:04,033 --> 00:00:09,104
-Học xong bài này, em sẽ biết hai kiểu
-trạng thái quan trọng nhất trên dãy:
+00:00:04,033 --> 00:00:05,178
+Học xong bài này,
 
 4
-00:00:09,144 --> 00:00:11,660
-kết thúc tại i, và xét i phần tử đầu.
+00:00:05,218 --> 00:00:09,081
+em sẽ biết hai kiểu trạng
+thái quan trọng nhất trên dãy:
 
 5
-00:00:11,700 --> 00:00:16,586
-Em sẽ giải bài đoạn con có tổng lớn nhất
-trong O của n bằng thuật toán Kadane,
+00:00:09,121 --> 00:00:11,660
+kết thúc tại i, và
+xét i phần tử đầu.
 
 6
-00:00:16,626 --> 00:00:20,754
+00:00:11,700 --> 00:00:16,121
+Em sẽ giải bài đoạn con có tổng lớn
+nhất trong O của n bằng thuật toán
+
+7
+00:00:16,161 --> 00:00:16,568
+Kadane,
+
+8
+00:00:16,608 --> 00:00:20,774
 giải bài chọn các phần tử không
 kề nhau bằng lập luận chọn hay bỏ,
 
-7
-00:00:20,794 --> 00:00:25,427
-và biết cách thêm một chiều vào trạng
-thái khi trạng thái thiếu thông tin.
+9
+00:00:20,814 --> 00:00:25,172
+và biết cách thêm một chiều vào
+trạng thái khi trạng thái thiếu thông
 
-8
+10
+00:00:25,212 --> 00:00:25,427
+tin.
+
+11
 00:00:26,667 --> 00:00:30,883
 Một cửa hàng ghi lại lãi, là
 số dương, hoặc lỗ, là số âm,
 
-9
+12
 00:00:30,923 --> 00:00:33,048
 của từng ngày trong tám ngày:
 
-10
-00:00:33,088 --> 00:00:35,960
-trừ 2, 3, trừ 1, 4, trừ 7, 2, 5, trừ 3.
-
-11
-00:00:36,000 --> 00:00:41,275
-Chủ cửa hàng muốn chọn một chuỗi ngày liên
-tiếp để viết báo cáo thời kì kinh doanh
-
-12
-00:00:41,315 --> 00:00:44,127
-tốt nhất, tức là chuỗi có tổng lãi lớn nhất.
-
 13
+00:00:33,088 --> 00:00:35,960
+trừ 2, 3, trừ 1, 4,
+trừ 7, 2, 5, trừ 3.
+
+14
+00:00:36,000 --> 00:00:40,367
+Chủ cửa hàng muốn chọn một chuỗi
+ngày liên tiếp để viết báo cáo thời
+
+15
+00:00:40,407 --> 00:00:44,127
+kì kinh doanh tốt nhất, tức
+là chuỗi có tổng lãi lớn nhất.
+
+16
 00:00:44,167 --> 00:00:45,293
 Em chọn chuỗi nào?
 
-14
-00:00:45,333 --> 00:00:50,993
-Nhiều bạn sẽ khoanh từ ngày 2 đến ngày
-4, tổng bằng 6, vì có hai số dương lớn.
+17
+00:00:45,333 --> 00:00:49,291
+Nhiều bạn sẽ khoanh từ ngày
+2 đến ngày 4, tổng bằng 6,
 
-15
+18
+00:00:49,331 --> 00:00:50,993
+vì có hai số dương lớn.
+
+19
 00:00:51,033 --> 00:00:53,032
 Nhưng hãy nhìn kĩ cuối dãy!
 
-16
+20
 00:00:53,072 --> 00:00:57,260
 Ngày 6 và ngày 7 cho tổng 2
 cộng 5, bằng 7, còn lớn hơn.
 
-17
+21
 00:00:58,500 --> 00:01:01,460
 Phát biểu tổng quát, ta
 có bài toán LOINHUAN:
 
-18
+22
 00:01:01,500 --> 00:01:04,193
-cho dãy n số nguyên là lãi lỗ của n ngày.
+cho dãy n số nguyên
+là lãi lỗ của n ngày.
 
-19
+23
 00:01:04,233 --> 00:01:08,127
 Hãy tìm một đoạn ngày liên tiếp
 khác rỗng có tổng lớn nhất.
 
-20
+24
 00:01:08,167 --> 00:01:09,460
 n lên tới một triệu.
 
-21
+25
 00:01:09,500 --> 00:01:12,660
 Ví dụ một là dãy vừa rồi, đáp án 7.
 
-22
-00:01:12,700 --> 00:01:15,583
-Ví dụ hai nhắc ta một chi tiết dễ quên:
-
-23
-00:01:15,623 --> 00:01:18,656
-dãy trừ 5, trừ 1, trừ 8, đáp án là trừ 1.
-
-24
-00:01:18,696 --> 00:01:21,879
-Đoạn phải khác rỗng, nên khi mọi số đều âm,
-
-25
-00:01:21,919 --> 00:01:25,027
-đáp án là số âm lớn nhất chứ không phải 0.
-
 26
+00:01:12,700 --> 00:01:15,583
+Ví dụ hai nhắc ta
+một chi tiết dễ quên:
+
+27
+00:01:15,623 --> 00:01:18,656
+dãy trừ 5, trừ 1, trừ
+8, đáp án là trừ 1.
+
+28
+00:01:18,696 --> 00:01:21,879
+Đoạn phải khác rỗng,
+nên khi mọi số đều âm,
+
+29
+00:01:21,919 --> 00:01:25,027
+đáp án là số âm lớn
+nhất chứ không phải 0.
+
+30
 00:01:26,267 --> 00:01:30,812
 Một đoạn được xác định bởi ngày
 bắt đầu l và ngày kết thúc r.
 
-27
+31
 00:01:30,852 --> 00:01:33,893
-Cách đơn giản nhất là thử mọi cặp l và r.
+Cách đơn giản nhất là
+thử mọi cặp l và r.
 
-28
+32
 00:01:33,933 --> 00:01:35,250
 Khéo hơn một chút:
 
-29
-00:01:35,290 --> 00:01:41,431
-khi cố định l và tăng dần r, tổng đoạn từ
-l đến r bằng tổng đoạn từ l đến r trừ 1,
+33
+00:01:35,290 --> 00:01:37,361
+khi cố định l và tăng dần r,
 
-30
-00:01:41,471 --> 00:01:42,487
-cộng thêm a r.
+34
+00:01:37,401 --> 00:01:42,487
+tổng đoạn từ l đến r bằng tổng đoạn
+từ l đến r trừ 1, cộng thêm a r.
 
-31
+35
 00:01:42,527 --> 00:01:45,427
-Nhờ vậy mỗi đoạn chỉ tốn một phép cộng.
+Nhờ vậy mỗi đoạn chỉ
+tốn một phép cộng.
 
-32
+36
 00:01:45,467 --> 00:01:49,193
 Đây là code thử mọi đoạn
 trong O của n bình phương.
 
-33
+37
 00:01:49,833 --> 00:01:51,140
 Đếm số phép tính:
 
-34
+38
 00:01:51,180 --> 00:01:53,993
 với l bằng 1, vòng trong chạy n lần;
 
-35
+39
 00:01:54,033 --> 00:01:56,370
 với l bằng 2 chạy n trừ 1 lần;
 
-36
+40
 00:01:56,410 --> 00:01:58,827
 cứ thế đến l bằng n chạy 1 lần.
 
-37
+41
 00:01:58,867 --> 00:02:03,510
 Tổng cộng n nhân n cộng 1 chia
 2 lần, cỡ n bình phương chia 2.
 
-38
+42
 00:02:03,550 --> 00:02:05,927
 Độ phức tạp O của n bình phương.
 
-39
+43
 00:02:05,967 --> 00:02:09,617
 Với n bằng mười nghìn, khoảng
 năm mươi triệu phép, chạy kịp.
 
-40
+44
 00:02:09,657 --> 00:02:13,860
 Nhưng với n bằng một triệu, khoảng
 năm trăm tỉ phép, cần gần một giờ!
 
-41
+45
 00:02:14,500 --> 00:02:14,926
 Bế tắc!
 
-42
+46
 00:02:14,966 --> 00:02:17,918
 Có tới n nhân n cộng 1
 chia 2 đoạn khác nhau,
 
-43
-00:02:17,958 --> 00:02:20,579
-và cách làm trên chạm vào từng đoạn một.
+47
+00:02:17,958 --> 00:02:21,643
+và cách làm trên chạm vào
+từng đoạn một. Muốn nhanh hơn,
 
-44
-00:02:20,619 --> 00:02:25,434
-Muốn nhanh hơn, ta phải tìm được đáp
-án mà không cần xét riêng từng đoạn.
+48
+00:02:21,683 --> 00:02:25,434
+ta phải tìm được đáp án mà
+không cần xét riêng từng đoạn.
 
-45
+49
 00:02:25,474 --> 00:02:28,493
 Nhưng làm sao biết đoạn
 nào tốt nếu không thử?
 
-46
+50
 00:02:29,733 --> 00:02:30,363
 Bước một:
 
-47
+51
 00:02:30,403 --> 00:02:32,150
 theo thói quen từ Bài 1,
 
-48
+52
 00:02:32,190 --> 00:02:37,360
 ta thử đặt F của i là tổng lớn nhất
 của một đoạn nằm trong i ngày đầu.
 
-49
+53
 00:02:37,400 --> 00:02:39,143
 Để tính F của i, ta hỏi:
 
-50
+54
 00:02:39,183 --> 00:02:43,006
 đoạn tốt nhất trong i ngày
 đầu có chứa ngày i không?
 
-51
+55
 00:02:43,046 --> 00:02:46,127
-Nếu không chứa, nó chính là F của i trừ 1.
+Nếu không chứa, nó
+chính là F của i trừ 1.
 
-52
-00:02:46,167 --> 00:02:49,944
+56
+00:02:46,167 --> 00:02:49,963
 Nếu có chứa, nó là một đoạn
 kết thúc đúng tại ngày i.
 
-53
-00:02:49,984 --> 00:02:55,634
-Nhưng F của i trừ 1 không cho ta biết gì
-về các đoạn kết thúc tại ngày i trừ 1,
+57
+00:02:50,003 --> 00:02:55,031
+Nhưng F của i trừ 1 không cho ta
+biết gì về các đoạn kết thúc tại ngày
 
-54
-00:02:55,674 --> 00:03:00,460
-vì đoạn tốt nhất có thể nằm tận
-đầu dãy, không nối được với ngày i!
+58
+00:02:55,071 --> 00:02:58,578
+i trừ 1, vì đoạn tốt nhất
+có thể nằm tận đầu dãy,
 
-55
+59
+00:02:58,618 --> 00:03:00,460
+không nối được với ngày i!
+
+60
 00:03:00,500 --> 00:03:02,445
 Trạng thái F thiếu thông tin:
 
-56
+61
 00:03:02,485 --> 00:03:06,142
 nó nhớ đoạn tốt nhất nhưng
 quên mất đoạn ấy nằm ở đâu.
 
-57
+62
 00:03:06,182 --> 00:03:08,127
 Đây là lúc ta đổi trạng thái.
 
-58
+63
 00:03:09,367 --> 00:03:09,976
 Bước hai:
 
-59
+64
 00:03:10,016 --> 00:03:15,027
 đặt best của i là tổng lớn nhất của
 một đoạn kết thúc đúng tại ngày i.
 
-60
+65
 00:03:15,067 --> 00:03:18,893
 Một đoạn kết thúc tại ngày
 i chỉ có hai dạng. Cách A:
 
-61
+66
 00:03:18,933 --> 00:03:20,498
 đoạn dài hơn một ngày,
 
-62
+67
 00:03:20,538 --> 00:03:25,020
 tức là một đoạn kết thúc tại
 ngày i trừ 1 rồi nối thêm ngày i.
 
-63
+68
 00:03:25,060 --> 00:03:29,032
 Tốt nhất là nối vào đoạn tốt
 nhất kết thúc tại i trừ 1,
 
-64
+69
 00:03:29,072 --> 00:03:31,293
 được best của i trừ 1 cộng a i.
 
-65
+70
 00:03:31,333 --> 00:03:31,854
 Cách B:
 
-66
+71
 00:03:31,894 --> 00:03:35,060
-đoạn chỉ gồm đúng ngày i, tổng bằng a i.
+đoạn chỉ gồm đúng
+ngày i, tổng bằng a i.
 
-67
+72
 00:03:35,100 --> 00:03:38,067
-Ta được công thức của thuật toán Kadane:
+Ta được công thức của
+thuật toán Kadane:
 
-68
+73
 00:03:38,107 --> 00:03:42,427
 best của i bằng max của a i,
 và best của i trừ 1 cộng a i.
 
-69
+74
 00:03:42,467 --> 00:03:43,737
 Diễn giải bằng lời:
 
-70
+75
 00:03:43,777 --> 00:03:48,357
 nếu đoạn tốt nhất kết thúc tại ngày
 trước có tổng âm thì vứt nó đi,
 
-71
+76
 00:03:48,397 --> 00:03:49,874
 bắt đầu lại từ ngày i;
 
-72
+77
 00:03:49,914 --> 00:03:51,460
 ngược lại thì nối tiếp.
 
-73
+78
 00:03:51,500 --> 00:03:54,658
 Vì mọi đoạn đều kết thúc
 tại một ngày nào đó,
 
-74
+79
 00:03:54,698 --> 00:03:59,136
 đoạn tốt nhất của cả dãy là đoạn
 tốt nhất trong các best của i.
 
-75
+80
 00:03:59,176 --> 00:04:03,827
 Đó là lí do đáp án là max của cả
 bảng, chứ không phải ô cuối cùng.
 
-76
+81
 00:04:05,067 --> 00:04:05,583
 Bước ba:
 
-77
+82
 00:04:05,623 --> 00:04:06,972
 chạy tay trên ví dụ.
 
-78
+83
 00:04:07,012 --> 00:04:09,960
-Hàng trên là dãy a, hàng dưới là bảng best.
+Hàng trên là dãy a,
+hàng dưới là bảng best.
 
-79
+84
 00:04:10,000 --> 00:04:14,060
 Màu xanh lá là bắt đầu đoạn
 mới, màu xanh dương là nối dài.
 
-80
+85
 00:04:14,100 --> 00:04:16,993
 best của 1 bằng a 1, bằng trừ 2.
 
-81
+86
 00:04:17,033 --> 00:04:20,939
 best của 2 bằng max của 3,
 và trừ 2 cộng 3. Bằng 3:
 
-82
+87
 00:04:20,979 --> 00:04:25,193
 đoạn trước có tổng âm nên bỏ
 đi, bắt đầu lại từ ngày 2.
 
-83
+88
 00:04:25,233 --> 00:04:30,060
 best của 3 bằng max của trừ 1,
 và 3 trừ 1. Bằng 2, nối dài.
 
-84
+89
 00:04:30,100 --> 00:04:33,167
-best của 4 bằng max của 4, và 2 cộng 4.
+best của 4 bằng max
+của 4, và 2 cộng 4.
 
-85
+90
 00:04:33,207 --> 00:04:36,593
-Bằng 6, nối dài, ứng với đoạn ngày 2 đến 4.
+Bằng 6, nối dài, ứng
+với đoạn ngày 2 đến 4.
 
-86
+91
 00:04:36,633 --> 00:04:40,949
 best của 5 bằng max của trừ
 7, và 6 trừ 7. Bằng trừ 1:
 
-87
+92
 00:04:40,989 --> 00:04:43,127
 vẫn nối dài, dù tổng đã âm.
 
-88
+93
 00:04:43,167 --> 00:04:47,087
 best của 6 bằng max của 2,
 và trừ 1 cộng 2. Bằng 2:
 
-89
+94
 00:04:47,127 --> 00:04:49,960
-đoạn trước âm, bắt đầu lại từ ngày 6.
+đoạn trước âm, bắt
+đầu lại từ ngày 6.
 
-90
+95
 00:04:50,000 --> 00:04:53,723
 best của 7 bằng max của
 5, và 2 cộng 5. Bằng 7:
 
-91
+96
 00:04:53,763 --> 00:04:57,327
 đây là ô lớn nhất, ứng
 với đoạn ngày 6 đến 7.
 
-92
+97
 00:04:57,367 --> 00:05:01,660
 best của 8 bằng max của
 trừ 3, và 7 trừ 3, bằng 4.
 
-93
-00:05:01,700 --> 00:05:04,740
-Đáp án là max của cả bảng: 7, ở ngày 7.
+98
+00:05:01,700 --> 00:05:04,768
+Đáp án là max của cả
+bảng: 7, ở ngày 7.
 
-94
-00:05:04,780 --> 00:05:10,427
+99
+00:05:04,808 --> 00:05:07,558
 Chú ý ô cuối best của 8 chỉ bằng 4,
+
+100
+00:05:07,598 --> 00:05:10,427
 nên không thể lấy ô cuối làm đáp án.
 
-95
+101
 00:05:11,667 --> 00:05:13,377
 Vì sao best của i đúng?
 
-96
-00:05:13,417 --> 00:05:15,584
-Xét đoạn tốt nhất từ l đến i.
+102
+00:05:13,417 --> 00:05:16,878
+Xét đoạn tốt nhất từ l
+đến i. Nếu l nhỏ hơn i,
 
-97
-00:05:15,624 --> 00:05:21,824
-Nếu l nhỏ hơn i, phần từ l đến i trừ 1
-phải là đoạn tốt nhất kết thúc tại i trừ 1,
+103
+00:05:16,918 --> 00:05:21,824
+phần từ l đến i trừ 1 phải là đoạn
+tốt nhất kết thúc tại i trừ 1,
 
-98
+104
 00:05:21,864 --> 00:05:26,847
 vì nếu có đoạn tổng lớn hơn, thay
 vào sẽ được đoạn tốt hơn, vô lí.
 
-99
+105
 00:05:26,887 --> 00:05:29,054
 Nếu l bằng i thì tổng là a i.
 
-100
+106
 00:05:29,094 --> 00:05:31,793
 Vậy lấy max của hai giá trị là đúng.
 
-101
-00:05:31,833 --> 00:05:36,783
+107
+00:05:31,833 --> 00:05:36,813
 Ô best của i chỉ phụ thuộc best của
 i trừ 1, nên ta chỉ cần một biến,
 
-102
-00:05:36,823 --> 00:05:38,591
+108
+00:05:36,853 --> 00:05:38,631
 vừa đọc dữ liệu vừa tính.
 
-103
-00:05:38,631 --> 00:05:44,160
-Ngày đầu tiên được xử lí riêng, để đáp
-án khởi đầu bằng a 1 chứ không phải 0.
+109
+00:05:38,671 --> 00:05:40,886
+Ngày đầu tiên được xử lí riêng,
 
-104
+110
+00:05:40,926 --> 00:05:44,160
+để đáp án khởi đầu bằng
+a 1 chứ không phải 0.
+
+111
 00:05:44,200 --> 00:05:47,752
 Độ phức tạp O của n thời
 gian và O của 1 bộ nhớ.
 
-105
+112
 00:05:47,792 --> 00:05:52,093
 Tổng có thể tới mười mũ mười
 lăm, nên phải dùng long long.
