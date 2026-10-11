@@ -1,0 +1,822 @@
+1
+00:00:00,000 --> 00:00:02,013
+Chào mừng các em đến với Bài 9:
+
+2
+00:00:02,053 --> 00:00:05,127
+Quy hoạch động trạng thái
+tập con, hay bitmask.
+
+3
+00:00:05,167 --> 00:00:06,245
+Học xong bài này,
+
+4
+00:00:06,285 --> 00:00:10,782
+em sẽ biểu diễn một tập con bằng
+một số nguyên và thành thạo các phép
+
+5
+00:00:10,822 --> 00:00:11,374
+toán bit,
+
+6
+00:00:11,414 --> 00:00:15,911
+rồi dùng tập con làm trạng thái khi
+lời giải phụ thuộc vào những phần
+
+7
+00:00:15,951 --> 00:00:17,227
+tử nào đã được dùng.
+
+8
+00:00:17,267 --> 00:00:21,748
+Em sẽ giải bài ghép cặp tối ưu,
+bài đếm đường đi qua mọi đỉnh,
+
+9
+00:00:21,788 --> 00:00:26,560
+và biết duyệt mọi tập con của một
+tập con trong tổng O của 3 mũ n.
+
+10
+00:00:27,800 --> 00:00:32,070
+Lớp em có 20 bạn, cần chia
+thành 10 cặp làm bài thí nghiệm.
+
+11
+00:00:32,110 --> 00:00:36,014
+Thầy giáo có bảng điểm độ
+không hợp giữa từng hai bạn,
+
+12
+00:00:36,054 --> 00:00:39,593
+và muốn tổng độ không hợp
+của 10 cặp là nhỏ nhất.
+
+13
+00:00:39,633 --> 00:00:43,911
+Số cách chia 20 bạn thành 10
+cặp là 19 nhân 17 nhân 15,
+
+14
+00:00:43,951 --> 00:00:48,542
+cho tới 3 nhân 1, bằng hơn sáu
+trăm năm mươi tư triệu cách.
+
+15
+00:00:48,582 --> 00:00:50,034
+Thử hết được không?
+
+16
+00:00:50,074 --> 00:00:52,781
+Máy tính nhanh cũng mất nhiều giây.
+
+17
+00:00:52,821 --> 00:00:55,293
+Còn 24 bạn thì gấp thêm 483 lần.
+
+18
+00:00:55,333 --> 00:00:56,286
+Nhưng nhìn lại:
+
+19
+00:00:56,326 --> 00:00:57,941
+khi đã ghép xong vài cặp,
+
+20
+00:00:57,981 --> 00:01:02,310
+điều duy nhất quan trọng cho phần
+còn lại là những bạn nào đã được
+
+21
+00:01:02,350 --> 00:01:04,494
+ghép, chứ không phải ghép với ai.
+
+22
+00:01:04,534 --> 00:01:07,341
+Có bao nhiêu tập các
+bạn đã ghép khác nhau?
+
+23
+00:01:07,381 --> 00:01:09,327
+Chỉ 2 mũ 20, khoảng một triệu.
+
+24
+00:01:10,567 --> 00:01:12,605
+Với n phần tử đánh số từ 0,
+
+25
+00:01:12,645 --> 00:01:17,378
+mỗi tập con S được biểu diễn
+bằng một số nguyên mask có n bit:
+
+26
+00:01:17,418 --> 00:01:21,227
+bit thứ i bằng 1 khi và
+chỉ khi phần tử i thuộc S.
+
+27
+00:01:21,267 --> 00:01:24,491
+Ví dụ số 11, viết nhị phân là 1011.
+
+28
+00:01:24,531 --> 00:01:29,993
+Bit 0, bit 1 và bit 3 bằng 1,
+nên nó biểu diễn tập 0, 1, 3.
+
+29
+00:01:30,033 --> 00:01:35,427
+Có 2 mũ n tập con, ứng với
+các số từ 0 đến 2 mũ n trừ 1.
+
+30
+00:01:36,667 --> 00:01:38,417
+Các phép toán bit cơ bản:
+
+31
+00:01:38,457 --> 00:01:41,567
+kiểm tra phần tử i bằng
+dịch phải rồi AND 1.
+
+32
+00:01:41,607 --> 00:01:44,502
+Thêm phần tử i bằng
+OR với 1 dịch trái i.
+
+33
+00:01:44,542 --> 00:01:47,008
+Bỏ phần tử i bằng AND với phủ định.
+
+34
+00:01:47,048 --> 00:01:48,727
+Đổi trạng thái bằng XOR.
+
+35
+00:01:48,767 --> 00:01:51,166
+Đếm số phần tử bằng hàm popcount.
+
+36
+00:01:51,206 --> 00:01:54,492
+Tập đầy đủ n phần tử là
+1 dịch trái n, trừ 1.
+
+37
+00:01:54,532 --> 00:01:57,227
+Bit 1 thấp nhất là
+mask AND trừ mask.
+
+38
+00:01:57,267 --> 00:02:00,197
+Một tính chất quan trọng
+cho quy hoạch động:
+
+39
+00:02:00,237 --> 00:02:04,922
+nếu T là tập con thực sự của S thì
+số biểu diễn T nhỏ hơn số biểu diễn
+
+40
+00:02:04,962 --> 00:02:05,057
+S.
+
+41
+00:02:05,097 --> 00:02:08,567
+Vậy nếu mỗi bước chuyển
+trạng thái chỉ thêm phần tử,
+
+42
+00:02:08,607 --> 00:02:10,727
+ta điền bảng theo mask tăng dần.
+
+43
+00:02:11,967 --> 00:02:13,193
+Bài toán GHEPDOI:
+
+44
+00:02:13,233 --> 00:02:14,833
+có n học sinh, n chẵn.
+
+45
+00:02:14,873 --> 00:02:18,782
+Ghép học sinh i với học sinh
+j có độ không hợp c i j.
+
+46
+00:02:18,822 --> 00:02:23,476
+Hãy chia thành n chia 2 cặp sao
+cho tổng độ không hợp nhỏ nhất.
+
+47
+00:02:23,516 --> 00:02:24,593
+n không quá 20.
+
+48
+00:02:24,633 --> 00:02:28,360
+Ví dụ bốn bạn với ma trận
+độ không hợp như sau.
+
+49
+00:02:28,400 --> 00:02:30,816
+Tham lam chọn cặp rẻ nhất trước:
+
+50
+00:02:30,856 --> 00:02:32,274
+cặp 0, 2 chỉ tốn 1.
+
+51
+00:02:32,314 --> 00:02:35,727
+Còn lại bắt buộc ghép
+1 với 3, tốn 5. Tổng 6.
+
+52
+00:02:35,767 --> 00:02:40,593
+Nhưng ghép 0 với 3, và 1 với
+2, chỉ tốn 3 cộng 2, bằng 5!
+
+53
+00:02:41,833 --> 00:02:42,969
+Ý tưởng ngây thơ:
+
+54
+00:02:43,009 --> 00:02:44,559
+để không liệt kê trùng,
+
+55
+00:02:44,599 --> 00:02:48,292
+mỗi bước lấy bạn có số thứ
+tự nhỏ nhất chưa được ghép,
+
+56
+00:02:48,332 --> 00:02:51,127
+rồi thử ghép bạn ấy
+với từng bạn còn lại.
+
+57
+00:02:51,167 --> 00:02:55,166
+Số cách ghép là n trừ 1,
+nhân n trừ 3, cho tới 1.
+
+58
+00:02:55,206 --> 00:02:57,063
+Với 10 bạn có 945 cách;
+
+59
+00:02:57,103 --> 00:02:58,794
+16 bạn hơn hai triệu;
+
+60
+00:02:58,834 --> 00:03:01,680
+20 bạn hơn sáu trăm năm mươi triệu:
+
+61
+00:03:01,720 --> 00:03:03,493
+quá giới hạn một giây.
+
+62
+00:03:03,533 --> 00:03:04,013
+Bế tắc!
+
+63
+00:03:04,053 --> 00:03:09,132
+Hai cách ghép khác nhau, 0 với 1
+rồi 2 với 3, và 0 với 2 rồi 1 với 3,
+
+64
+00:03:09,172 --> 00:03:11,507
+đều dẫn tới cùng một tình huống:
+
+65
+00:03:11,547 --> 00:03:16,181
+bốn bạn đầu đã có cặp, phần còn
+lại cần ghép tối ưu y như nhau.
+
+66
+00:03:16,221 --> 00:03:18,927
+Làm sao nhớ theo
+tập các bạn đã ghép?
+
+67
+00:03:20,167 --> 00:03:20,753
+Bước một:
+
+68
+00:03:20,793 --> 00:03:25,484
+đặt best của mask là tổng độ không
+hợp nhỏ nhất để ghép cặp đúng các
+
+69
+00:03:25,524 --> 00:03:26,806
+bạn thuộc tập mask.
+
+70
+00:03:26,846 --> 00:03:28,893
+Đáp án là best của tập đầy đủ.
+
+71
+00:03:28,933 --> 00:03:29,498
+Bước hai:
+
+72
+00:03:29,538 --> 00:03:31,714
+công thức kiểu đẩy về phía trước.
+
+73
+00:03:31,754 --> 00:03:35,945
+Từ một trạng thái đã biết, đẩy
+kết quả sang các trạng thái sau.
+
+74
+00:03:35,985 --> 00:03:39,504
+Từ mask, gọi i là bạn có số
+nhỏ nhất chưa thuộc mask.
+
+75
+00:03:39,544 --> 00:03:42,929
+Bạn i phải được ghép với
+một bạn j chưa thuộc mask:
+
+76
+00:03:42,969 --> 00:03:47,093
+cập nhật best của mask hợp i, j
+bằng best của mask cộng c i j.
+
+77
+00:03:47,133 --> 00:03:50,095
+Vì sao chỉ cần xét bạn
+i nhỏ nhất chưa ghép?
+
+78
+00:03:50,135 --> 00:03:52,961
+Vì bạn i dù sớm hay
+muộn cũng phải có cặp;
+
+79
+00:03:53,001 --> 00:03:57,191
+quyết định cặp của i ngay bây
+giờ không làm mất cách ghép nào,
+
+80
+00:03:57,231 --> 00:04:01,693
+mà lại tránh được việc một cách
+ghép bị sinh ra theo nhiều thứ tự.
+
+81
+00:04:03,433 --> 00:04:05,659
+Từ best của 0000 bằng 0:
+
+82
+00:04:05,699 --> 00:04:10,757
+bạn 0 là bạn nhỏ nhất chưa
+ghép, ghép với 1, 2 hoặc 3:
+
+83
+00:04:10,797 --> 00:04:16,893
+best của 0011 bằng 4, best của
+0101 bằng 1, best của 1001 bằng 3.
+
+84
+00:04:17,233 --> 00:04:22,501
+Từ 0011, bạn nhỏ nhất chưa
+ghép là 2, chỉ ghép được với 3:
+
+85
+00:04:22,541 --> 00:04:26,527
+ứng viên 4 cộng 6 bằng
+10 cho best của 1111.
+
+86
+00:04:26,567 --> 00:04:29,257
+Từ 0101, bạn 0 và 2 đã ghép:
+
+87
+00:04:29,297 --> 00:04:33,060
+ghép 1 với 3, ứng
+viên 1 cộng 5 bằng 6.
+
+88
+00:04:33,100 --> 00:04:35,790
+Từ 1001, bạn 0 và 3 đã ghép:
+
+89
+00:04:35,830 --> 00:04:39,593
+ghép 1 với 2, ứng
+viên 3 cộng 2 bằng 5.
+
+90
+00:04:39,633 --> 00:04:44,942
+best của 1111 bằng min của 10,
+6, 5, bằng 5. Đường tốt nhất:
+
+91
+00:04:44,982 --> 00:04:47,260
+ghép 0 với 3, rồi 1 với 2.
+
+92
+00:04:48,500 --> 00:04:48,771
+Code:
+
+93
+00:04:48,811 --> 00:04:52,062
+duyệt mask tăng dần, bỏ qua
+trạng thái chưa tới được.
+
+94
+00:04:52,102 --> 00:04:55,105
+Tìm bạn first nhỏ nhất
+chưa ghép bằng vòng while,
+
+95
+00:04:55,145 --> 00:04:58,893
+rồi thử mọi bạn j chưa ghép,
+đẩy kết quả sang trạng thái mới.
+
+96
+00:04:58,933 --> 00:05:02,661
+Có 2 mũ n trạng thái, mỗi
+trạng thái thử tối đa n bạn:
+
+97
+00:05:02,701 --> 00:05:04,057
+O của 2 mũ n nhân n.
+
+98
+00:05:04,097 --> 00:05:06,988
+Với n bằng 20, khoảng
+hai mươi triệu phép,
+
+99
+00:05:07,028 --> 00:05:09,081
+chạy trong vài chục mili giây.
+
+100
+00:05:09,121 --> 00:05:10,337
+Và quan trọng hơn:
+
+101
+00:05:10,377 --> 00:05:14,454
+khi n tăng thêm 2, quy hoạch
+động chỉ chậm đi khoảng 4 lần,
+
+102
+00:05:14,494 --> 00:05:16,827
+còn quay lui chậm đi khoảng n lần.
+
+103
+00:05:18,067 --> 00:05:22,417
+Một dạng bitmask kinh điển khác
+cần nhớ thêm đang đứng ở đâu.
+
+104
+00:05:22,457 --> 00:05:25,512
+Cho đồ thị có hướng n
+đỉnh, n không quá 18.
+
+105
+00:05:25,552 --> 00:05:28,606
+Đếm số đường đi từ đỉnh
+0 tới đỉnh n trừ 1,
+
+106
+00:05:28,646 --> 00:05:30,693
+đi qua mỗi đỉnh đúng một lần.
+
+107
+00:05:30,733 --> 00:05:33,681
+Chỉ biết tập các đỉnh
+đã đi qua là chưa đủ:
+
+108
+00:05:33,721 --> 00:05:38,198
+để đi tiếp, ta cần biết đỉnh cuối
+cùng để biết có cạnh nào đi ra.
+
+109
+00:05:38,238 --> 00:05:40,560
+Vậy trạng thái gồm hai thành phần.
+
+110
+00:05:40,600 --> 00:05:44,004
+ways của mask, v là số
+đường đi xuất phát từ 0,
+
+111
+00:05:44,044 --> 00:05:47,740
+đi qua đúng các đỉnh thuộc
+mask, và kết thúc tại v.
+
+112
+00:05:47,780 --> 00:05:51,257
+Nó bằng tổng ways của
+mask bỏ v, kết thúc tại u,
+
+113
+00:05:51,297 --> 00:05:53,529
+với mọi cạnh từ u đến v. Cơ sở:
+
+114
+00:05:53,569 --> 00:05:55,727
+tập chỉ có đỉnh 0 có một cách.
+
+115
+00:05:56,967 --> 00:06:01,260
+Minh họa với một đồ thị nhỏ
+bốn đỉnh và sáu cạnh có hướng.
+
+116
+00:06:01,300 --> 00:06:03,627
+Đường thứ nhất: 0, 1, 2, 3.
+
+117
+00:06:03,667 --> 00:06:05,547
+Đường thứ hai: 0, 2, 1, 3.
+
+118
+00:06:05,587 --> 00:06:07,393
+Không còn đường nào khác.
+
+119
+00:06:07,433 --> 00:06:12,058
+Bảng quy hoạch động cho ways của
+tập đầy đủ, kết thúc tại đỉnh 3,
+
+120
+00:06:12,098 --> 00:06:12,560
+bằng 2.
+
+121
+00:06:12,600 --> 00:06:17,067
+Có 2 mũ n nhân n trạng thái, mỗi
+trạng thái xét tối đa n cạnh vào:
+
+122
+00:06:17,107 --> 00:06:19,252
+O của 2 mũ n nhân n bình phương.
+
+123
+00:06:19,292 --> 00:06:22,325
+Đổi phép cộng thành phép
+min với độ dài cạnh,
+
+124
+00:06:22,365 --> 00:06:24,442
+ta được bài toán người du lịch,
+
+125
+00:06:24,482 --> 00:06:27,993
+một trong những bài toán
+nổi tiếng nhất của tin học.
+
+126
+00:06:29,233 --> 00:06:29,523
+Code:
+
+127
+00:06:29,563 --> 00:06:31,436
+chỉ xét các mask chứa đỉnh 0.
+
+128
+00:06:31,476 --> 00:06:35,527
+Với mỗi đỉnh cuối last thuộc
+mask, bỏ last ra được tập before,
+
+129
+00:06:35,567 --> 00:06:38,825
+rồi cộng dồn từ mọi đỉnh
+from có cạnh đi vào last.
+
+130
+00:06:38,865 --> 00:06:41,860
+Với n bằng 18, khoảng
+tám mươi lăm triệu phép.
+
+131
+00:06:43,100 --> 00:06:46,141
+Có những bài cần chia
+một tập thành nhiều nhóm,
+
+132
+00:06:46,181 --> 00:06:48,501
+ví dụ chia n công việc cho các ngày,
+
+133
+00:06:48,541 --> 00:06:51,648
+mỗi ngày làm một nhóm
+việc có chi phí cho trước.
+
+134
+00:06:51,688 --> 00:06:52,893
+Công thức tự nhiên:
+
+135
+00:06:52,933 --> 00:06:56,827
+f của mask bằng min theo mọi
+tập con khác rỗng sub của mask.
+
+136
+00:06:56,867 --> 00:07:01,074
+Mẹo duyệt mọi tập con của mask,
+từ lớn đến nhỏ, rất ngắn gọn:
+
+137
+00:07:01,114 --> 00:07:03,093
+sub bằng sub trừ 1, AND mask.
+
+138
+00:07:03,133 --> 00:07:06,448
+Ví dụ mask bằng 1010. Lần lượt:
+
+139
+00:07:06,488 --> 00:07:11,860
+1010, rồi 1000, rồi 0010,
+rồi dừng khi sub bằng 0.
+
+140
+00:07:11,900 --> 00:07:16,464
+Tổng số cặp mask và sub với sub
+là tập con của mask là 3 mũ n,
+
+141
+00:07:16,504 --> 00:07:19,508
+vì mỗi phần tử ở một
+trong ba trạng thái.
+
+142
+00:07:19,548 --> 00:07:23,369
+Với n bằng 15, khoảng mười
+bốn triệu, vẫn rất nhanh;
+
+143
+00:07:23,409 --> 00:07:25,893
+n bằng 20 thì hơn ba tỉ, quá chậm.
+
+144
+00:07:27,133 --> 00:07:27,853
+Mở rộng một:
+
+145
+00:07:27,893 --> 00:07:31,337
+đếm số cách lát bảng bằng
+gạch domino, với số hàng nhỏ:
+
+146
+00:07:31,377 --> 00:07:32,287
+duyệt từng cột,
+
+147
+00:07:32,327 --> 00:07:36,467
+trạng thái là dãy bit cho biết
+những ô nào của cột tiếp theo đã bị
+
+148
+00:07:36,507 --> 00:07:37,797
+gạch nằm ngang chiếm.
+
+149
+00:07:37,837 --> 00:07:39,760
+Đây là bitmask trên đường biên.
+
+150
+00:07:39,800 --> 00:07:40,574
+Mở rộng hai:
+
+151
+00:07:40,614 --> 00:07:42,269
+khi nào nghĩ tới bitmask?
+
+152
+00:07:42,309 --> 00:07:45,999
+Khi giới hạn rất nhỏ, n không
+quá 20 hoặc không quá 15,
+
+153
+00:07:46,039 --> 00:07:49,390
+và lời giải phụ thuộc vào
+tập các phần tử đã dùng,
+
+154
+00:07:49,430 --> 00:07:53,527
+không phụ thuộc thứ tự dùng,
+hoặc chỉ phụ thuộc phần tử cuối.
+
+155
+00:07:54,767 --> 00:07:55,260
+Bẫy một:
+
+156
+00:07:55,300 --> 00:07:56,793
+thứ tự ưu tiên toán tử.
+
+157
+00:07:56,833 --> 00:07:59,993
+Phép so sánh bằng được
+thực hiện trước phép AND.
+
+158
+00:08:00,033 --> 00:08:01,260
+Hãy luôn đặt ngoặc.
+
+159
+00:08:01,300 --> 00:08:02,665
+Bẫy hai: tràn bit.
+
+160
+00:08:02,705 --> 00:08:06,960
+1 dịch trái 31 với kiểu int
+là tràn số; phải dùng 1 LL.
+
+161
+00:08:07,000 --> 00:08:08,077
+Bẫy ba: bộ nhớ.
+
+162
+00:08:08,117 --> 00:08:12,468
+2 mũ 20 nhân 20 ô long long
+tốn một trăm sáu mươi megabyte.
+
+163
+00:08:12,508 --> 00:08:14,627
+Ước lượng trước khi khai báo.
+
+164
+00:08:14,667 --> 00:08:15,184
+Bẫy bốn:
+
+165
+00:08:15,224 --> 00:08:17,346
+duyệt tập con mà quên tập rỗng.
+
+166
+00:08:17,386 --> 00:08:19,368
+Vòng lặp dừng khi sub bằng 0;
+
+167
+00:08:19,408 --> 00:08:21,460
+nếu cần tập rỗng, xử lí riêng.
+
+168
+00:08:22,700 --> 00:08:23,204
+Ghi nhớ:
+
+169
+00:08:23,244 --> 00:08:25,790
+tập con tương ứng
+một số nguyên n bit;
+
+170
+00:08:25,830 --> 00:08:30,485
+tập con thực sự luôn có số nhỏ hơn,
+nên điền bảng theo mask tăng dần.
+
+171
+00:08:30,525 --> 00:08:32,526
+best của mask cho tập đã dùng;
+
+172
+00:08:32,566 --> 00:08:35,860
+ways của mask, v cho tập
+đã dùng và phần tử cuối.
+
+173
+00:08:35,900 --> 00:08:40,428
+Độ phức tạp O của 2 mũ n nhân
+n, hoặc nhân n bình phương;
+
+174
+00:08:40,468 --> 00:08:43,793
+duyệt tập con của tập
+con là O của 3 mũ n.
+
+175
+00:08:45,033 --> 00:08:46,436
+Câu hỏi tự kiểm tra:
+
+176
+00:08:46,476 --> 00:08:49,106
+viết tập 1, 2, 4
+dưới dạng số nguyên.
+
+177
+00:08:49,146 --> 00:08:50,693
+Dừng video và thử nhé!
+
+178
+00:08:50,733 --> 00:08:53,249
+Bật bit 1, bit 2 và bit 4:
+
+179
+00:08:53,289 --> 00:08:58,360
+được 10110 nhị phân, bằng
+2 cộng 4 cộng 16, bằng 22.
+
+180
+00:08:58,400 --> 00:08:59,387
+Bài tiếp theo:
+
+181
+00:08:59,427 --> 00:09:01,000
+quy hoạch động chữ số.
+
+182
+00:09:01,040 --> 00:09:02,393
+Hẹn gặp lại các em!

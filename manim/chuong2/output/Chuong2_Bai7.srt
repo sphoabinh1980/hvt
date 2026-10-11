@@ -1,0 +1,831 @@
+1
+00:00:00,000 --> 00:00:03,714
+Chào mừng các em đến với Bài
+7, bài cuối của Chương 2:
+
+2
+00:00:03,754 --> 00:00:05,660
+Quy hoạch động trên hai xâu.
+
+3
+00:00:05,700 --> 00:00:10,035
+Học xong bài này, em sẽ xây dựng
+trạng thái i, j trên hai tiền tố,
+
+4
+00:00:10,075 --> 00:00:12,951
+khung sườn của hầu hết
+các bài trên hai xâu,
+
+5
+00:00:12,991 --> 00:00:17,193
+và giải bài khoảng cách sửa xâu
+cùng bài dãy con chung dài nhất.
+
+6
+00:00:17,233 --> 00:00:20,660
+Em cũng sẽ truy vết trên
+bảng để in ra cách sửa,
+
+7
+00:00:20,700 --> 00:00:24,560
+và tiết kiệm bộ nhớ bằng hai
+hàng khi chỉ cần giá trị.
+
+8
+00:00:25,800 --> 00:00:28,405
+Em gõ vội chữ HOXINHH
+thay vì HOCSINH.
+
+9
+00:00:28,445 --> 00:00:32,860
+Bộ gõ trên điện thoại vẫn đoán
+ra từ em muốn gõ. Nó làm thế nào?
+
+10
+00:00:32,900 --> 00:00:36,677
+Một cách là đo xem cần ít
+nhất bao nhiêu thao tác sửa:
+
+11
+00:00:36,717 --> 00:00:41,412
+chèn một kí tự, xóa một kí tự, hoặc
+thay một kí tự bằng kí tự khác,
+
+12
+00:00:41,452 --> 00:00:46,360
+để biến từ gõ nhầm thành từng từ
+trong từ điển, rồi gợi ý từ gần nhất.
+
+13
+00:00:46,400 --> 00:00:46,869
+Hãy thử:
+
+14
+00:00:46,909 --> 00:00:49,860
+cần mấy thao tác để biến
+HOXINHH thành HOCSINH?
+
+15
+00:00:49,900 --> 00:00:50,715
+Đáp án là 3.
+
+16
+00:00:50,755 --> 00:00:53,137
+Viết dưới dạng gióng hàng hai xâu:
+
+17
+00:00:53,177 --> 00:00:56,699
+mỗi cột là một cặp kí tự
+giống nhau, không tốn gì;
+
+18
+00:00:56,739 --> 00:00:58,551
+một cặp khác nhau là thay;
+
+19
+00:00:58,591 --> 00:01:01,186
+một kí tự của s đứng
+một mình là xóa;
+
+20
+00:01:01,226 --> 00:01:03,893
+một kí tự của t đứng
+một mình là chèn.
+
+21
+00:01:05,133 --> 00:01:08,103
+Phát biểu tổng quát, ta
+có bài toán SUACHINHTA:
+
+22
+00:01:08,143 --> 00:01:09,320
+cho hai xâu s và t.
+
+23
+00:01:09,360 --> 00:01:12,778
+Mỗi thao tác được phép chèn,
+xóa, hoặc thay một kí tự.
+
+24
+00:01:12,818 --> 00:01:15,468
+Tìm số thao tác ít
+nhất để biến s thành t.
+
+25
+00:01:15,508 --> 00:01:19,311
+Đây gọi là khoảng cách sửa xâu,
+hay khoảng cách Levenshtein.
+
+26
+00:01:19,351 --> 00:01:21,360
+Hai xâu dài tới năm nghìn kí tự.
+
+27
+00:01:22,600 --> 00:01:23,867
+Ý tưởng ngây thơ:
+
+28
+00:01:23,907 --> 00:01:26,327
+nhìn vào kí tự cuối của hai xâu.
+
+29
+00:01:26,367 --> 00:01:27,850
+Nếu chúng giống nhau,
+
+30
+00:01:27,890 --> 00:01:32,130
+cứ để nguyên và giải bài toán
+cho hai xâu đã bỏ kí tự cuối.
+
+31
+00:01:32,170 --> 00:01:35,249
+Nếu khác nhau, có ba
+cách xử lí kí tự cuối:
+
+32
+00:01:35,289 --> 00:01:39,239
+xóa kí tự cuối của s, chèn
+kí tự cuối của t vào cuối s,
+
+33
+00:01:39,279 --> 00:01:42,794
+hoặc thay kí tự cuối của
+s bằng kí tự cuối của t.
+
+34
+00:01:42,834 --> 00:01:46,493
+Thử cả ba bằng đệ quy và
+lấy cách ít thao tác nhất.
+
+35
+00:01:46,533 --> 00:01:47,751
+Đếm số phép tính:
+
+36
+00:01:47,791 --> 00:01:52,558
+khi hai kí tự cuối khác nhau, mỗi
+lời gọi sinh ra ba lời gọi con,
+
+37
+00:01:52,598 --> 00:01:55,369
+độ sâu có thể tới
+tổng độ dài hai xâu.
+
+38
+00:01:55,409 --> 00:01:58,180
+Số lời gọi có thể
+cỡ 3 mũ tổng độ dài.
+
+39
+00:01:58,220 --> 00:02:01,360
+Hai xâu dài 20 là hoàn
+toàn không chạy nổi.
+
+40
+00:02:02,000 --> 00:02:02,456
+Bế tắc!
+
+41
+00:02:02,496 --> 00:02:05,433
+Nhưng tham số của hàm
+chỉ là một cặp i, j:
+
+42
+00:02:05,473 --> 00:02:08,198
+i kí tự đầu của s và
+j kí tự đầu của t.
+
+43
+00:02:08,238 --> 00:02:12,805
+Có tối đa khoảng hai mươi lăm
+triệu cặp khác nhau với xâu dài năm
+
+44
+00:02:12,845 --> 00:02:13,231
+nghìn.
+
+45
+00:02:13,271 --> 00:02:17,909
+Hàng tỉ tỉ lời gọi chỉ xoay quanh
+hai mươi lăm triệu bài toán con:
+
+46
+00:02:17,949 --> 00:02:19,327
+quá nhiều trùng lặp!
+
+47
+00:02:20,567 --> 00:02:21,245
+Bước một:
+
+48
+00:02:21,285 --> 00:02:24,516
+trạng thái trên hai
+tiền tố. Đặt d của i,
+
+49
+00:02:24,556 --> 00:02:29,941
+j là số thao tác ít nhất để biến i
+kí tự đầu của s thành j kí tự đầu
+
+50
+00:02:29,981 --> 00:02:30,420
+của t.
+
+51
+00:02:30,460 --> 00:02:32,893
+Đáp án là d tại độ dài hai xâu.
+
+52
+00:02:32,933 --> 00:02:33,553
+Bước hai:
+
+53
+00:02:33,593 --> 00:02:37,363
+nhìn vào cột cuối cùng của
+phép gióng hàng tốt nhất.
+
+54
+00:02:37,403 --> 00:02:41,393
+Chỉ có ba khả năng, ứng với
+ba ô có thể dẫn tới ô i, j.
+
+55
+00:02:41,433 --> 00:02:41,985
+Đi chéo:
+
+56
+00:02:42,025 --> 00:02:45,976
+ghép s i với t j, giữ nguyên
+nếu giống, thay nếu khác.
+
+57
+00:02:46,016 --> 00:02:49,893
+Đi từ trên xuống: xóa s i.
+Đi từ trái sang: chèn t j.
+
+58
+00:02:49,933 --> 00:02:50,727
+Công thức:
+
+59
+00:02:50,767 --> 00:02:54,143
+cơ sở d của i, 0 bằng
+i, xóa hết i kí tự;
+
+60
+00:02:54,183 --> 00:02:57,060
+d của 0, j bằng j, chèn đủ j kí tự.
+
+61
+00:02:57,100 --> 00:03:00,477
+Nếu s i bằng t j, d
+của i, j bằng ô chéo.
+
+62
+00:03:00,517 --> 00:03:05,060
+Nếu khác, bằng 1 cộng min
+của ô trên, ô trái và ô chéo.
+
+63
+00:03:05,100 --> 00:03:09,056
+Khi hai kí tự bằng nhau, ghép
+chúng với nhau luôn là tốt nhất:
+
+64
+00:03:09,096 --> 00:03:11,828
+nếu một cách sửa tốt
+nhất không ghép chúng,
+
+65
+00:03:11,868 --> 00:03:15,760
+ta luôn biến đổi được thành một
+cách không tệ hơn mà có ghép.
+
+66
+00:03:17,000 --> 00:03:21,869
+Bảng có hàng là các kí tự của
+s, cột là các kí tự của t.
+
+67
+00:03:21,909 --> 00:03:24,061
+Hàng 0 và cột 0 là cơ sở:
+
+68
+00:03:24,101 --> 00:03:25,727
+0, 1, 2, cho tới 7.
+
+69
+00:03:25,767 --> 00:03:27,160
+Hàng H và hàng O.
+
+70
+00:03:27,200 --> 00:03:31,374
+Ô xanh lá là ô có hai kí
+tự bằng nhau, lấy ô chéo.
+
+71
+00:03:31,414 --> 00:03:32,892
+d của 2, 2 bằng 0:
+
+72
+00:03:32,932 --> 00:03:34,493
+HO và HO giống hệt.
+
+73
+00:03:34,533 --> 00:03:38,700
+d của 2, 3 bằng 1 cộng
+min của 2, 0 và 1, bằng 1:
+
+74
+00:03:38,740 --> 00:03:40,760
+HO thành HOC cần chèn C.
+
+75
+00:03:40,800 --> 00:03:41,369
+Hàng X:
+
+76
+00:03:41,409 --> 00:03:46,760
+d của 3, 4, với X khác S, bằng
+1 cộng min của 2, 1, 1, bằng 2.
+
+77
+00:03:46,800 --> 00:03:50,760
+Cứ thế điền các hàng I, N, H, H.
+
+78
+00:03:50,800 --> 00:03:51,405
+Ô cuối:
+
+79
+00:03:51,445 --> 00:03:57,860
+s 7 bằng t 7 bằng H, nên d của 7, 7
+bằng d của 6, 6, bằng 3. Đáp án 3.
+
+80
+00:03:59,100 --> 00:03:59,686
+Truy vết:
+
+81
+00:03:59,726 --> 00:04:01,008
+đi ngược từ ô cuối.
+
+82
+00:04:01,048 --> 00:04:05,531
+Nếu hai kí tự bằng nhau và ô chéo
+bằng nhau, đi chéo, giữ nguyên.
+
+83
+00:04:05,571 --> 00:04:09,984
+Nếu không, tìm ô trong ba ô kề
+có giá trị bằng ô hiện tại trừ 1:
+
+84
+00:04:10,024 --> 00:04:13,393
+chéo là thay, lên trên là
+xóa, sang trái là chèn.
+
+85
+00:04:13,433 --> 00:04:13,982
+Ô 7, 7:
+
+86
+00:04:14,022 --> 00:04:17,427
+hai kí tự cùng là H,
+đi chéo, giữ nguyên.
+
+87
+00:04:17,467 --> 00:04:18,086
+Ô 6, 6:
+
+88
+00:04:18,126 --> 00:04:21,193
+ô phía trên nhỏ hơn 1: xóa chữ H.
+
+89
+00:04:21,233 --> 00:04:21,782
+Ô 5, 6:
+
+90
+00:04:21,822 --> 00:04:25,227
+hai kí tự cùng là N,
+đi chéo, giữ nguyên.
+
+91
+00:04:25,267 --> 00:04:25,815
+Ô 4, 5:
+
+92
+00:04:25,855 --> 00:04:29,260
+hai kí tự cùng là I,
+đi chéo, giữ nguyên.
+
+93
+00:04:29,300 --> 00:04:29,904
+Ô 3, 4:
+
+94
+00:04:29,944 --> 00:04:33,860
+X khác S, ô chéo nhỏ
+hơn 1: thay X thành S.
+
+95
+00:04:33,900 --> 00:04:34,519
+Ô 2, 3:
+
+96
+00:04:34,559 --> 00:04:37,627
+ô bên trái nhỏ hơn 1: chèn chữ C.
+
+97
+00:04:37,667 --> 00:04:38,215
+Ô 2, 2:
+
+98
+00:04:38,255 --> 00:04:41,660
+hai kí tự cùng là O,
+đi chéo, giữ nguyên.
+
+99
+00:04:41,700 --> 00:04:42,248
+Ô 1, 1:
+
+100
+00:04:42,288 --> 00:04:45,693
+hai kí tự cùng là H,
+đi chéo, giữ nguyên.
+
+101
+00:04:45,733 --> 00:04:48,472
+Đường đi cho đúng
+cách sửa ở đầu bài:
+
+102
+00:04:48,512 --> 00:04:52,527
+chèn C, thay X bằng S, xóa
+một chữ H. Tổng 3 thao tác.
+
+103
+00:04:53,767 --> 00:04:54,340
+Bước năm:
+
+104
+00:04:54,380 --> 00:04:58,568
+hàng i chỉ dùng hàng i trừ 1 và
+chính nó, nên ta giữ hai mảng:
+
+105
+00:04:58,608 --> 00:05:01,363
+prev là hàng trên,
+cur là hàng đang điền.
+
+106
+00:05:01,403 --> 00:05:02,863
+Điền xong thì đổi vai.
+
+107
+00:05:02,903 --> 00:05:07,227
+Lệnh swap của hai vector chỉ đổi
+con trỏ bên trong, tốn O của 1.
+
+108
+00:05:07,267 --> 00:05:10,414
+Chú ý cur 0 bằng i ở đầu mỗi hàng:
+
+109
+00:05:10,454 --> 00:05:13,227
+đó là cơ sở d của i, 0 bằng i.
+
+110
+00:05:13,267 --> 00:05:17,462
+Bộ nhớ giảm từ hai mươi lăm triệu
+ô xuống hai nhân năm nghìn ô.
+
+111
+00:05:17,502 --> 00:05:19,747
+Độ phức tạp O của tích hai độ dài:
+
+112
+00:05:19,787 --> 00:05:23,579
+hai xâu dài năm nghìn cần
+khoảng hai mươi lăm triệu phép,
+
+113
+00:05:23,619 --> 00:05:25,327
+chạy khoảng 0 phẩy 1 giây.
+
+114
+00:05:26,567 --> 00:05:29,731
+Bài toán thứ hai trên hai
+xâu nổi tiếng không kém:
+
+115
+00:05:29,771 --> 00:05:34,152
+các nhà sinh học so sánh hai đoạn
+ADN bằng cách tìm dãy con chung dài
+
+116
+00:05:34,192 --> 00:05:38,637
+nhất, tức là dãy kí tự dài nhất xuất
+hiện, không nhất thiết liên tiếp,
+
+117
+00:05:38,677 --> 00:05:39,727
+trong cả hai xâu.
+
+118
+00:05:39,767 --> 00:05:41,373
+Ví dụ ACCGTA và CAGTTA:
+
+119
+00:05:41,413 --> 00:05:44,593
+một dãy con chung dài
+nhất là AGTA, độ dài 4.
+
+120
+00:05:44,633 --> 00:05:47,555
+Vẫn trạng thái trên
+hai tiền tố: L của i,
+
+121
+00:05:47,595 --> 00:05:52,612
+j là độ dài dãy con chung dài nhất
+của i kí tự đầu s và j kí tự đầu t.
+
+122
+00:05:52,652 --> 00:05:56,658
+Nếu hai kí tự cuối bằng nhau,
+ghép chúng làm kí tự cuối:
+
+123
+00:05:56,698 --> 00:05:57,669
+ô chéo cộng 1.
+
+124
+00:05:57,709 --> 00:06:02,654
+Nếu khác nhau, ít nhất một trong
+hai không thuộc dãy chung; bỏ nó đi:
+
+125
+00:06:02,694 --> 00:06:04,460
+max của ô trên và ô trái.
+
+126
+00:06:06,300 --> 00:06:09,254
+Hàng 0 và cột 0 bằng
+0. Điền từng hàng:
+
+127
+00:06:09,294 --> 00:06:13,093
+ô xanh lá là hai kí tự
+bằng nhau, lấy chéo cộng 1.
+
+128
+00:06:13,133 --> 00:06:15,760
+Ô cuối L của 6, 6 bằng 4.
+
+129
+00:06:15,800 --> 00:06:16,437
+Truy vết:
+
+130
+00:06:16,477 --> 00:06:21,324
+từ ô cuối, nếu hai kí tự bằng nhau
+thì ghi nhận kí tự và đi chéo;
+
+131
+00:06:21,364 --> 00:06:25,610
+nếu không, đi về phía ô lớn
+hơn trong hai ô trên và trái.
+
+132
+00:06:25,650 --> 00:06:28,693
+Các ô vàng là các kí
+tự chung A, G, T, A.
+
+133
+00:06:29,933 --> 00:06:32,032
+Mối liên hệ giữa hai bài toán:
+
+134
+00:06:32,072 --> 00:06:35,026
+nếu chỉ được chèn và
+xóa, không được thay,
+
+135
+00:06:35,066 --> 00:06:38,947
+số thao tác ít nhất bằng tổng
+hai độ dài trừ hai lần L.
+
+136
+00:06:38,987 --> 00:06:41,370
+Giữ nguyên dãy con chung dài nhất,
+
+137
+00:06:41,410 --> 00:06:45,648
+xóa mọi kí tự còn lại của s và
+chèn mọi kí tự còn lại của t.
+
+138
+00:06:45,688 --> 00:06:46,646
+Với ví dụ ADN:
+
+139
+00:06:46,686 --> 00:06:48,927
+6 cộng 6 trừ 8, bằng 4 thao tác.
+
+140
+00:06:48,967 --> 00:06:51,660
+Code dãy con chung
+dài nhất chỉ vài dòng,
+
+141
+00:06:51,700 --> 00:06:53,793
+cùng khung sườn với bài sửa xâu.
+
+142
+00:06:55,033 --> 00:06:55,786
+Mở rộng một:
+
+143
+00:06:55,826 --> 00:06:58,492
+nếu chèn, xóa, thay
+có chi phí khác nhau,
+
+144
+00:06:58,532 --> 00:07:01,265
+hoặc chi phí thay phụ
+thuộc vào hai kí tự,
+
+145
+00:07:01,305 --> 00:07:03,774
+chỉ cần thay các số
+1 trong công thức.
+
+146
+00:07:03,814 --> 00:07:05,160
+Khung sườn không đổi.
+
+147
+00:07:05,200 --> 00:07:06,045
+Mở rộng hai:
+
+148
+00:07:06,085 --> 00:07:11,131
+dãy con đối xứng dài nhất của s
+chính là dãy con chung dài nhất của s
+
+149
+00:07:11,171 --> 00:07:12,827
+và xâu đảo ngược của s.
+
+150
+00:07:12,867 --> 00:07:13,620
+Mở rộng ba:
+
+151
+00:07:13,660 --> 00:07:18,599
+đếm số lần t xuất hiện như dãy con
+của s, khớp mẫu có kí tự đại diện,
+
+152
+00:07:18,639 --> 00:07:22,568
+hay siêu dãy chung ngắn nhất
+dài tổng hai độ dài trừ L,
+
+153
+00:07:22,608 --> 00:07:24,660
+đều là bảng trên hai tiền tố.
+
+154
+00:07:25,900 --> 00:07:27,591
+Bẫy một: lệch chỉ số.
+
+155
+00:07:27,631 --> 00:07:31,301
+Trong công thức, s i là
+kí tự thứ i đếm từ 1,
+
+156
+00:07:31,341 --> 00:07:33,527
+còn trong C++ là s i trừ 1.
+
+157
+00:07:33,567 --> 00:07:34,228
+Bẫy hai:
+
+158
+00:07:34,268 --> 00:07:38,608
+quên cơ sở d của i, 0 bằng
+i và d của 0, j bằng j,
+
+159
+00:07:38,648 --> 00:07:40,360
+bảng sẽ sai toàn bộ.
+
+160
+00:07:40,400 --> 00:07:41,609
+Bẫy ba: tràn bộ nhớ.
+
+161
+00:07:41,649 --> 00:07:45,417
+Bảng năm nghìn nhân năm nghìn
+kiểu int cần một trăm megabyte.
+
+162
+00:07:45,457 --> 00:07:47,727
+Dùng hai hàng khi
+không cần truy vết.
+
+163
+00:07:47,767 --> 00:07:48,252
+Bẫy bốn:
+
+164
+00:07:48,292 --> 00:07:49,895
+nhầm dãy con với xâu con.
+
+165
+00:07:49,935 --> 00:07:53,377
+Xâu con chung dài nhất, liên
+tiếp, có công thức khác:
+
+166
+00:07:53,417 --> 00:07:54,560
+kiểu kết thúc tại.
+
+167
+00:07:55,800 --> 00:07:56,296
+Ghi nhớ:
+
+168
+00:07:56,336 --> 00:07:59,984
+bài trên hai xâu dùng trạng
+thái i, j trên hai tiền tố,
+
+169
+00:08:00,024 --> 00:08:02,130
+và nhìn cặp kí tự cuối. Sửa xâu:
+
+170
+00:08:02,170 --> 00:08:06,556
+bằng nhau thì đi chéo miễn phí,
+khác nhau thì 1 cộng min của trên,
+
+171
+00:08:06,596 --> 00:08:07,293
+trái, chéo.
+
+172
+00:08:07,333 --> 00:08:08,883
+Dãy con chung dài nhất:
+
+173
+00:08:08,923 --> 00:08:13,167
+bằng nhau thì chéo cộng 1, khác
+nhau thì max của trên và trái.
+
+174
+00:08:13,207 --> 00:08:15,793
+Và hai hàng là đủ
+nếu chỉ cần giá trị.
+
+175
+00:08:17,033 --> 00:08:18,299
+Câu hỏi tự kiểm tra:
+
+176
+00:08:18,339 --> 00:08:21,824
+khoảng cách sửa xâu giữa
+TRUONG và TRUNG là bao nhiêu?
+
+177
+00:08:21,864 --> 00:08:23,260
+Dừng video và thử nhé!
+
+178
+00:08:23,300 --> 00:08:24,149
+Đáp án 1:
+
+179
+00:08:24,189 --> 00:08:25,927
+chỉ cần xóa chữ O.
+
+180
+00:08:25,967 --> 00:08:28,524
+Chúc mừng các em đã
+hoàn thành Chương 2!
+
+181
+00:08:28,564 --> 00:08:29,953
+Tiếp theo là Chương 3:
+
+182
+00:08:29,993 --> 00:08:33,914
+Quy hoạch động nâng cao, mở đầu
+với quy hoạch động trên đoạn.
+
+183
+00:08:33,954 --> 00:08:34,693
+Hẹn gặp lại!

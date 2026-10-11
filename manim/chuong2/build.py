@@ -1,4 +1,4 @@
-"""Dựng toàn bộ video Chương 2 (Bài 4–6) (TikTok 1080x1920) + phụ đề thuyết minh .srt.
+"""Dựng toàn bộ video Chương 2 (Bài 4–7) (TikTok 1080x1920) + phụ đề thuyết minh .srt.
 
 Cách dùng:
     python build.py            # render mọi cảnh rồi ghép
@@ -35,6 +35,8 @@ LESSONS = {
     "Bai5": ("bai5.py", ["B5_00_Intro", "B5_01_KhoHang", "B5_02_TachNhiPhan", "B5_03_BaloVang", "B5_04_Bitset",
                          "B5_05_TongKet"]),
     "Bai6": ("bai6.py", ["B6_00_Intro", "B6_01_KhoiDong", "B6_02_On2", "B6_03_MangD", "B6_04_TongKet"]),
+    "Bai7": ("bai7.py", ["B7_00_Intro", "B7_01_KhoiDong", "B7_02_NgayTho", "B7_03_BangD", "B7_04_TruyVet", "B7_05_LCS",
+                         "B7_06_TongKet"]),
 }
 CHAPTER = "Chuong2"
 
@@ -196,13 +198,15 @@ def main():
     ap.add_argument("--no-render", action="store_true")
     ap.add_argument("--jobs", type=int, default=4)
     ap.add_argument("--no-burn", action="store_true")
+    ap.add_argument("--lessons", nargs="*", help="chỉ render/ghép các bài này (ví dụ Bai7); cả chương vẫn được ghép lại")
     args = ap.parse_args()
+    chosen = set(args.lessons or LESSONS)
     OUT.mkdir(exist_ok=True)
     (OUT / "parts").mkdir(exist_ok=True)
 
     if not args.no_render:
         print("Đang render các cảnh…", flush=True)
-        jobs = [(f, s) for f, scenes in LESSONS.values() for s in scenes]
+        jobs = [(f, s) for name, (f, scenes) in LESSONS.items() if name in chosen for s in scenes]
         # cảnh dài render trước để cân tải
         with ThreadPoolExecutor(args.jobs) as ex:
             ok = list(ex.map(lambda fs: render_scene(*fs), jobs))
@@ -219,6 +223,12 @@ def main():
             cues += cues_for_scene(s, off)
             off += d
         base = OUT / f"{CHAPTER}_{lesson}"
+        if lesson not in chosen:
+            for s, d in zip(scenes, durs):
+                full_cues += cues_for_scene(s, offset_full)
+                offset_full += d
+            full_videos += vids
+            continue
         concat(vids, base.with_suffix(".mp4"))
         write_srt(cues, base.with_suffix(".srt"))
         summary.append((base.name, off))
