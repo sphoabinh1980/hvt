@@ -1,0 +1,901 @@
+1
+00:00:00,000 --> 00:00:02,436
+Chào mừng các em đến với Bài 11:
+
+2
+00:00:02,476 --> 00:00:04,293
+Quy hoạch động trên cây.
+
+3
+00:00:04,333 --> 00:00:08,025
+Học xong bài này, em sẽ dùng
+cây con làm bài toán con:
+
+4
+00:00:08,065 --> 00:00:12,241
+kết quả tại một đỉnh được ghép
+từ kết quả tại các con của nó.
+
+5
+00:00:12,281 --> 00:00:17,010
+Em sẽ thêm trạng thái được chọn hay
+không để xử lí ràng buộc giữa cha
+
+6
+00:00:17,050 --> 00:00:17,493
+và con.
+
+7
+00:00:17,533 --> 00:00:20,960
+Em sẽ duyệt cây không đệ
+quy theo thứ tự BFS ngược,
+
+8
+00:00:21,000 --> 00:00:24,495
+tránh tràn ngăn xếp khi cây
+sâu hai trăm nghìn tầng;
+
+9
+00:00:24,535 --> 00:00:26,126
+và học kĩ thuật đổi gốc,
+
+10
+00:00:26,166 --> 00:00:29,593
+tính đáp án cho mọi đỉnh
+làm gốc chỉ trong O của n.
+
+11
+00:00:30,833 --> 00:00:33,034
+Công ty tổ chức dạ tiệc cuối năm.
+
+12
+00:00:33,074 --> 00:00:35,818
+Mỗi nhân viên có một
+độ vui khi tham gia.
+
+13
+00:00:35,858 --> 00:00:37,380
+Nhưng có một luật ngầm:
+
+14
+00:00:37,420 --> 00:00:41,793
+không ai muốn dự tiệc cùng sếp
+trực tiếp của mình, vì sẽ mất vui.
+
+15
+00:00:41,833 --> 00:00:43,620
+Sơ đồ công ty là một cây:
+
+16
+00:00:43,660 --> 00:00:45,665
+giám đốc, người số 1, ở gốc;
+
+17
+00:00:45,705 --> 00:00:48,661
+mỗi người khác có đúng
+một sếp trực tiếp.
+
+18
+00:00:48,701 --> 00:00:50,560
+Con số màu vàng là độ vui.
+
+19
+00:00:50,600 --> 00:00:53,493
+Mời những ai để tổng
+độ vui lớn nhất?
+
+20
+00:00:53,533 --> 00:00:54,797
+Thử cách tham lam:
+
+21
+00:00:54,837 --> 00:00:58,348
+mời ngay người vui nhất,
+người số 3 với độ vui 9.
+
+22
+00:00:58,388 --> 00:01:02,260
+Khi đó sếp 1 và hai nhân
+viên 6, 7 đều không được mời.
+
+23
+00:01:02,300 --> 00:01:06,860
+Tốt nhất phần còn lại là mời
+4 và 5. Tổng chỉ được 15.
+
+24
+00:01:07,400 --> 00:01:10,238
+Cách tốt nhất lại không mời người 3:
+
+25
+00:01:10,278 --> 00:01:12,956
+mời giám đốc 1, cùng 4, 5, 6 và 7.
+
+26
+00:01:12,996 --> 00:01:16,393
+Tổng 5 cộng 4 cộng 2
+cộng 1 cộng 7 bằng 19.
+
+27
+00:01:17,633 --> 00:01:18,700
+Bài toán DATIEC:
+
+28
+00:01:18,740 --> 00:01:21,399
+công ty có n người,
+tới hai trăm nghìn.
+
+29
+00:01:21,439 --> 00:01:26,173
+Người 1 là giám đốc, mỗi người v
+khác có sếp trực tiếp p v nhỏ hơn v,
+
+30
+00:01:26,213 --> 00:01:27,142
+và độ vui h v.
+
+31
+00:01:27,182 --> 00:01:28,940
+Chọn một tập người để mời,
+
+32
+00:01:28,980 --> 00:01:32,953
+không có cặp sếp trực tiếp và
+nhân viên nào cùng được mời,
+
+33
+00:01:32,993 --> 00:01:34,960
+sao cho tổng độ vui lớn nhất.
+
+34
+00:01:35,000 --> 00:01:35,450
+Ví dụ:
+
+35
+00:01:35,490 --> 00:01:40,677
+bảy người, dòng hai là độ vui,
+dòng ba là sếp của người 2 đến 7.
+
+36
+00:01:40,717 --> 00:01:41,493
+Đáp án 19.
+
+37
+00:01:41,533 --> 00:01:43,874
+Bài này giống bài hái nấm ở Bài 2:
+
+38
+00:01:43,914 --> 00:01:46,045
+không chọn hai phần tử kề nhau.
+
+39
+00:01:46,085 --> 00:01:50,527
+Nhưng kề nhau giờ là quan hệ cha
+con trên cây, thay vì trên dãy.
+
+40
+00:01:51,767 --> 00:01:52,739
+Cách ngây thơ:
+
+41
+00:01:52,779 --> 00:01:54,691
+thử mọi tập người được mời.
+
+42
+00:01:54,731 --> 00:01:55,992
+Có 2 mũ n tập con;
+
+43
+00:01:56,032 --> 00:01:59,679
+với mỗi tập, kiểm tra n
+trừ 1 cặp sếp và nhân viên;
+
+44
+00:01:59,719 --> 00:02:02,427
+nếu hợp lệ thì cập
+nhật tổng lớn nhất.
+
+45
+00:02:02,467 --> 00:02:05,233
+Độ phức tạp O của 2 mũ n nhân n:
+
+46
+00:02:05,273 --> 00:02:08,127
+chỉ chạy được với n không quá 20.
+
+47
+00:02:09,967 --> 00:02:11,090
+Bế tắc nằm ở đâu?
+
+48
+00:02:11,130 --> 00:02:14,854
+Quyết định ở nhánh trái, mời
+ai trong nhóm của người 2,
+
+49
+00:02:14,894 --> 00:02:18,960
+và ở nhánh phải, nhóm của người
+3, gần như độc lập với nhau.
+
+50
+00:02:19,000 --> 00:02:21,011
+Chúng chỉ gặp nhau ở người 1.
+
+51
+00:02:21,051 --> 00:02:24,829
+Nếu người 1 không được mời,
+hai nhánh hoàn toàn tự do.
+
+52
+00:02:24,869 --> 00:02:28,293
+Nếu người 1 được mời, chỉ
+có người 2 và 3 bị cấm.
+
+53
+00:02:28,333 --> 00:02:31,739
+Duyệt mọi tập con là bỏ
+qua cấu trúc độc lập ấy.
+
+54
+00:02:31,779 --> 00:02:34,827
+Ta sẽ tách thành các
+bài toán trên cây con.
+
+55
+00:02:36,067 --> 00:02:36,650
+Bước một:
+
+56
+00:02:36,690 --> 00:02:38,314
+cây con là bài toán con.
+
+57
+00:02:38,354 --> 00:02:42,749
+Với mỗi người v, xét cây con gốc
+v, gồm v và mọi cấp dưới của v.
+
+58
+00:02:42,789 --> 00:02:47,392
+Đáp án cho cây con này chỉ phụ
+thuộc vào đáp án cho các cây con của
+
+59
+00:02:47,432 --> 00:02:50,788
+các nhân viên trực tiếp,
+cộng thêm một thông tin:
+
+60
+00:02:50,828 --> 00:02:52,451
+v có được mời hay không,
+
+61
+00:02:52,491 --> 00:02:56,193
+vì điều đó quyết định các
+con của v có được mời không.
+
+62
+00:02:56,233 --> 00:02:57,911
+Vậy ta lưu hai giá trị.
+
+63
+00:02:57,951 --> 00:03:02,839
+moi của v là tổng vui lớn nhất
+trong cây con gốc v khi v được mời;
+
+64
+00:03:02,879 --> 00:03:05,527
+khong của v là khi v không được mời.
+
+65
+00:03:05,567 --> 00:03:08,530
+Nếu v được mời, mọi
+con c phải vắng mặt:
+
+66
+00:03:08,570 --> 00:03:12,060
+moi của v bằng h v cộng
+tổng khong của các con.
+
+67
+00:03:12,100 --> 00:03:16,327
+Nếu v không được mời, mỗi con
+được tự do chọn cách tốt hơn:
+
+68
+00:03:16,367 --> 00:03:19,727
+khong của v bằng tổng
+max của moi c và khong c.
+
+69
+00:03:19,767 --> 00:03:20,177
+Cơ sở:
+
+70
+00:03:20,217 --> 00:03:22,877
+lá có moi bằng độ vui, khong bằng 0.
+
+71
+00:03:22,917 --> 00:03:25,502
+Đáp án là max của moi 1 và khong 1.
+
+72
+00:03:25,542 --> 00:03:29,327
+Đây đúng là kĩ thuật thêm
+chiều trạng thái ở Bài 2.
+
+73
+00:03:31,167 --> 00:03:34,224
+Bắt đầu từ bốn lá: người 4, 5, 6, 7.
+
+74
+00:03:34,264 --> 00:03:37,665
+Mỗi lá có moi bằng
+độ vui, khong bằng 0:
+
+75
+00:03:37,705 --> 00:03:40,160
+bốn cặp 4 0, 2 0, 1 0 và 7 0.
+
+76
+00:03:40,200 --> 00:03:41,570
+Người 2, độ vui 3:
+
+77
+00:03:41,610 --> 00:03:45,720
+moi bằng 3 cộng khong của
+4 và 5, đều bằng 0, được 3.
+
+78
+00:03:45,760 --> 00:03:50,027
+khong bằng max của 4 và 0,
+cộng max của 2 và 0, được 6.
+
+79
+00:03:50,067 --> 00:03:51,479
+Người 3, độ vui 9:
+
+80
+00:03:51,519 --> 00:03:54,627
+moi bằng 9, khong
+bằng 1 cộng 7 bằng 8.
+
+81
+00:03:54,667 --> 00:03:56,056
+Người 1, độ vui 5:
+
+82
+00:03:56,096 --> 00:04:01,377
+moi bằng 5 cộng khong của 2 cộng
+khong của 3, bằng 5 cộng 6 cộng 8,
+
+83
+00:04:01,417 --> 00:04:02,013
+bằng 19.
+
+84
+00:04:02,053 --> 00:04:06,460
+khong bằng max của 3 và 6,
+cộng max của 9 và 8, bằng 15.
+
+85
+00:04:06,500 --> 00:04:10,770
+Đáp án là max của 19 và 15,
+bằng 19. Truy ngược lại:
+
+86
+00:04:10,810 --> 00:04:13,090
+1 được mời, nên 2 và 3 vắng;
+
+87
+00:04:13,130 --> 00:04:15,825
+khi 2 vắng, 4 và 5 chọn được mời;
+
+88
+00:04:15,865 --> 00:04:18,560
+khi 3 vắng, 6 và 7 chọn được mời.
+
+89
+00:04:19,800 --> 00:04:22,465
+Cách viết tự nhiên là
+một hàm DFS đệ quy.
+
+90
+00:04:22,505 --> 00:04:26,423
+Nhưng cây có thể là một đường
+thẳng dài hai trăm nghìn đỉnh,
+
+91
+00:04:26,463 --> 00:04:28,468
+mỗi người chỉ có một nhân viên.
+
+92
+00:04:28,508 --> 00:04:32,427
+Đệ quy sẽ sâu hai trăm nghìn
+tầng, có nguy cơ tràn ngăn xếp.
+
+93
+00:04:32,467 --> 00:04:33,397
+Cách an toàn:
+
+94
+00:04:33,437 --> 00:04:38,250
+liệt kê các đỉnh theo thứ tự BFS
+từ gốc, cha luôn đứng trước con.
+
+95
+00:04:38,290 --> 00:04:39,370
+Với cây của ta:
+
+96
+00:04:39,410 --> 00:04:41,460
+1, rồi 2, 3, rồi 4, 5, 6, 7.
+
+97
+00:04:41,500 --> 00:04:44,192
+Rồi duyệt danh sách từ cuối lên đầu:
+
+98
+00:04:44,232 --> 00:04:47,228
+7, 6, 5, 4, rồi 3,
+2, và cuối cùng là 1.
+
+99
+00:04:47,268 --> 00:04:51,327
+Khi xử lí một đỉnh, mọi con
+của nó đã được xử lí xong.
+
+100
+00:04:52,567 --> 00:04:52,867
+Code:
+
+101
+00:04:52,907 --> 00:04:55,317
+danh sách order bắt đầu bằng đỉnh 1.
+
+102
+00:04:55,357 --> 00:04:59,059
+Duyệt nó bằng chỉ số k chạy
+dần, thêm các con vào cuối:
+
+103
+00:04:59,099 --> 00:05:02,393
+order vừa là hàng đợi BFS,
+vừa là thứ tự kết quả.
+
+104
+00:05:02,433 --> 00:05:04,493
+Rồi duyệt k từ n trừ 1 về 0.
+
+105
+00:05:04,533 --> 00:05:06,893
+invited là moi, absent là khong;
+
+106
+00:05:06,933 --> 00:05:08,393
+cộng dồn từ mọi con.
+
+107
+00:05:08,433 --> 00:05:12,345
+Mỗi đỉnh xuất hiện một lần,
+mỗi cạnh được xét một lần:
+
+108
+00:05:12,385 --> 00:05:14,393
+O của n thời gian và bộ nhớ.
+
+109
+00:05:15,633 --> 00:05:17,132
+Vì sao công thức đúng?
+
+110
+00:05:17,172 --> 00:05:20,489
+Nếu v được mời thì mọi
+con c đều không được mời,
+
+111
+00:05:20,529 --> 00:05:25,385
+và các cây con của các con khác nhau
+không có cặp sếp và nhân viên nào
+
+112
+00:05:25,425 --> 00:05:27,693
+chung, nên có thể tối ưu độc lập.
+
+113
+00:05:27,733 --> 00:05:30,777
+Nếu v không được mời,
+mỗi con c được tự do,
+
+114
+00:05:30,817 --> 00:05:35,439
+tốt nhất là max của moi c và khong
+c, và các cây con lại độc lập.
+
+115
+00:05:35,479 --> 00:05:39,527
+Vì vậy công thức không bỏ sót
+và không vi phạm ràng buộc.
+
+116
+00:05:40,762 --> 00:05:44,770
+Có những bài hỏi đáp án cho mọi
+đỉnh khi coi đỉnh đó là gốc.
+
+117
+00:05:44,810 --> 00:05:45,782
+Bài KHOANGCACH:
+
+118
+00:05:45,822 --> 00:05:47,873
+cho cây n đỉnh, mỗi cạnh dài 1.
+
+119
+00:05:47,913 --> 00:05:51,989
+Với mỗi đỉnh v, tính tổng khoảng
+cách từ v tới mọi đỉnh khác.
+
+120
+00:05:52,029 --> 00:05:57,027
+Ví dụ cây sáu đỉnh này cho
+kết quả 8, 8, 10, 12, 12, 14.
+
+121
+00:05:57,067 --> 00:05:58,827
+Chẳng hạn từ đỉnh 1:
+
+122
+00:05:58,867 --> 00:06:02,155
+1 cộng 1 cộng 2 cộng
+2 cộng 2 bằng 8.
+
+123
+00:06:02,195 --> 00:06:06,297
+Làm lại quy hoạch động cho từng
+gốc tốn O của n bình phương.
+
+124
+00:06:06,337 --> 00:06:08,989
+Kĩ thuật đổi gốc chỉ
+cần hai lần duyệt.
+
+125
+00:06:10,729 --> 00:06:12,750
+Lần duyệt thứ nhất, từ gốc 1:
+
+126
+00:06:12,790 --> 00:06:14,739
+BFS để tính độ sâu mọi đỉnh,
+
+127
+00:06:14,779 --> 00:06:19,074
+rồi duyệt ngược để tính kích
+thước cây con size của mỗi đỉnh:
+
+128
+00:06:19,114 --> 00:06:23,622
+lá có size 1, đỉnh 3 có size 2,
+đỉnh 2 có size 3, gốc có size 6.
+
+129
+00:06:23,662 --> 00:06:27,389
+Khi đó kq của 1 bằng
+tổng các độ sâu, bằng 8.
+
+130
+00:06:29,229 --> 00:06:31,815
+Lần duyệt thứ hai đi từ gốc xuống.
+
+131
+00:06:31,855 --> 00:06:35,832
+Giả sử đã biết kq của v,
+tính kq của c là con của v.
+
+132
+00:06:35,872 --> 00:06:41,008
+Khi đi từ v sang c, size c đỉnh
+nằm trong cây con của c gần thêm 1;
+
+133
+00:06:41,048 --> 00:06:43,789
+n trừ size c đỉnh còn lại xa thêm 1.
+
+134
+00:06:43,829 --> 00:06:45,214
+Công thức đổi gốc:
+
+135
+00:06:45,254 --> 00:06:49,489
+kq của c bằng kq của v, trừ
+size c, cộng n trừ size c.
+
+136
+00:06:49,929 --> 00:06:50,910
+Từ 1 sang 2:
+
+137
+00:06:50,950 --> 00:06:55,506
+ba đỉnh 2, 4, 5 gần thêm 1,
+ba đỉnh còn lại xa thêm 1.
+
+138
+00:06:55,546 --> 00:06:58,655
+kq của 2 bằng 8 trừ
+3 cộng 3, bằng 8.
+
+139
+00:06:58,695 --> 00:06:59,646
+Từ 1 sang 3:
+
+140
+00:06:59,686 --> 00:07:02,618
+hai đỉnh gần thêm, bốn đỉnh xa thêm.
+
+141
+00:07:02,658 --> 00:07:05,755
+kq của 3 bằng 8 trừ
+2 cộng 4, bằng 10.
+
+142
+00:07:05,795 --> 00:07:06,847
+Từ 2 sang 4:
+
+143
+00:07:06,887 --> 00:07:10,303
+kq của 4 bằng 8 trừ
+1 cộng 5, bằng 12.
+
+144
+00:07:10,343 --> 00:07:13,122
+Tương tự kq của 5 cũng bằng 12.
+
+145
+00:07:13,162 --> 00:07:14,338
+Từ 3 sang 6:
+
+146
+00:07:14,378 --> 00:07:18,289
+kq của 6 bằng 10 trừ
+1 cộng 5, bằng 14.
+
+147
+00:07:19,529 --> 00:07:19,856
+Code:
+
+148
+00:07:19,896 --> 00:07:23,898
+lần một duyệt BFS từ gốc 1
+để có cha, độ sâu và thứ tự;
+
+149
+00:07:23,938 --> 00:07:26,911
+rồi duyệt ngược để
+cộng dồn size lên cha.
+
+150
+00:07:26,951 --> 00:07:28,822
+kq của 1 bằng tổng độ sâu.
+
+151
+00:07:28,862 --> 00:07:32,094
+Lần hai đi theo thứ tự
+BFS xuôi, cha trước con,
+
+152
+00:07:32,134 --> 00:07:33,764
+ngược với lần tính size.
+
+153
+00:07:33,804 --> 00:07:35,922
+Mỗi đỉnh một công thức O của 1.
+
+154
+00:07:35,962 --> 00:07:39,317
+Tổng khoảng cách có thể tới
+cỡ n bình phương chia 2,
+
+155
+00:07:39,357 --> 00:07:42,189
+khoảng hai mươi tỉ, nên
+phải dùng long long.
+
+156
+00:07:43,429 --> 00:07:45,392
+Mở rộng một: cái túi trên cây.
+
+157
+00:07:45,432 --> 00:07:49,666
+Chọn đúng k đỉnh liên thông chứa
+gốc với tổng trọng số lớn nhất.
+
+158
+00:07:49,706 --> 00:07:53,939
+f của v, j là tổng lớn nhất khi
+chọn j đỉnh trong cây con gốc v.
+
+159
+00:07:53,979 --> 00:07:56,877
+Ghép các con lần lượt
+như cái túi theo nhóm;
+
+160
+00:07:56,917 --> 00:08:00,016
+nếu giới hạn j theo kích
+thước cây con đã ghép,
+
+161
+00:08:00,056 --> 00:08:03,822
+tổng chỉ là O của n bình
+phương, không phải n lập phương.
+
+162
+00:08:03,862 --> 00:08:05,546
+Mở rộng hai: bài đặt camera.
+
+163
+00:08:05,586 --> 00:08:08,686
+Mỗi đỉnh phải có camera
+hoặc kề một đỉnh có camera.
+
+164
+00:08:08,726 --> 00:08:10,964
+Mỗi đỉnh có ba trạng
+thái: có camera;
+
+165
+00:08:11,004 --> 00:08:12,996
+không có nhưng được một con canh;
+
+166
+00:08:13,036 --> 00:08:15,089
+hoặc chưa được canh, phải nhờ cha.
+
+167
+00:08:15,129 --> 00:08:16,838
+Mở rộng ba: đường kính cây.
+
+168
+00:08:16,878 --> 00:08:21,115
+Đường dài nhất đi qua một đỉnh cao
+nhất v rồi xuống hai nhánh khác
+
+169
+00:08:21,155 --> 00:08:21,439
+nhau.
+
+170
+00:08:21,479 --> 00:08:23,966
+Lưu down của v là
+đường xuống dài nhất,
+
+171
+00:08:24,006 --> 00:08:26,622
+rồi ghép hai nhánh
+dài nhất tại mỗi đỉnh.
+
+172
+00:08:27,862 --> 00:08:28,365
+Bẫy một:
+
+173
+00:08:28,405 --> 00:08:32,029
+đệ quy sâu với cây dạng đường
+thẳng gây tràn ngăn xếp.
+
+174
+00:08:32,069 --> 00:08:33,522
+Dùng thứ tự BFS ngược.
+
+175
+00:08:33,562 --> 00:08:34,050
+Bẫy hai:
+
+176
+00:08:34,090 --> 00:08:36,822
+cây cho dưới dạng danh
+sách cạnh vô hướng.
+
+177
+00:08:36,862 --> 00:08:40,055
+Phải tìm cha bằng BFS, và
+tránh đi ngược lên cha.
+
+178
+00:08:40,095 --> 00:08:40,615
+Bẫy ba:
+
+179
+00:08:40,655 --> 00:08:43,255
+gốc không phải đỉnh 1. Đọc kĩ đề.
+
+180
+00:08:43,295 --> 00:08:43,835
+Bẫy bốn:
+
+181
+00:08:43,875 --> 00:08:47,022
+quên trường hợp n bằng
+1, không có cạnh nào.
+
+182
+00:08:47,062 --> 00:08:47,632
+Bẫy năm:
+
+183
+00:08:47,672 --> 00:08:50,222
+tràn số khi cộng dồn trên cây lớn.
+
+184
+00:08:51,462 --> 00:08:51,934
+Ghi nhớ:
+
+185
+00:08:51,974 --> 00:08:55,390
+bài toán con là cây con,
+ghép kết quả các con tại cha.
+
+186
+00:08:55,430 --> 00:08:58,205
+Ràng buộc cha con thì
+thêm chiều trạng thái:
+
+187
+00:08:58,245 --> 00:09:00,189
+chọn hay không, hoặc nhiều hơn.
+
+188
+00:09:00,229 --> 00:09:01,251
+Thứ tự an toàn:
+
+189
+00:09:01,291 --> 00:09:04,722
+BFS từ gốc, xử lí ngược.
+Đổi gốc: tính cho gốc 1,
+
+190
+00:09:04,762 --> 00:09:08,689
+rồi chuyển gốc sang con bằng
+công thức O của 1 mỗi cạnh.
+
+191
+00:09:09,929 --> 00:09:11,353
+Câu hỏi tự kiểm tra:
+
+192
+00:09:11,393 --> 00:09:16,478
+với ví dụ DATIEC, nếu người 1 chỉ
+có độ vui 1 thì đáp án là bao nhiêu?
+
+193
+00:09:16,518 --> 00:09:18,089
+Dừng video và thử nhé!
+
+194
+00:09:18,129 --> 00:09:20,788
+Các cặp ở người 2 và 3 không đổi.
+
+195
+00:09:20,828 --> 00:09:23,978
+moi của 1 bằng 1 cộng
+6 cộng 8 bằng 15;
+
+196
+00:09:24,018 --> 00:09:27,168
+khong của 1 bằng 6
+cộng 9 cũng bằng 15.
+
+197
+00:09:27,208 --> 00:09:29,622
+Đáp số 15, hai cách bằng nhau.
+
+198
+00:09:29,662 --> 00:09:30,636
+Bài tiếp theo:
+
+199
+00:09:30,676 --> 00:09:33,679
+đếm, đồ thị có hướng,
+xác suất và kì vọng.
+
+200
+00:09:33,719 --> 00:09:35,055
+Hẹn gặp lại các em!

@@ -5,7 +5,7 @@ Cách dùng:
     python build.py --no-render  # chỉ ghép lại từ các cảnh đã render
 
 Kết quả nằm trong output/:
-    Chuong3_Bai8.mp4 / .srt, Chuong3_Bai9   (video sạch + phụ đề rời)
+    Chuong3_Bai8.mp4 / .srt, Chuong3_Bai9 … Bai12  (video sạch + phụ đề rời)
     Chuong3_Bai8_vietsub.mp4 ...                               (phụ đề in cứng trên video)
     Chuong3_Full.mp4 / .srt                                     (cả chương)
     parts/Chuong3_Bai8_Phan1.mp4 / .srt ...                     (mỗi phần ≤ 10 phút cho TikTok)
@@ -34,6 +34,12 @@ LESSONS = {
                          "B8_05_TongKet"]),
     "Bai9": ("bai9.py", ["B9_00_Intro", "B9_01_KhoiDong", "B9_02_TapHop", "B9_03_GhepDoi", "B9_04_TrangThai",
                          "B9_05_Hamilton", "B9_06_TapCon", "B9_07_TongKet"]),
+    "Bai10": ("bai10.py", ["B10_00_Intro", "B10_01_KhoiDong", "B10_02_NgayTho", "B10_03_ChanTren", "B10_04_CongThuc",
+                           "B10_05_ChayTay", "B10_06_Code", "B10_07_KhuonMau", "B10_08_TongKet"]),
+    "Bai11": ("bai11.py", ["B11_00_Intro", "B11_01_KhoiDong", "B11_02_NgayTho", "B11_03_HaiTrangThai",
+                           "B11_04_KhongDeQuy", "B11_05_DoiGoc", "B11_06_TongKet"]),
+    "Bai12": ("bai12.py", ["B12_00_Intro", "B12_01_KhoiDong", "B12_02_NgayTho", "B12_03_ToPo", "B12_04_DAG",
+                           "B12_05_XucXac", "B12_06_KyVong", "B12_07_TongKet"]),
 }
 CHAPTER = "Chuong3"
 

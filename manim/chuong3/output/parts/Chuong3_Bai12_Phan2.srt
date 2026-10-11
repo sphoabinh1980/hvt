@@ -1,0 +1,579 @@
+1
+00:00:00,600 --> 00:00:03,660
+Câu hỏi thứ hai, về
+xác suất. Bài XUCXAC:
+
+2
+00:00:03,700 --> 00:00:06,986
+tung n con xúc xắc cân
+đối 6 mặt, n tới 100.
+
+3
+00:00:07,026 --> 00:00:10,993
+Tính xác suất để tổng số
+chấm nằm trong đoạn A đến B.
+
+4
+00:00:11,033 --> 00:00:11,504
+Ví dụ:
+
+5
+00:00:11,544 --> 00:00:13,291
+hai con, tổng bằng 7:
+
+6
+00:00:13,331 --> 00:00:16,864
+6 trong 36 kết quả,
+xác suất một phần sáu.
+
+7
+00:00:16,904 --> 00:00:18,906
+Ba con, tổng 10 hoặc 11:
+
+8
+00:00:18,946 --> 00:00:23,927
+27 cộng 27 bằng 54 trong 216
+kết quả, xác suất một phần tư.
+
+9
+00:00:23,967 --> 00:00:27,152
+Cách ngây thơ liệt
+kê 6 mũ n kết quả:
+
+10
+00:00:27,192 --> 00:00:31,860
+n bằng 10 đã hơn 60 triệu,
+n bằng 100 thì không tưởng.
+
+11
+00:00:31,900 --> 00:00:33,974
+Quy hoạch động: đặt P của i,
+
+12
+00:00:34,014 --> 00:00:38,505
+s là xác suất để i con xúc xắc
+đầu tiên có tổng đúng bằng s.
+
+13
+00:00:38,545 --> 00:00:42,204
+Con thứ i ra mỗi mặt f
+với xác suất một phần sáu,
+
+14
+00:00:42,244 --> 00:00:47,188
+độc lập với các con trước, nên P
+của i, s bằng tổng P của i trừ 1,
+
+15
+00:00:47,228 --> 00:00:49,227
+s trừ f, nhân một phần sáu.
+
+16
+00:00:49,267 --> 00:00:51,227
+Cơ sở P của 0, 0 bằng 1.
+
+17
+00:00:51,267 --> 00:00:54,060
+Bảng có n nhân 6n ô, mỗi ô 6 phép:
+
+18
+00:00:54,100 --> 00:00:58,560
+với n bằng 100 chỉ khoảng
+ba trăm sáu mươi nghìn phép.
+
+19
+00:00:59,800 --> 00:01:01,390
+Xem bảng chạy thế nào.
+
+20
+00:01:01,430 --> 00:01:04,797
+Dưới đây là số cách, tức
+xác suất nhân 6 mũ i.
+
+21
+00:01:04,837 --> 00:01:09,093
+Với một con xúc xắc, mỗi tổng
+từ 1 đến 6 có đúng một cách.
+
+22
+00:01:09,133 --> 00:01:10,404
+Thêm con thứ hai:
+
+23
+00:01:10,444 --> 00:01:14,874
+số cách để tổng bằng s là tổng
+số cách ở s trừ 1, s trừ 2,
+
+24
+00:01:14,914 --> 00:01:17,186
+cho đến s trừ 6 của hàng trên.
+
+25
+00:01:17,226 --> 00:01:21,193
+Tổng 7 gom được cả sáu ô,
+nên có 6 cách, nhiều nhất.
+
+26
+00:01:21,233 --> 00:01:22,145
+Con thứ ba:
+
+27
+00:01:22,185 --> 00:01:24,480
+phân bố có hình quả chuông.
+
+28
+00:01:24,520 --> 00:01:29,323
+Tổng 10 và 11 mỗi tổng có 27
+cách, cộng lại 54 trên 216,
+
+29
+00:01:29,363 --> 00:01:30,793
+đúng một phần tư.
+
+30
+00:01:32,033 --> 00:01:32,349
+Code:
+
+31
+00:01:32,389 --> 00:01:35,478
+mảng chance giữ phân
+bố của các con đã tung.
+
+32
+00:01:35,518 --> 00:01:37,682
+Với mỗi con mới, tạo mảng next,
+
+33
+00:01:37,722 --> 00:01:41,593
+và đẩy chance của s chia 6
+sang s cộng f với mọi mặt f.
+
+34
+00:01:41,633 --> 00:01:44,162
+So với bài đếm, chỉ có một thay đổi:
+
+35
+00:01:44,202 --> 00:01:48,230
+mỗi cách chuyển trạng thái
+được nhân với xác suất của nó.
+
+36
+00:01:48,270 --> 00:01:51,584
+Ta cũng có thể đếm số
+cách rồi chia cho 6 mũ n,
+
+37
+00:01:51,624 --> 00:01:54,582
+nhưng 6 mũ 100 vượt
+xa mọi kiểu số nguyên;
+
+38
+00:01:54,622 --> 00:01:57,293
+làm trực tiếp với
+số thực an toàn hơn.
+
+39
+00:01:58,533 --> 00:01:59,521
+Câu hỏi thứ ba:
+
+40
+00:01:59,561 --> 00:02:02,945
+tung một con xúc xắc liên
+tục và cộng dồn số chấm,
+
+41
+00:02:02,985 --> 00:02:04,863
+dừng khi tổng đạt ít nhất N.
+
+42
+00:02:04,903 --> 00:02:07,260
+Trung bình phải tung bao nhiêu lần?
+
+43
+00:02:07,300 --> 00:02:11,807
+Kì vọng của một đại lượng ngẫu nhiên
+là trung bình có trọng số của các
+
+44
+00:02:11,847 --> 00:02:14,470
+giá trị có thể, với
+trọng số là xác suất.
+
+45
+00:02:14,510 --> 00:02:17,393
+Tính chất quan trọng
+nhất là tính tuyến tính:
+
+46
+00:02:17,433 --> 00:02:19,927
+kì vọng của tổng bằng
+tổng các kì vọng.
+
+47
+00:02:19,967 --> 00:02:23,575
+Đặt E của s là số lần
+trung bình còn phải tung,
+
+48
+00:02:23,615 --> 00:02:25,360
+khi tổng hiện tại là s.
+
+49
+00:02:25,400 --> 00:02:28,238
+Nếu s đã đạt N thì
+đã dừng: E bằng 0.
+
+50
+00:02:28,278 --> 00:02:31,038
+Nếu s nhỏ hơn N, ta tung thêm 1 lần,
+
+51
+00:02:31,078 --> 00:02:36,327
+được mặt f với xác suất một phần
+sáu, rồi ở vào trạng thái s cộng f.
+
+52
+00:02:36,367 --> 00:02:41,071
+Vậy E của s bằng 1 cộng trung
+bình của sáu giá trị E kế tiếp.
+
+53
+00:02:41,111 --> 00:02:43,560
+Tính s giảm dần từ N trừ 1 về 0.
+
+54
+00:02:44,800 --> 00:02:46,230
+Chạy với N bằng 6.
+
+55
+00:02:46,270 --> 00:02:49,170
+Các ô từ 6 trở đi đã dừng, E bằng 0.
+
+56
+00:02:49,210 --> 00:02:51,293
+Ta tính từ phải sang trái.
+
+57
+00:02:51,333 --> 00:02:56,460
+Từ tổng 5, tung thêm một lần là
+chắc chắn đạt 6: E của 5 bằng 1.
+
+58
+00:02:56,500 --> 00:02:57,260
+Từ tổng 4:
+
+59
+00:02:57,300 --> 00:03:01,820
+tung một lần, nếu ra 1 thì về
+tổng 5, còn phải tung thêm.
+
+60
+00:03:01,860 --> 00:03:06,060
+E của 4 bằng 1 cộng một phần
+sáu, khoảng 1 phẩy 1667.
+
+61
+00:03:06,100 --> 00:03:11,560
+E của 3 bằng 1 cộng một phần
+sáu của 1 phẩy 1667 cộng 1,
+
+62
+00:03:11,600 --> 00:03:13,427
+khoảng 1 phẩy 3611.
+
+63
+00:03:13,467 --> 00:03:16,360
+E của 2 khoảng 1 phẩy 588.
+
+64
+00:03:16,400 --> 00:03:19,560
+E của 1 khoảng 1 phẩy 8526.
+
+65
+00:03:19,600 --> 00:03:23,593
+Và E của 0, đáp án,
+khoảng 2 phẩy 1614.
+
+66
+00:03:23,633 --> 00:03:28,416
+Vậy trung bình cần khoảng 2 phẩy
+16 lần tung. Một điều thú vị:
+
+67
+00:03:28,456 --> 00:03:32,927
+với N không quá 7, E của 0
+đúng bằng 7 phần 6, mũ N trừ 1.
+
+68
+00:03:34,167 --> 00:03:35,260
+Chú ý chiều tính.
+
+69
+00:03:35,300 --> 00:03:38,593
+Xác suất thường được tính
+xuôi, từ trạng thái đầu,
+
+70
+00:03:38,633 --> 00:03:40,660
+vì ta biết xác suất đã tới đây.
+
+71
+00:03:40,700 --> 00:03:45,169
+Còn kì vọng số bước còn lại được
+tính ngược, từ trạng thái cuối,
+
+72
+00:03:45,209 --> 00:03:47,493
+vì giá trị ở cuối đã biết bằng 0.
+
+73
+00:03:47,533 --> 00:03:48,803
+Code chỉ vài dòng:
+
+74
+00:03:48,843 --> 00:03:51,569
+mảng expect có thêm
+6 ô bằng 0 ở cuối;
+
+75
+00:03:51,609 --> 00:03:55,427
+duyệt s giảm dần, cộng sáu
+ô kế tiếp, chia 6, cộng 1.
+
+76
+00:03:56,667 --> 00:03:57,476
+Mở rộng một:
+
+77
+00:03:57,516 --> 00:03:58,892
+đếm cấu trúc tổ hợp.
+
+78
+00:03:58,932 --> 00:04:01,370
+Ví dụ đếm dãy ngoặc đúng độ dài 2n:
+
+79
+00:04:01,410 --> 00:04:05,334
+trạng thái là i kí tự đã viết,
+và số ngoặc mở chưa đóng,
+
+80
+00:04:05,374 --> 00:04:06,325
+luôn không âm.
+
+81
+00:04:06,365 --> 00:04:09,582
+Mở ngoặc làm nó tăng 1,
+đóng ngoặc làm giảm 1.
+
+82
+00:04:09,622 --> 00:04:11,493
+Đáp án là trạng thái 2n, 0.
+
+83
+00:04:11,533 --> 00:04:12,252
+Mở rộng hai:
+
+84
+00:04:12,292 --> 00:04:14,466
+nếu đồ thị trạng thái có chu trình,
+
+85
+00:04:14,506 --> 00:04:18,767
+ví dụ trò chơi có thể quay lại vị
+trí cũ, thì không có thứ tự tô pô,
+
+86
+00:04:18,807 --> 00:04:21,550
+quy hoạch động thông
+thường không dùng được.
+
+87
+00:04:21,590 --> 00:04:23,701
+Đường ngắn nhất thì dùng Dijkstra;
+
+88
+00:04:23,741 --> 00:04:26,927
+kì vọng có chu trình thì
+phải giải hệ phương trình.
+
+89
+00:04:26,967 --> 00:04:27,680
+Mở rộng ba:
+
+90
+00:04:27,720 --> 00:04:32,066
+khi đề yêu cầu xác suất dạng phân
+số lấy dư theo số nguyên tố p,
+
+91
+00:04:32,106 --> 00:04:36,109
+thay phép chia cho 6 bằng nhân
+với nghịch đảo modulo của 6,
+
+92
+00:04:36,149 --> 00:04:40,427
+tính bằng lũy thừa nhanh 6 mũ p
+trừ 2, theo định lí Fermat nhỏ.
+
+93
+00:04:41,667 --> 00:04:42,174
+Bẫy một:
+
+94
+00:04:42,214 --> 00:04:45,664
+đồ thị có chu trình nhưng
+vẫn áp dụng thứ tự tô pô.
+
+95
+00:04:45,704 --> 00:04:48,128
+Kahn sẽ không lấy được hết các đỉnh;
+
+96
+00:04:48,168 --> 00:04:50,660
+hãy kiểm tra kích
+thước order bằng n.
+
+97
+00:04:50,700 --> 00:04:51,231
+Bẫy hai:
+
+98
+00:04:51,271 --> 00:04:54,803
+đỉnh không tới được từ 1
+có ways bằng 0, vẫn đúng;
+
+99
+00:04:54,843 --> 00:04:59,160
+nhưng nếu khởi tạo ways bằng 1
+cho mọi đỉnh có bán bậc vào 0,
+
+100
+00:04:59,200 --> 00:05:01,660
+sẽ đếm cả đường không bắt đầu từ 1.
+
+101
+00:05:01,700 --> 00:05:03,418
+Bẫy ba: sai số số thực.
+
+102
+00:05:03,458 --> 00:05:07,927
+In đủ số chữ số yêu cầu, và
+tránh trừ hai số gần bằng nhau.
+
+103
+00:05:07,967 --> 00:05:08,457
+Bẫy bốn:
+
+104
+00:05:08,497 --> 00:05:11,438
+tính kì vọng số bước
+còn lại theo chiều xuôi.
+
+105
+00:05:11,478 --> 00:05:13,360
+Phải tính từ trạng thái cuối.
+
+106
+00:05:14,600 --> 00:05:15,083
+Ghi nhớ:
+
+107
+00:05:15,123 --> 00:05:17,696
+trạng thái là đỉnh,
+phép chuyển là cạnh;
+
+108
+00:05:17,736 --> 00:05:21,093
+quy hoạch động chính là
+duyệt DAG theo thứ tự tô pô.
+
+109
+00:05:21,133 --> 00:05:22,464
+Đếm thì cộng số cách.
+
+110
+00:05:22,504 --> 00:05:25,990
+Xác suất thì cộng xác suất
+nguồn nhân xác suất chuyển.
+
+111
+00:05:26,030 --> 00:05:27,818
+Tối ưu thì lấy max hoặc min.
+
+112
+00:05:27,858 --> 00:05:32,128
+Kì vọng bằng 1 cộng trung bình có
+trọng số của E các trạng thái kế
+
+113
+00:05:32,168 --> 00:05:33,760
+tiếp, tính ngược từ cuối.
+
+114
+00:05:35,000 --> 00:05:36,317
+Câu hỏi tự kiểm tra:
+
+115
+00:05:36,357 --> 00:05:39,641
+nếu thêm cạnh từ 1 tới 4
+vào ví dụ DUONGMOTCHIEU,
+
+116
+00:05:39,681 --> 00:05:41,134
+có bao nhiêu đường đi?
+
+117
+00:05:41,174 --> 00:05:42,627
+Dừng video và thử nhé!
+
+118
+00:05:42,667 --> 00:05:46,077
+ways của 4 giờ nhận thêm
+1 từ đỉnh 1, thành 3.
+
+119
+00:05:46,117 --> 00:05:51,252
+ways của 6 bằng ways 4 cộng ways 5
+cộng ways 3, bằng 3 cộng 1 cộng 1,
+
+120
+00:05:51,292 --> 00:05:52,227
+bằng 5 đường.
+
+121
+00:05:53,367 --> 00:05:55,928
+Chúc mừng các em đã
+hoàn thành Chương 3!
+
+122
+00:05:55,968 --> 00:05:59,699
+Ta đã đi qua quy hoạch động
+trên đoạn, trạng thái tập con,
+
+123
+00:05:59,739 --> 00:06:04,121
+quy hoạch động chữ số, quy hoạch
+động trên cây, và cuối cùng là đếm,
+
+124
+00:06:04,161 --> 00:06:06,527
+đồ thị có hướng,
+xác suất và kì vọng.
+
+125
+00:06:06,567 --> 00:06:09,082
+Chương 4 sẽ trả lời một câu hỏi mới:
+
+126
+00:06:09,122 --> 00:06:13,624
+khi công thức đã đúng nhưng chương
+trình vẫn chạy quá thời gian,
+
+127
+00:06:13,664 --> 00:06:14,973
+làm sao tối ưu hóa?
+
+128
+00:06:15,013 --> 00:06:16,960
+Hẹn gặp lại các em ở Bài 13!
