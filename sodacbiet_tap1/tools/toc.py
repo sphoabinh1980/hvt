@@ -11,7 +11,7 @@ for k in range(1, n + 1):
     pages.append(t)
 norm = lambda s: re.sub(r'\s+', ' ', s)
 # trang mục lục: có dòng "Bài x.y. ..." kèm dấu chấm dẫn, hoặc tiêu đề MỤC LỤC
-toc_pages = {i for i, t in enumerate(pages) if re.search(r'Bài \d+\.\d+\. .*\.{5}', t) or 'MỤC LỤC' in t}
+toc_pages = {i for i, t in enumerate(pages) if re.search(r'Bài \d+\. .*\.{5}', t) or 'MỤC LỤC' in t}
 # danh sách mục theo thứ tự xuất hiện: lấy từ document.xml (bookmark + văn bản)
 import zipfile
 doc = zipfile.ZipFile(os.path.join(ROOT, 'out', 'SoDacBiet_Tap1_LyThuyet.docx')).read('word/document.xml').decode('utf-8')
@@ -21,7 +21,7 @@ for name, xml in entries:
     text = ''.join(re.findall(r'<w:t[^>]*>([^<]*)</w:t>', xml.split('<w:tab/>')[0]))
     items.append((name, text))
 def key(text):
-    m = re.match(r'Bài (\d+\.\d+)\. ', text)
+    m = re.match(r'Bài (\d+)\. ', text)
     if m: return 'BÀI ' + m.group(1) + ' '
     return text.split(' (')[0]
 pm = {}; cur = 0
