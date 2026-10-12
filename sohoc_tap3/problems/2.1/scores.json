@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Thử mọi d từ 1 tới n",
+  "pts": [
+   30,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.37s",
+   "TLE 1.05s"
+  ]
+ },
+ "intd.cpp": {
+  "title": "Duyệt tới √n, biến d kiểu int",
+  "pts": [
+   30,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.00s",
+   "TLE 1.05s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Duyệt cặp ước tới √n, O(√n)",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.00s",
+   "AC 0.04s"
+  ]
+ }
+}

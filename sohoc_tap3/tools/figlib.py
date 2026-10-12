@@ -47,7 +47,10 @@ def new(w, h):
 
 def save(fig, path):
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    fig.savefig(path, dpi=200, facecolor='white')
+    for a in fig.axes:
+        for t in a.texts:
+            t.set_clip_on(False)
+    fig.savefig(path, dpi=200, facecolor='white', bbox_inches='tight', pad_inches=0.06)
     plt.close(fig)
 
 
