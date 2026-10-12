@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Thử mọi điểm trong hình chữ nhật bao",
+  "pts": [
+   0,
+   0,
+   0
+  ],
+  "detail": [
+   "TLE 1.05s",
+   "TLE 1.05s",
+   "TLE 1.06s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Pick bằng long long",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.06s",
+   "AC 0.12s",
+   "WA 0.21s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Pick bằng __int128, tự viết hàm in",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.06s",
+   "AC 0.14s",
+   "AC 0.24s"
+  ]
+ }
+}
