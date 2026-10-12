@@ -1,0 +1,24 @@
+{
+ "naive.cpp": {
+  "title": "Kiểm tra từng số 1, 2, 3, ...",
+  "pts": [
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.03s",
+   "TLE 1.05s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Ba con trỏ",
+  "pts": [
+   30,
+   70
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.00s"
+  ]
+ }
+}
