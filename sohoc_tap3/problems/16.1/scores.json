@@ -1,0 +1,54 @@
+{
+ "naive.cpp": {
+  "title": "Tính σ(x) cho từng x bằng duyệt ước tới √x",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "TLE 1.05s",
+   "TLE 1.05s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Đếm hai lần: Σ i · ⌊n/i⌋, i = 1..n",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.06s",
+   "TLE 1.05s"
+  ]
+ },
+ "trap.cpp": {
+  "title": "Chia khối, lấy dư i, j trước khi chia 2",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.00s",
+   "WA 0.03s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Chia khối, tổng khối bằng __int128",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.00s",
+   "AC 0.03s"
+  ]
+ }
+}
