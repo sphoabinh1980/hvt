@@ -1,0 +1,24 @@
+{
+ "naive.cpp": {
+  "title": "Duyệt mọi số, kiểm tra đối xứng rồi nguyên tố",
+  "pts": [
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.08s",
+   "TLE 1.05s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Sinh số đối xứng độ dài lẻ + Miller–Rabin",
+  "pts": [
+   30,
+   70
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.27s"
+  ]
+ }
+}

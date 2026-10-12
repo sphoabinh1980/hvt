@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Mô phỏng hai dãy thời điểm nháy",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "TLE 1.05s",
+   "TLE 1.05s"
+  ]
+ },
+ "nogate.cpp": {
+  "title": "Gộp đồng dư, quên điều kiện \"đã bật\"",
+  "pts": [
+   0,
+   30,
+   0
+  ],
+  "detail": [
+   "WA 0.00s",
+   "AC 0.08s",
+   "WA 0.11s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Gộp đồng dư tổng quát + số đầu tiên ≥ max(a₁, a₂)",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.11s",
+   "AC 0.12s"
+  ]
+ }
+}

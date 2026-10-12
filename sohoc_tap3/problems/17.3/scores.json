@@ -1,0 +1,54 @@
+{
+ "naive.cpp": {
+  "title": "Dùng __int128",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "WA 0.00s",
+   "WA 0.00s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Nhân cộng dồn trong cơ số 10",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.02s",
+   "TLE 1.05s"
+  ]
+ },
+ "trap.cpp": {
+  "title": "Nhân cộng dồn trong cơ số 10⁹",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "WA 0.00s",
+   "WA 0.03s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Nhân cộng dồn trong cơ số 10⁴",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.00s",
+   "AC 0.11s"
+  ]
+ }
+}

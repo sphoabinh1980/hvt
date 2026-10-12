@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Quy hoạch động f[0..n]",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.02s",
+   "RE 0.00s",
+   "RE 0.00s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "QHĐ khi n ≤ 10⁶, lũy thừa ma trận khi K = 0",
+  "pts": [
+   30,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.03s",
+   "AC 0.01s",
+   "WA 0.01s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Lũy thừa ma trận theo từng đoạn giữa các bậc hỏng",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.00s",
+   "AC 0.04s"
+  ]
+ }
+}

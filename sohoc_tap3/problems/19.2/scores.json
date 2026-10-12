@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Duyệt mọi đoạn [l, r]",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.02s",
+   "TLE 1.05s",
+   "TLE 1.06s"
+  ]
+ },
+ "trap.cpp": {
+  "title": "Vị trí đầu tiên của số dư, dùng S % k trực tiếp",
+  "pts": [
+   0,
+   30,
+   0
+  ],
+  "detail": [
+   "RE 0.01s",
+   "AC 0.21s",
+   "RE 0.02s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Vị trí đầu tiên của số dư, số dư đưa về [0, k)",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.16s",
+   "AC 0.19s"
+  ]
+ }
+}

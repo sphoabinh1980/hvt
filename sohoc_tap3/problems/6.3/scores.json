@@ -1,0 +1,28 @@
+{
+ "naive.cpp": {
+  "title": "Phân tích bằng thử chia tới √a",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.16s",
+   "AC 0.23s",
+   "TLE 1.06s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Bóc thừa số ≤ 10⁴, xét phần còn lại",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.48s",
+   "AC 0.01s",
+   "AC 0.48s"
+  ]
+ }
+}

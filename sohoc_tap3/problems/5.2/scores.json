@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Sàng Eratosthenes tới n",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.37s",
+   "RE 0.00s",
+   "RE 0.00s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Thử p = 2, 3, ... tới n/2 (không xét chẵn lẻ)",
+  "pts": [
+   30,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.28s",
+   "TLE 1.05s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Xét chẵn lẻ + kiểm tra p trước, n − p sau",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.28s",
+   "AC 0.23s"
+  ]
+ }
+}

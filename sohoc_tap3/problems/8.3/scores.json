@@ -1,0 +1,41 @@
+{
+ "harm.cpp": {
+  "title": "Sàng điều hòa đếm ước tới R",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.03s",
+   "RE 0.00s",
+   "RE 0.00s"
+  ]
+ },
+ "naive.cpp": {
+  "title": "Đếm ước từng số bằng cặp ước, O(√x)",
+  "pts": [
+   0,
+   30,
+   0
+  ],
+  "detail": [
+   "TLE 1.05s",
+   "AC 0.37s",
+   "TLE 1.05s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Phân tích đồng loạt trên đoạn",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.06s",
+   "AC 0.01s",
+   "AC 0.06s"
+  ]
+ }
+}

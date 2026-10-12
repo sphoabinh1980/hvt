@@ -1,0 +1,54 @@
+{
+ "naive.cpp": {
+  "title": "Dùng long long",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "WA 0.00s",
+   "WA 0.00s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Cộng hai xâu chữ số, chưa xử lí hai số khác dấu",
+  "pts": [
+   0,
+   40,
+   0
+  ],
+  "detail": [
+   "WA 0.00s",
+   "AC 0.00s",
+   "WA 0.00s"
+  ]
+ },
+ "trap.cpp": {
+  "title": "Đủ cộng/trừ, so sánh trị tuyệt đối như so sánh xâu",
+  "pts": [
+   0,
+   40,
+   0
+  ],
+  "detail": [
+   "WA 0.01s",
+   "AC 0.01s",
+   "WA 0.00s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Cộng/trừ xâu, so sánh độ dài trước",
+  "pts": [
+   20,
+   40,
+   40
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.01s",
+   "AC 0.01s"
+  ]
+ }
+}

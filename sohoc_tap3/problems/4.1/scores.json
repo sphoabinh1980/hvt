@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Loang (BFS) trên các lượng nước ≤ 4000",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "WA 0.02s",
+   "WA 0.03s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Chỉ dùng gcd của hai can đầu",
+  "pts": [
+   30,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.02s",
+   "AC 0.02s",
+   "WA 0.03s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Bézout: gcd của cả dãy",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.02s",
+   "AC 0.03s"
+  ]
+ }
+}

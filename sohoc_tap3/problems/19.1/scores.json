@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Duyệt mọi đoạn [l, r]",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "TLE 1.05s",
+   "TLE 1.06s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Đếm tổng tiền tố bằng mảng dời gốc",
+  "pts": [
+   0,
+   30,
+   0
+  ],
+  "detail": [
+   "RE 0.06s",
+   "AC 0.18s",
+   "RE 0.07s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Sắp xếp các tổng tiền tố, đếm nhóm bằng nhau",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.16s",
+   "AC 0.23s"
+  ]
+ }
+}

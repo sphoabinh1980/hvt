@@ -1,0 +1,54 @@
+{
+ "naive.cpp": {
+  "title": "Đệ quy liệt kê mọi cách chia",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "TLE 1.06s",
+   "TLE 1.06s"
+  ]
+ },
+ "pascal.cpp": {
+  "title": "Tam giác Pascal tới 4000",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.05s",
+   "AC 0.08s",
+   "RE 0.05s"
+  ]
+ },
+ "bay.cpp": {
+  "title": "Giai thừa chỉ tới 10⁶",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.02s",
+   "AC 0.05s",
+   "RE 0.03s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Phát trước t cái + C(a, b) từ bảng giai thừa tới 2·10⁶",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.04s",
+   "AC 0.07s",
+   "AC 0.08s"
+  ]
+ }
+}

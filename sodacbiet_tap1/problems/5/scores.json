@@ -1,0 +1,24 @@
+{
+ "naive.cpp": {
+  "title": "Horner trên từng đoạn",
+  "pts": [
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.04s",
+   "TLE 1.06s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Tiền tố số dư và lũy thừa của 10",
+  "pts": [
+   30,
+   70
+  ],
+  "detail": [
+   "AC 0.02s",
+   "AC 0.44s"
+  ]
+ }
+}

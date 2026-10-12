@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Thử mọi d ≤ n; duyệt dãy cho mỗi khách",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "TLE 1.05s",
+   "TLE 1.06s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Ước tới √n; duyệt tuần tự cho mỗi khách",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.01s",
+   "AC 0.40s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Ghép hai dãy ước + tìm kiếm nhị phân",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.01s",
+   "AC 0.05s"
+  ]
+ }
+}

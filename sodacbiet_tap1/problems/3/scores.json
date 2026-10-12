@@ -1,0 +1,35 @@
+{
+ "trap.cpp": {
+  "title": "Giữ chữ số cuối sau khi bỏ số 0",
+  "pts": [
+   0,
+   0
+  ],
+  "detail": [
+   "WA 0.01s",
+   "TLE 1.05s"
+  ]
+ },
+ "naive.cpp": {
+  "title": "Tách thừa số 2 và 5 của từng số",
+  "pts": [
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "TLE 1.05s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Legendre + công thức đệ quy theo n / 5",
+  "pts": [
+   30,
+   70
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.16s"
+  ]
+ }
+}

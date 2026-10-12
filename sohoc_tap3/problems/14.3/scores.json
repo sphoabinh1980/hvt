@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Duyệt mọi hoán vị",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "RE 0.01s",
+   "RE 0.01s"
+  ]
+ },
+ "trap.cpp": {
+  "title": "C(n, k) · D(k), nhân (n − i) chưa lấy dư",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.02s",
+   "WA 0.15s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "C(n, k) · D(k), lấy dư từng thừa số",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.02s",
+   "AC 0.16s"
+  ]
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Cộng popcount từng số trong [L, R]",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "TLE 1.05s",
+   "TLE 1.06s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Đếm theo cột, f(R) − f(L − 1) bằng long long",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.09s",
+   "WA 0.09s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Đếm theo cột, unsigned __int128",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.18s",
+   "AC 0.18s"
+  ]
+ }
+}

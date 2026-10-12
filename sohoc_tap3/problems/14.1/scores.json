@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Duyệt mọi x trong [L, R]",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "TLE 1.05s",
+   "TLE 1.06s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Bù trừ, lcm tính thẳng (có thể tràn)",
+  "pts": [
+   30,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.12s",
+   "WA 0.15s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Bù trừ, lcm có chặn trên",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.10s",
+   "AC 0.14s"
+  ]
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "naive.cpp": {
+  "title": "Nhân dần bằng long long",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "WA 0.00s",
+   "WA 0.00s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Số lớn cơ số 10, nhân b lần với a",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.04s",
+   "TLE 1.05s"
+  ]
+ },
+ "trap.cpp": {
+  "title": "Cơ số 10⁹, in mỗi ô bằng %lld",
+  "pts": [
+   0,
+   0,
+   0
+  ],
+  "detail": [
+   "WA 0.00s",
+   "WA 0.01s",
+   "WA 0.14s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Cơ số 10⁹, in các ô sau bằng %09lld",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.01s",
+   "AC 0.14s"
+  ]
+ }
+}

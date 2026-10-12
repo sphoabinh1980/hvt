@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Ghép thành số long long rồi chia",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "WA 0.00s",
+   "WA 0.04s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Lưu cả xâu, Horner từng chữ số",
+  "pts": [
+   30,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.01s",
+   "RE 0.17s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Horner theo từng số i, bộ nhớ O(1)",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.00s",
+   "AC 0.11s"
+  ]
+ }
+}

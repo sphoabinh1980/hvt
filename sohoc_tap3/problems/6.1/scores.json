@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Thử chia từng số cho mỗi truy vấn",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.02s",
+   "TLE 1.06s",
+   "TLE 1.06s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Sàng + mảng đếm; loại 2 thì duyệt sàng",
+  "pts": [
+   30,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.07s",
+   "AC 0.50s",
+   "TLE 1.06s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Sàng + mảng đếm + danh sách số nguyên tố",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.11s",
+   "AC 0.43s",
+   "AC 0.40s"
+  ]
+ }
+}

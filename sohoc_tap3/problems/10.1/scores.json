@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Phân số chính xác bằng long long",
+  "pts": [
+   30,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.00s",
+   "RE 0.02s"
+  ]
+ },
+ "bay.cpp": {
+  "title": "Theo mô-đun, quên cộng MOD khi trừ",
+  "pts": [
+   0,
+   0,
+   0
+  ],
+  "detail": [
+   "WA 0.00s",
+   "WA 0.01s",
+   "WA 0.02s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Tử, mẫu theo mô-đun + một lần nghịch đảo",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.00s",
+   "AC 0.02s"
+  ]
+ }
+}

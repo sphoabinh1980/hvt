@@ -1,0 +1,28 @@
+{
+ "naive.cpp": {
+  "title": "Thử chia từng số trong đoạn",
+  "pts": [
+   30,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.09s",
+   "AC 0.51s",
+   "TLE 1.05s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Sàng trên đoạn, duyệt cặp liên tiếp",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.01s",
+   "AC 0.10s"
+  ]
+ }
+}

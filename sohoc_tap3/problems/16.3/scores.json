@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Cộng trực tiếp, i = 1..min(n, m)",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.09s",
+   "TLE 1.05s",
+   "TLE 1.05s"
+  ]
+ },
+ "trap.cpp": {
+  "title": "Chia khối chỉ theo ⌊n/i⌋",
+  "pts": [
+   0,
+   30,
+   0
+  ],
+  "detail": [
+   "WA 0.00s",
+   "AC 0.13s",
+   "WA 0.09s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Khối chung của hai thương, tổng Σ1, Σi, Σi²",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.11s",
+   "AC 0.14s"
+  ]
+ }
+}

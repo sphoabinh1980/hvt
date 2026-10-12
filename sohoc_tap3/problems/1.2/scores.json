@@ -1,0 +1,54 @@
+{
+ "naive.cpp": {
+  "title": "Nhân b lần, số kiểu long long",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.03s",
+   "TLE 1.05s",
+   "TLE 1.05s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Lũy thừa nhanh, số kiểu long long",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.00s",
+   "WA 0.02s"
+  ]
+ },
+ "bay4.cpp": {
+  "title": "Xâu + số mũ b mod 4 (quên b ⋮ 4)",
+  "pts": [
+   0,
+   0,
+   0
+  ],
+  "detail": [
+   "WA 0.00s",
+   "WA 0.00s",
+   "WA 0.04s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Xâu + chu kì 4, O(độ dài)",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.01s",
+   "AC 0.01s"
+  ]
+ }
+}

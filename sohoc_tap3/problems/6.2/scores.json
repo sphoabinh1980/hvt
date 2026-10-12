@@ -1,0 +1,54 @@
+{
+ "naive.cpp": {
+  "title": "Thử chia, duyệt p trong đoạn",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "TLE 2.05s",
+   "TLE 2.06s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Sàng, duyệt p trong đoạn cho mỗi truy vấn",
+  "pts": [
+   30,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.08s",
+   "AC 0.86s",
+   "TLE 2.06s"
+  ]
+ },
+ "bay.cpp": {
+  "title": "Tiền tố t[b] − t[a − 1] (đếm thừa)",
+  "pts": [
+   0,
+   0,
+   0
+  ],
+  "detail": [
+   "WA 0.09s",
+   "WA 0.08s",
+   "WA 0.44s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Tiền tố trên dấu hiệu s[p], đoạn [a, b − 2]",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.08s",
+   "AC 0.08s",
+   "AC 0.47s"
+  ]
+ }
+}

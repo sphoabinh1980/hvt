@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Bảng đếm tính sẵn trên [0, 10⁵]",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.06s",
+   "RE 0.03s",
+   "RE 0.02s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Loại 1 bằng tổ hợp, loại 2 tra bảng tới 10⁵",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.05s",
+   "AC 0.12s",
+   "WA 0.08s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Duyệt bit từ cao xuống với C(i, k) cho cả hai loại",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.06s",
+   "AC 0.13s",
+   "AC 0.14s"
+  ]
+ }
+}

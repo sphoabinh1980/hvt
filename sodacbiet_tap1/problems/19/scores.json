@@ -1,0 +1,24 @@
+{
+ "naive.cpp": {
+  "title": "Thử mọi a, kiểm tra n − a² chính phương",
+  "pts": [
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.02s",
+   "TLE 1.05s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Sàng ước nguyên tố nhỏ nhất + định lí hai bình phương",
+  "pts": [
+   30,
+   70
+  ],
+  "detail": [
+   "AC 0.18s",
+   "AC 0.61s"
+  ]
+ }
+}

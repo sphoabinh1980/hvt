@@ -1,0 +1,24 @@
+{
+ "naive.cpp": {
+  "title": "Lặp k lần: xóa đỉnh đầu tiên",
+  "pts": [
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "TLE 1.05s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Tham lam với ngăn xếp",
+  "pts": [
+   30,
+   70
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.04s"
+  ]
+ }
+}

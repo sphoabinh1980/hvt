@@ -1,0 +1,54 @@
+{
+ "naive.cpp": {
+  "title": "Tính s(n) bằng thử mọi ước, O(N²)",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "TLE 2.05s",
+   "TLE 2.05s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Tính s(n) bằng cặp ước, O(N√N)",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.32s",
+   "TLE 2.05s"
+  ]
+ },
+ "ll.cpp": {
+  "title": "Sàng điều hòa, mảng long long",
+  "pts": [
+   0,
+   0,
+   0
+  ],
+  "detail": [
+   "RE 0.00s",
+   "RE 0.00s",
+   "RE 0.00s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Sàng điều hòa, mảng int",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.01s",
+   "AC 0.70s"
+  ]
+ }
+}
