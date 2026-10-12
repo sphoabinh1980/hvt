@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Thử chia 6k ± 1 tới √n",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.13s",
+   "TLE 2.06s",
+   "TLE 2.06s"
+  ]
+ },
+ "mr11.cpp": {
+  "title": "Miller–Rabin 11 cơ sở 2..31",
+  "pts": [
+   20,
+   50,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.71s",
+   "WA 0.29s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Miller–Rabin 12 cơ sở 2..37",
+  "pts": [
+   20,
+   50,
+   30
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.70s",
+   "AC 0.89s"
+  ]
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Kiểm tra bằng thử chia tới n − 1",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "TLE 1.05s",
+   "TLE 1.05s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Thử chia mọi i ≤ √n",
+  "pts": [
+   30,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.02s",
+   "TLE 1.00s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Thử chia 2, 3 và 6k ± 1 tới √n",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.01s",
+   "AC 0.33s"
+  ]
+ }
+}
