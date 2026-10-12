@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Thử x = L, L + 1, ...",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "TLE 1.06s",
+   "TLE 1.06s"
+  ]
+ },
+ "onestep.cpp": {
+  "title": "Gộp Trung Hoa, chỉ nhảy thêm một bước M",
+  "pts": [
+   0,
+   30,
+   0
+  ],
+  "detail": [
+   "WA 0.00s",
+   "AC 0.00s",
+   "WA 0.00s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Gộp Trung Hoa + nhảy thẳng tới số đầu tiên ≥ L",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.00s",
+   "AC 0.00s"
+  ]
+ }
+}

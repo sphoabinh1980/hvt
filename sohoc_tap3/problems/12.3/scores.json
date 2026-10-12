@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Liệt kê các năm",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.09s",
+   "RE 0.98s",
+   "RE 0.88s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Gộp đồng dư, lcm bằng long long",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.02s",
+   "AC 0.34s",
+   "WA 0.42s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "lcm qua phân tích thừa số; dừng gộp khi M > R",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.02s",
+   "AC 0.25s",
+   "AC 0.33s"
+  ]
+ }
+}
