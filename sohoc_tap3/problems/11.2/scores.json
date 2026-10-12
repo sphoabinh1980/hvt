@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Đếm cặp (a, b) với gcd = 1",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.06s",
+   "TLE 1.05s",
+   "TLE 1.05s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "φ(b) bằng thử chia + tổng tiền tố",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.08s",
+   "TLE 1.06s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Sàng φ tới max R + tổng tiền tố",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.04s",
+   "AC 0.33s"
+  ]
+ }
+}

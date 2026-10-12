@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Đếm k ≤ n với gcd(k, n) = 1",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.04s",
+   "TLE 1.05s",
+   "TLE 1.06s"
+  ]
+ },
+ "bay.cpp": {
+  "title": "Công thức tích, quên ước nguyên tố lớn còn lại",
+  "pts": [
+   0,
+   0,
+   0
+  ],
+  "detail": [
+   "WA 0.00s",
+   "WA 0.01s",
+   "WA 0.14s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Công thức tích φ(n), thử chia tới √n",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.01s",
+   "AC 0.14s"
+  ]
+ }
+}

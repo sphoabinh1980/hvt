@@ -1,0 +1,62 @@
+{
+ "naive.cpp": {
+  "title": "Tính giá trị thật của tháp (k ≤ 3)",
+  "pts": [
+   20,
+   0,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "TLE 1.05s",
+   "TLE 1.06s",
+   "TLE 1.06s"
+  ]
+ },
+ "fermat.cpp": {
+  "title": "k = 3, rút gọn số mũ theo m − 1",
+  "pts": [
+   0,
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "WA 0.01s",
+   "AC 0.01s",
+   "WA 0.00s",
+   "WA 0.11s"
+  ]
+ },
+ "euler.cpp": {
+  "title": "Đệ quy theo φ, Euler thường (bỏ + φ)",
+  "pts": [
+   0,
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "WA 0.01s",
+   "AC 0.01s",
+   "WA 0.01s",
+   "WA 0.11s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Euler mở rộng + giá trị chặn của tháp",
+  "pts": [
+   20,
+   20,
+   30,
+   30
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.01s",
+   "AC 0.01s",
+   "AC 0.13s"
+  ]
+ }
+}
