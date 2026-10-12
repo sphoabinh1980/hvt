@@ -6,3 +6,6 @@ coverage/
 *.log
 .env*
 !.env.example
+sohoc_tap3/out/*.pdf
+sohoc_tap3/out/*.jpg
+__pycache__/

@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Đếm từng ngày",
+  "pts": [
+   0,
+   0,
+   0
+  ],
+  "detail": [
+   "TLE 1.05s",
+   "TLE 1.05s",
+   "TLE 1.05s"
+  ]
+ },
+ "modam.cpp": {
+  "title": "(t − 2 + k) % 7, quên số âm",
+  "pts": [
+   30,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.02s",
+   "AC 0.03s",
+   "WA 0.05s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Số dư không âm, O(1) mỗi câu",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.03s",
+   "AC 0.05s",
+   "AC 0.03s"
+  ]
+ }
+}
