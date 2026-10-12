@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Horner rồi in thập phân (chỉ đúng khi b = 10)",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.05s",
+   "WA 0.03s",
+   "WA 0.05s"
+  ]
+ },
+ "trap.cpp": {
+  "title": "Đổi cơ số bằng vòng while (v > 0)",
+  "pts": [
+   0,
+   0,
+   0
+  ],
+  "detail": [
+   "WA 0.05s",
+   "WA 0.05s",
+   "WA 0.05s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Horner + chia liên tiếp, do ... while",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.05s",
+   "AC 0.03s",
+   "AC 0.06s"
+  ]
+ }
+}
