@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Duyệt mọi hình chữ nhật, tổng tiền tố 2 chiều",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "TLE 1.05s",
+   "TLE 1.06s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Cố định cặp hàng, xóa cả mảng đếm k phần tử",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.08s",
+   "AC 0.13s",
+   "TLE 1.06s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Cố định cặp hàng, chỉ xóa các ô vừa dùng",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.15s",
+   "AC 0.16s"
+  ]
+ }
+}
