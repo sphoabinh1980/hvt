@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Thử mọi d từ 1 tới n",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.02s",
+   "TLE 2.05s",
+   "TLE 2.06s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Duyệt cặp ước tới √n",
+  "pts": [
+   30,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.02s",
+   "TLE 2.06s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Sàng spf, phân tích O(log n)",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.13s",
+   "AC 0.13s",
+   "AC 0.70s"
+  ]
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "naive.cpp": {
+  "title": "Tính n! rồi chia dần cho b",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "TLE 1.06s",
+   "TLE 1.06s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Ghép: n! (n ≤ 20), đếm thừa số 5 (b = 10)",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.00s",
+   "WA 0.00s"
+  ]
+ },
+ "bay.cpp": {
+  "title": "Legendre, chỉ xét ước nguyên tố lớn nhất của b",
+  "pts": [
+   0,
+   30,
+   0
+  ],
+  "detail": [
+   "WA 0.00s",
+   "AC 0.00s",
+   "WA 0.25s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Legendre cho mọi ước nguyên tố của b, lấy min",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.00s",
+   "AC 0.24s"
+  ]
+ }
+}

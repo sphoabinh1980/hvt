@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "BCNN chính xác bằng __int128, xóa thử từng số",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "WA 0.52s",
+   "TLE 1.06s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Bảng số mũ (thử chia), xóa thử từng số O(n²)",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.03s",
+   "TLE 1.06s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Sàng spf + số mũ lớn nhất + số phần tử đạt",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.16s",
+   "AC 0.24s"
+  ]
+ }
+}

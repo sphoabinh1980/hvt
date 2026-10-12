@@ -48,7 +48,7 @@ def new(w, h):
 def save(fig, path):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     for a in fig.axes:
-        for t in a.texts:
+        for t in list(a.texts) + list(a.patches) + list(a.lines):
             t.set_clip_on(False)
     fig.savefig(path, dpi=200, facecolor='white', bbox_inches='tight', pad_inches=0.06)
     plt.close(fig)
