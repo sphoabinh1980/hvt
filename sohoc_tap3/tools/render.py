@@ -70,6 +70,8 @@ def inline(text, base=None):
             buf.append(text[k + 1]); k += 2; continue
         if c == '`':
             flush(); st['code'] = True; k += 1; continue
+        if text.startswith('__int128', k) or text.startswith('__builtin', k):
+            buf.append('__'); k += 2; continue     # tên C++, không phải chữ nghiêng
         if two == '**':
             flush(); st['b'] = not st['b']; k += 2; continue
         if two == '__':
