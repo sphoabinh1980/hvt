@@ -1,0 +1,54 @@
+{
+ "naive.cpp": {
+  "title": "Đánh dấu điểm trên lưới [−100, 100]²",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "RE 0.03s",
+   "RE 0.03s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Đoạn song song trục: |dx| + |dy| điểm",
+  "pts": [
+   0,
+   30,
+   0
+  ],
+  "detail": [
+   "WA 0.00s",
+   "AC 0.02s",
+   "WA 0.02s"
+  ]
+ },
+ "trap.cpp": {
+  "title": "Cộng gcd + 1 cho từng đoạn",
+  "pts": [
+   0,
+   0,
+   0
+  ],
+  "detail": [
+   "WA 0.00s",
+   "WA 0.02s",
+   "WA 0.04s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Σ gcd(|dx|, |dy|) + 1, long long",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.03s",
+   "AC 0.04s"
+  ]
+ }
+}
