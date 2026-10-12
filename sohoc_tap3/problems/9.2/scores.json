@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Đọc b vào long long, lũy thừa nhanh",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "WA 0.01s",
+   "WA 0.01s"
+  ]
+ },
+ "fermat.cpp": {
+  "title": "Cách của Hùng: lấy b mod (m − 1)",
+  "pts": [
+   0,
+   30,
+   0
+  ],
+  "detail": [
+   "WA 0.01s",
+   "AC 0.03s",
+   "WA 0.03s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Horner trên số mũ: r ← r¹⁰ · aᵈ",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.05s",
+   "AC 0.05s"
+  ]
+ }
+}

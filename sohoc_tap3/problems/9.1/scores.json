@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Nhân b lần",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.04s",
+   "TLE 1.05s",
+   "TLE 1.06s"
+  ]
+ },
+ "bay.cpp": {
+  "title": "Lũy thừa nhanh, quên lấy dư cơ số",
+  "pts": [
+   0,
+   30,
+   0
+  ],
+  "detail": [
+   "WA 0.00s",
+   "AC 0.07s",
+   "WA 0.08s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Lũy thừa nhanh, a %= MOD trước",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.07s",
+   "AC 0.08s"
+  ]
+ }
+}

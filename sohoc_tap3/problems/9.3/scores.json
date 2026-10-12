@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Cộng dồn n + 1 số hạng",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.10s",
+   "TLE 1.06s",
+   "TLE 1.06s"
+  ]
+ },
+ "formula.cpp": {
+  "title": "Công thức (aⁿ⁺¹ − 1)/(a − 1), nghịch đảo Fermat",
+  "pts": [
+   0,
+   30,
+   0
+  ],
+  "detail": [
+   "WA 0.01s",
+   "AC 0.02s",
+   "WA 0.02s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Chia đôi S(2k) = S(k)(1 + aᵏ), __int128",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.03s",
+   "AC 0.05s"
+  ]
+ }
+}

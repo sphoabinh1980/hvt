@@ -203,7 +203,8 @@ class Doc:
             return
         pw, ph = png_size(path)
         maxw = W / 1440 * 2.54
-        width_cm = min(width_cm, maxw)
+        natural = pw / 200 * 2.54 * 0.92          # giữ cỡ chữ trong hình đồng đều
+        width_cm = min(width_cm, maxw, natural)
         cx = int(width_cm / 2.54 * 914400)
         cy = int(cx * ph / pw)
         rid = 'rIdImg%d' % (len(self.images) + 1)
