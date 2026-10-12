@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "QHĐ K bước trên vectơ số đường đi",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.02s",
+   "TLE 1.05s",
+   "TLE 1.05s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Mỗi câu hỏi lũy thừa ma trận A^K",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.02s",
+   "AC 0.15s",
+   "TLE 1.05s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Tính sẵn A^(2^i), nhân vectơ với ma trận",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.02s",
+   "AC 0.21s"
+  ]
+ }
+}
