@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Duyệt x ≤ N, kiểm tra gcd",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.58s",
+   "TLE 1.06s",
+   "TLE 1.06s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Bù trừ; phân tích n bằng thử mọi d ≤ √n",
+  "pts": [
+   30,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.04s",
+   "TLE 1.06s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Bù trừ; chỉ thử chia các số nguyên tố ≤ 10⁶",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.02s",
+   "AC 0.03s",
+   "AC 0.27s"
+  ]
+ }
+}
