@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Thử mọi x cho từng i",
+  "pts": [
+   0,
+   0,
+   0
+  ],
+  "detail": [
+   "TLE 1.06s",
+   "TLE 1.06s",
+   "TLE 1.06s"
+  ]
+ },
+ "fermat.cpp": {
+  "title": "Lũy thừa nhanh i^(p−2) cho từng i",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.26s",
+   "TLE 1.06s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Truy hồi inv[i] = −⌊p/i⌋ · inv[p mod i]",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.01s",
+   "AC 0.12s"
+  ]
+ }
+}

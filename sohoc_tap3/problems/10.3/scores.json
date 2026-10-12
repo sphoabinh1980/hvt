@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Thử mọi x trong [L, R]",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.08s",
+   "TLE 1.06s",
+   "TLE 1.06s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Tổng quát, nhân bằng long long",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.12s",
+   "WA 0.13s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Tổng quát, nhân __int128, đếm cấp số cộng",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.12s",
+   "AC 0.17s"
+  ]
+ }
+}
