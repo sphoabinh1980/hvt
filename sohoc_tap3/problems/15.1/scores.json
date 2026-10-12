@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Đệ quy T(n) = T(n − 1) + T(n − 2)",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "TLE 1.05s",
+   "RE 0.43s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Quy hoạch động tới max n",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.01s",
+   "RE 0.00s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Lũy thừa nhanh ma trận 2 × 2",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.00s",
+   "AC 0.01s"
+  ]
+ }
+}
