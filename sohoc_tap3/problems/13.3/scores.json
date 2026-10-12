@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Tam giác Pascal theo mô-đun m",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.07s",
+   "RE 0.03s",
+   "RE 0.03s"
+  ]
+ },
+ "lucas1.cpp": {
+  "title": "Định lí Lucas, coi m là số nguyên tố",
+  "pts": [
+   0,
+   30,
+   0
+  ],
+  "detail": [
+   "RE 0.01s",
+   "AC 0.09s",
+   "RE 0.04s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Lucas cho từng ước nguyên tố + ghép Trung Hoa",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.05s",
+   "AC 0.10s",
+   "AC 0.39s"
+  ]
+ }
+}

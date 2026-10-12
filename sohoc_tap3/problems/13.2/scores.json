@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Quy hoạch động trên lưới",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.01s",
+   "RE 0.47s",
+   "RE 0.35s"
+  ]
+ },
+ "order.cpp": {
+  "title": "Bù trừ, coi ô cấm thứ nhất luôn đi trước",
+  "pts": [
+   0,
+   30,
+   0
+  ],
+  "detail": [
+   "WA 0.04s",
+   "AC 0.04s",
+   "WA 0.04s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Bù trừ hai tập + hệ số nhị thức",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.04s",
+   "AC 0.04s",
+   "AC 0.05s"
+  ]
+ }
+}
