@@ -33,7 +33,8 @@ int main() {
                 ans += cnt[pre[j]];
                 cnt[pre[j]]++;
             }
-            for (int j = 0; j <= n; j++) cnt[pre[j]] = 0; // chỉ xóa ô đã dùng
+            // chỉ xóa những ô vừa dùng: O(n) thay vì O(k)
+            for (int j = 0; j <= n; j++) cnt[pre[j]] = 0;
         }
     }
     printf("%lld\n", ans);

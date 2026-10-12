@@ -295,7 +295,12 @@ class Doc:
         self.table(hdr, [row], widths=widths or ([2.2, 2.2, 5] if expl else [1, 1]), align=['left', 'left', 'both'][:len(hdr)], mono_cols=(0, 1))
 
     def pagebreak(self):
-        self.raw('<w:p><w:r><w:br w:type="page"/></w:r></w:p>')
+        # bỏ các đoạn trống ở cuối (khoảng đệm sau bảng): chúng có thể tràn sang trang mới
+        while self.body and re.fullmatch(r'<w:p>(<w:pPr>(?:(?!<w:sectPr).)*?</w:pPr>)?</w:p>', self.body[-1], re.S):
+            self.body.pop()
+        # đoạn rỗng tí hon có pageBreakBefore: không bao giờ sinh trang trắng
+        self.raw('<w:p><w:pPr><w:pageBreakBefore/><w:spacing w:before="0" w:after="0" w:line="20" w:lineRule="exact"/>'
+                 '<w:rPr><w:sz w:val="2"/><w:szCs w:val="2"/></w:rPr></w:pPr></w:p>')
 
     def bookmark(self, text, level):
         self.bm += 1
