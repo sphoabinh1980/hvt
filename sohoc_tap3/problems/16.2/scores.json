@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Cộng trực tiếp n mod i, i = 1..k",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.05s",
+   "TLE 1.05s",
+   "TLE 1.05s"
+  ]
+ },
+ "trap.cpp": {
+  "title": "Chia khối tới k, quên trường hợp i > n",
+  "pts": [
+   0,
+   30,
+   0
+  ],
+  "detail": [
+   "RE 0.03s",
+   "AC 0.03s",
+   "RE 0.04s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "n · k − Σ i · ⌊n/i⌋, chia khối trên [1, min(n, k)]",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.04s",
+   "AC 0.03s",
+   "AC 0.03s"
+  ]
+ }
+}
