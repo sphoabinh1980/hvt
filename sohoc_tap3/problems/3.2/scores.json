@@ -1,0 +1,24 @@
+{
+ "naive.cpp": {
+  "title": "Bỏ thử từng phần tử, tính lại gcd O(n²)",
+  "pts": [
+   40,
+   0
+  ],
+  "detail": [
+   "AC 0.11s",
+   "TLE 1.06s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "gcd tiền tố + hậu tố, O(n log)",
+  "pts": [
+   40,
+   60
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.14s"
+  ]
+ }
+}

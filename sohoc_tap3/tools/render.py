@@ -278,8 +278,9 @@ class Doc:
                 base = dict(sz=sz, b=(j in bold_cols) or (i in hl and j == n - 1))
                 if j in mono_cols:
                     base['font'] = 'C'; base['sz'] = sz - 2
-                ps = ''.join('<w:p><w:pPr><w:spacing w:after="0" w:line="252" w:lineRule="auto"/><w:jc w:val="%s"/></w:pPr>%s</w:p>' % (
-                    {'center': 'center', 'left': 'left', 'right': 'right', 'both': 'both'}[align[j]], inline(l, base)) for l in lines)
+                kn = '<w:keepNext/>' if (len(rows) <= 14 and i < len(rows) - 1) else ''
+                ps = ''.join('<w:p><w:pPr>%s<w:spacing w:after="0" w:line="252" w:lineRule="auto"/><w:jc w:val="%s"/></w:pPr>%s</w:p>' % (
+                    kn, {'center': 'center', 'left': 'left', 'right': 'right', 'both': 'both'}[align[j]], inline(l, base)) for l in lines)
                 fill = 'EAF5E6' if i in hl else (fills[i][j] if fills and fills[i] and fills[i][j] else None)
                 cs.append(cellxml(ws[j], ps, fill=fill))
             trs.append(('<w:trPr><w:cantSplit/><w:jc w:val="center"/></w:trPr>', cs))

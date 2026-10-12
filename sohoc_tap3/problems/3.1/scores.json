@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Thử cạnh giảm dần từ min(a, b)",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.02s",
+   "TLE 1.05s",
+   "TLE 1.06s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Euclid, số miếng kiểu long long",
+  "pts": [
+   30,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.07s",
+   "WA 0.08s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Euclid + số miếng __int128",
+  "pts": [
+   30,
+   30,
+   40
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.09s",
+   "AC 0.15s"
+  ]
+ }
+}

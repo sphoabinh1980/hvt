@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Thử mọi x từ 0 tới c / a",
+  "pts": [
+   30,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.15s",
+   "TLE 1.05s",
+   "TLE 1.05s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "Thử x trong một chu kì b/g rồi chia",
+  "pts": [
+   30,
+   20,
+   0
+  ],
+  "detail": [
+   "AC 0.04s",
+   "AC 0.01s",
+   "TLE 1.05s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Euclid mở rộng: x nhỏ nhất + một phép chia",
+  "pts": [
+   30,
+   20,
+   50
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.00s",
+   "AC 0.06s"
+  ]
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Tính lại BCNN cho mỗi kịch bản",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.05s",
+   "TLE 1.05s",
+   "TLE 1.06s"
+  ]
+ },
+ "mid.cpp": {
+  "title": "BCNN tiền tố cho l = 1, còn lại tính lại",
+  "pts": [
+   20,
+   30,
+   0
+  ],
+  "detail": [
+   "AC 0.04s",
+   "AC 0.08s",
+   "TLE 1.06s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Quét r, giữ các đoạn cùng BCNN",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.01s",
+   "AC 0.13s",
+   "AC 0.18s"
+  ]
+ }
+}
