@@ -1,0 +1,41 @@
+{
+ "naive.cpp": {
+  "title": "Thử mọi điểm trong hình chữ nhật bao",
+  "pts": [
+   20,
+   0,
+   0
+  ],
+  "detail": [
+   "AC 0.03s",
+   "TLE 1.05s",
+   "TLE 1.05s"
+  ]
+ },
+ "trap.cpp": {
+  "title": "Dây giày lấy trị tuyệt đối từng số hạng",
+  "pts": [
+   0,
+   0,
+   0
+  ],
+  "detail": [
+   "WA 0.01s",
+   "WA 0.02s",
+   "WA 0.02s"
+  ]
+ },
+ "opt.cpp": {
+  "title": "Dây giày + định lí Pick",
+  "pts": [
+   20,
+   30,
+   50
+  ],
+  "detail": [
+   "AC 0.00s",
+   "AC 0.02s",
+   "AC 0.03s"
+  ]
+ }
+}
