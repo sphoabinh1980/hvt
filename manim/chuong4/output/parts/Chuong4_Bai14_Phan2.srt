@@ -1,0 +1,523 @@
+1
+00:00:00,600 --> 00:00:01,794
+Bài toán MATMADEN:
+
+2
+00:00:01,834 --> 00:00:04,675
+một dãy đèn trang trí
+gồm n bóng xếp hàng,
+
+3
+00:00:04,715 --> 00:00:07,692
+mỗi bóng có một trong
+ba màu đỏ, vàng, xanh.
+
+4
+00:00:07,732 --> 00:00:10,984
+Để đẹp mắt, không được
+có hai bóng đỏ cạnh nhau,
+
+5
+00:00:11,024 --> 00:00:14,893
+và không được có hai bóng xanh
+cạnh nhau. n tới 10 mũ 18!
+
+6
+00:00:14,933 --> 00:00:15,979
+Với n bằng 2:
+
+7
+00:00:16,019 --> 00:00:20,739
+có 9 cách ghép hai màu, trừ
+đi đỏ đỏ và xanh xanh, còn 7.
+
+8
+00:00:20,779 --> 00:00:22,827
+Với n bằng 3, có 17 cách.
+
+9
+00:00:24,067 --> 00:00:27,085
+Màu tiếp theo chỉ phụ
+thuộc màu của bóng cuối,
+
+10
+00:00:27,125 --> 00:00:29,943
+nên trạng thái là số
+bóng và màu bóng cuối.
+
+11
+00:00:29,983 --> 00:00:31,140
+Đồ thị chuyển màu:
+
+12
+00:00:31,180 --> 00:00:32,868
+từ đỏ sang vàng hoặc xanh;
+
+13
+00:00:32,908 --> 00:00:34,132
+từ vàng sang cả ba;
+
+14
+00:00:34,172 --> 00:00:35,860
+từ xanh sang đỏ hoặc vàng.
+
+15
+00:00:35,900 --> 00:00:41,157
+Gọi d i, v i, x i là số dãy dài
+i kết thúc bằng đỏ, vàng, xanh.
+
+16
+00:00:41,197 --> 00:00:43,932
+d i bằng v cộng x của hàng trước;
+
+17
+00:00:43,972 --> 00:00:45,613
+v i bằng tổng cả ba;
+
+18
+00:00:45,653 --> 00:00:47,127
+x i bằng d cộng v.
+
+19
+00:00:47,167 --> 00:00:47,618
+Bảng:
+
+20
+00:00:47,658 --> 00:00:49,386
+hàng 1 là 1, 1, 1;
+
+21
+00:00:49,426 --> 00:00:53,513
+hàng 2 là 2, 3, 2,
+tổng 7; hàng 3 tổng 17;
+
+22
+00:00:53,553 --> 00:00:56,460
+hàng 4 là 12, 17, 12, tổng 41.
+
+23
+00:00:56,500 --> 00:00:58,994
+Bảng có n hàng, mỗi hàng O của 1.
+
+24
+00:00:59,034 --> 00:01:01,758
+Với n bằng 10 mũ 18, cần hơn 30 năm.
+
+25
+00:01:01,798 --> 00:01:06,826
+Mỗi hàng được tính từ hàng trước
+bằng cùng một quy tắc tuyến tính,
+
+26
+00:01:06,866 --> 00:01:08,438
+lặp lại 10 mũ 18 lần.
+
+27
+00:01:08,478 --> 00:01:11,893
+Có cách nào gộp nhiều
+lần lặp thành một bước?
+
+28
+00:01:13,133 --> 00:01:13,866
+Phá bế tắc:
+
+29
+00:01:13,906 --> 00:01:16,955
+xếp ba giá trị thành
+một vectơ hàng d, v, x.
+
+30
+00:01:16,995 --> 00:01:21,027
+Quy tắc chuyển chính là phép
+nhân vectơ với một ma trận M.
+
+31
+00:01:21,067 --> 00:01:23,669
+Hàng của M là màu
+trước, cột là màu sau;
+
+32
+00:01:23,709 --> 00:01:25,914
+ô bằng 1 nếu được chuyển. Hàng đỏ:
+
+33
+00:01:25,954 --> 00:01:29,943
+không sang đỏ, sang vàng và xanh
+được. Hàng vàng: sang cả ba.
+
+34
+00:01:29,983 --> 00:01:31,727
+Hàng xanh: sang đỏ và vàng.
+
+35
+00:01:31,767 --> 00:01:36,569
+Vì vậy vectơ ở bước n bằng
+vectơ toàn 1 nhân M mũ n trừ 1,
+
+36
+00:01:36,609 --> 00:01:40,493
+và đáp án là tổng mọi
+phần tử của M mũ n trừ 1.
+
+37
+00:01:41,733 --> 00:01:44,150
+Phép nhân ma trận có tính kết hợp,
+
+38
+00:01:44,190 --> 00:01:48,125
+nên tính M mũ k giống hệt
+lũy thừa nhanh của số nguyên:
+
+39
+00:01:48,165 --> 00:01:50,727
+M mũ 2k bằng bình phương của M mũ k.
+
+40
+00:01:50,767 --> 00:01:52,139
+Ví dụ M mũ 13.
+
+41
+00:01:52,179 --> 00:01:54,762
+Viết 13 trong hệ nhị phân:
+
+42
+00:01:54,802 --> 00:01:58,393
+1101, gồm các bit ứng với 8, 4 và 1.
+
+43
+00:01:58,433 --> 00:02:02,862
+Bình phương liên tiếp được
+M mũ 1, mũ 2, mũ 4, mũ 8;
+
+44
+00:02:02,902 --> 00:02:05,612
+nhân vào kết quả khi bit bằng 1.
+
+45
+00:02:05,652 --> 00:02:09,393
+M mũ 13 bằng M mũ 8
+nhân M mũ 4 nhân M mũ 1.
+
+46
+00:02:10,633 --> 00:02:10,941
+Code:
+
+47
+00:02:10,981 --> 00:02:14,488
+step là ma trận M, power
+bắt đầu là ma trận đơn vị.
+
+48
+00:02:14,528 --> 00:02:16,713
+Duyệt các bit của số mũ n trừ 1:
+
+49
+00:02:16,753 --> 00:02:19,425
+nếu bit bằng 1 thì
+nhân step vào power;
+
+50
+00:02:19,465 --> 00:02:20,955
+luôn bình phương step;
+
+51
+00:02:20,995 --> 00:02:22,693
+rồi dịch số mũ sang phải.
+
+52
+00:02:22,733 --> 00:02:27,855
+Mỗi phép nhân ma trận 3 nhân 3 tốn
+27 phép nhân số, có khoảng 2 log n,
+
+53
+00:02:27,895 --> 00:02:29,994
+tối đa 120 phép nhân ma trận:
+
+54
+00:02:30,034 --> 00:02:32,575
+tổng khoảng ba nghìn hai trăm phép.
+
+55
+00:02:32,615 --> 00:02:35,893
+Từ hơn 30 năm xuống dưới
+một phần triệu giây!
+
+56
+00:02:37,133 --> 00:02:39,579
+Khi nào dùng được lũy thừa ma trận?
+
+57
+00:02:39,619 --> 00:02:42,065
+Khi công thức chuyển là tuyến tính,
+
+58
+00:02:42,105 --> 00:02:45,759
+mỗi giá trị mới là tổng có
+hệ số của các giá trị cũ,
+
+59
+00:02:45,799 --> 00:02:47,534
+và giống nhau ở mọi bước;
+
+60
+00:02:47,574 --> 00:02:51,654
+và số trạng thái trong một
+hàng nhỏ, khoảng không quá 100,
+
+61
+00:02:51,694 --> 00:02:53,927
+vì chi phí là k mũ 3 nhân log n.
+
+62
+00:02:53,967 --> 00:02:54,376
+Ví dụ:
+
+63
+00:02:54,416 --> 00:02:57,518
+bài nhảy đá ở Bài 1
+dùng ma trận 3 nhân 3;
+
+64
+00:02:57,558 --> 00:03:00,212
+dãy Fibonacci dùng ma trận 2 nhân 2;
+
+65
+00:03:00,252 --> 00:03:04,627
+đếm đường đi độ dài n trên đồ
+thị dùng lũy thừa ma trận kề.
+
+66
+00:03:05,867 --> 00:03:06,627
+Mở rộng một:
+
+67
+00:03:06,667 --> 00:03:09,627
+nhận dạng câu hỏi bên
+trong công thức chuyển.
+
+68
+00:03:09,667 --> 00:03:12,093
+Tổng trên đoạn liên
+tiếp các ô trước:
+
+69
+00:03:12,133 --> 00:03:14,027
+mảng cộng dồn, O của 1 mỗi ô.
+
+70
+00:03:14,067 --> 00:03:16,278
+Max hoặc min trên cửa sổ trượt:
+
+71
+00:03:16,318 --> 00:03:18,893
+hàng đợi đơn điệu, O của 1 khấu hao.
+
+72
+00:03:18,933 --> 00:03:21,423
+Tổng hoặc max theo giá trị nhỏ hơn:
+
+73
+00:03:21,463 --> 00:03:24,893
+cây Fenwick cùng nén giá
+trị, O của log n mỗi ô.
+
+74
+00:03:24,933 --> 00:03:28,641
+Lặp lại một phép biến đổi
+tuyến tính rất nhiều lần:
+
+75
+00:03:28,681 --> 00:03:31,727
+lũy thừa ma trận, k
+mũ 3 log n cho cả bài.
+
+76
+00:03:32,967 --> 00:03:33,764
+Mở rộng hai:
+
+77
+00:03:33,804 --> 00:03:38,298
+trên con đường tới kì thi học sinh
+giỏi quốc gia, em sẽ gặp thêm:
+
+78
+00:03:38,338 --> 00:03:42,344
+bao lồi, cho công thức dạng
+min của a j nhân x i cộng b j;
+
+79
+00:03:42,384 --> 00:03:45,344
+chia để trị, khi điểm
+chia tối ưu đơn điệu;
+
+80
+00:03:45,384 --> 00:03:49,460
+và cây phân đoạn, khi cần cập
+nhật và hỏi trên đoạn bất kì.
+
+81
+00:03:49,500 --> 00:03:52,609
+Tất cả đều tuân theo cùng
+tinh thần của chương này:
+
+82
+00:03:52,649 --> 00:03:54,893
+giữ nguyên công
+thức, thay cách tính.
+
+83
+00:03:56,133 --> 00:03:56,723
+Bẫy một:
+
+84
+00:03:56,763 --> 00:04:01,527
+quên nén giá trị, mảng Fenwick
+cỡ 10 mũ 9 phần tử là quá lớn.
+
+85
+00:04:01,567 --> 00:04:02,066
+Bẫy hai:
+
+86
+00:04:02,106 --> 00:04:03,414
+truy vấn sai ngưỡng.
+
+87
+00:04:03,454 --> 00:04:05,639
+Tăng ngặt thì hỏi đến hạng trừ 1;
+
+88
+00:04:05,679 --> 00:04:07,527
+không giảm thì hỏi đến hạng.
+
+89
+00:04:07,567 --> 00:04:08,055
+Bẫy ba:
+
+90
+00:04:08,095 --> 00:04:10,246
+cây Fenwick đánh chỉ số từ 1.
+
+91
+00:04:10,286 --> 00:04:14,627
+Vị trí 0 làm vòng lặp cộng p
+AND trừ p không bao giờ dừng.
+
+92
+00:04:14,667 --> 00:04:15,210
+Bẫy bốn:
+
+93
+00:04:15,250 --> 00:04:17,033
+tràn số khi nhân ma trận.
+
+94
+00:04:17,073 --> 00:04:20,970
+Hai số nhỏ hơn 10 mũ 9 cộng
+7 nhân nhau vừa long long,
+
+95
+00:04:21,010 --> 00:04:23,960
+nhưng phải lấy dư ngay
+sau mỗi phép nhân.
+
+96
+00:04:24,000 --> 00:04:25,377
+Bẫy năm: n bằng 1.
+
+97
+00:04:25,417 --> 00:04:28,053
+Lũy thừa M mũ 0 là ma trận đơn vị;
+
+98
+00:04:28,093 --> 00:04:30,493
+chương trình ở trên xử lí đúng.
+
+99
+00:04:31,733 --> 00:04:32,219
+Ghi nhớ:
+
+100
+00:04:32,259 --> 00:04:36,816
+tổng hay max của các trạng thái theo
+giá trị thì dùng nén giá trị cùng
+
+101
+00:04:36,856 --> 00:04:39,049
+cây Fenwick, O của log n mỗi bước.
+
+102
+00:04:39,089 --> 00:04:41,347
+Truy hồi tuyến tính, hệ số cố định,
+
+103
+00:04:41,387 --> 00:04:44,893
+n rất lớn thì viết thành
+nhân ma trận, lũy thừa nhanh.
+
+104
+00:04:44,933 --> 00:04:47,926
+Công thức quy hoạch động
+cho biết cần tính gì;
+
+105
+00:04:47,966 --> 00:04:50,893
+cấu trúc dữ liệu cho
+biết tính nhanh thế nào.
+
+106
+00:04:52,133 --> 00:04:53,489
+Câu hỏi tự kiểm tra:
+
+107
+00:04:53,529 --> 00:04:56,558
+bài MATMADEN với n bằng
+4 có bao nhiêu cách?
+
+108
+00:04:56,598 --> 00:04:58,093
+Dừng video và thử nhé!
+
+109
+00:04:58,133 --> 00:05:00,150
+Từ hàng 3 là 5, 7, 5:
+
+110
+00:05:00,190 --> 00:05:06,027
+d bằng 7 cộng 5 bằng 12, v bằng
+17, x bằng 12. Tổng 41 cách.
+
+111
+00:05:07,167 --> 00:05:12,188
+Chúc mừng các em đã hoàn thành toàn
+bộ 14 bài của tài liệu quy hoạch
+
+112
+00:05:12,228 --> 00:05:12,560
+động!
+
+113
+00:05:12,600 --> 00:05:16,805
+Từ nền tảng, qua các mô hình kinh
+điển, quy hoạch động nâng cao,
+
+114
+00:05:16,845 --> 00:05:17,800
+đến tối ưu hóa:
+
+115
+00:05:17,840 --> 00:05:20,122
+mọi bài đều xoay quanh một câu hỏi.
+
+116
+00:05:20,162 --> 00:05:22,576
+Để đi tiếp, ta cần
+nhớ gì về quá khứ?
+
+117
+00:05:22,616 --> 00:05:24,234
+Hãy luyện tập thật nhiều.
+
+118
+00:05:24,274 --> 00:05:25,760
+Chúc các em thành công!

@@ -1,0 +1,412 @@
+1
+00:00:00,000 --> 00:00:00,745
+Chào các em!
+
+2
+00:00:00,785 --> 00:00:03,426
+Chúng ta bước sang
+chương cuối, Chương 4:
+
+3
+00:00:03,466 --> 00:00:05,127
+Tối ưu hóa quy hoạch động.
+
+4
+00:00:05,167 --> 00:00:07,790
+Có những bài em đã
+tìm ra công thức đúng,
+
+5
+00:00:07,830 --> 00:00:10,519
+nhưng chương trình vẫn
+chạy quá thời gian:
+
+6
+00:00:10,559 --> 00:00:14,352
+bảng có một triệu ô, mỗi ô lại
+phải duyệt một triệu ô khác.
+
+7
+00:00:14,392 --> 00:00:16,756
+Lúc này công thức
+không cần thay đổi;
+
+8
+00:00:16,796 --> 00:00:19,160
+thứ cần thay đổi là
+cách tính từng ô.
+
+9
+00:00:19,200 --> 00:00:22,766
+Chương này giới thiệu bốn công
+cụ tăng tốc quan trọng nhất:
+
+10
+00:00:22,806 --> 00:00:26,799
+mảng cộng dồn, hàng đợi đơn điệu,
+cây Fenwick và lũy thừa ma trận.
+
+11
+00:00:26,839 --> 00:00:30,832
+Mỗi công cụ trả lời nhanh một loại
+câu hỏi nằm bên trong công thức
+
+12
+00:00:30,872 --> 00:00:31,260
+chuyển.
+
+13
+00:00:31,900 --> 00:00:32,402
+Bài 13:
+
+14
+00:00:32,442 --> 00:00:36,193
+Tăng tốc bằng mảng cộng
+dồn và hàng đợi đơn điệu.
+
+15
+00:00:36,233 --> 00:00:37,366
+Học xong bài này,
+
+16
+00:00:37,406 --> 00:00:42,196
+em sẽ nhận ra khi công thức chuyển
+là tổng trên một đoạn liên tiếp các
+
+17
+00:00:42,236 --> 00:00:46,060
+ô trước đó, và tính nó trong
+O của 1 bằng mảng cộng dồn.
+
+18
+00:00:46,100 --> 00:00:50,962
+Em cũng nhận ra khi công thức là
+max hoặc min trên một cửa sổ trượt,
+
+19
+00:00:51,002 --> 00:00:54,061
+và tính nó bằng hàng
+đợi đơn điệu. Kết quả:
+
+20
+00:00:54,101 --> 00:00:57,593
+giảm độ phức tạp từ O của
+n nhân k xuống O của n.
+
+21
+00:00:58,833 --> 00:01:02,810
+Ở Bài 1, chú ếch mỗi bước
+chỉ nhảy 1, 2 hoặc 3 đá,
+
+22
+00:01:02,850 --> 00:01:05,060
+nên công thức có ba số hạng.
+
+23
+00:01:05,100 --> 00:01:09,100
+Nếu được nhảy bất kì độ dài
+nào từ 2 đến ba trăm nghìn,
+
+24
+00:01:09,140 --> 00:01:12,993
+công thức có tới gần ba trăm
+nghìn số hạng cho mỗi ô.
+
+25
+00:01:13,033 --> 00:01:17,860
+Một triệu ô cần khoảng 3 nhân
+10 mũ 11 phép cộng: quá chậm.
+
+26
+00:01:17,900 --> 00:01:18,954
+Nhưng hãy để ý:
+
+27
+00:01:18,994 --> 00:01:22,600
+các số hạng ấy là các ô
+liên tiếp nhau trong bảng.
+
+28
+00:01:22,640 --> 00:01:27,193
+Ô tiếp theo dùng gần như đúng
+các ô ấy, chỉ dịch đi một vị trí.
+
+29
+00:01:28,433 --> 00:01:30,123
+Bài toán DEMCACHNHAY:
+
+30
+00:01:30,163 --> 00:01:32,265
+các đá đánh số từ 0 đến n.
+
+31
+00:01:32,305 --> 00:01:36,549
+Từ đá i được nhảy tới đá i
+cộng d, với d từ L đến R.
+
+32
+00:01:36,589 --> 00:01:41,409
+Đếm số cách đi từ đá 0 tới đá
+n, lấy dư cho 10 mũ 9 cộng 7.
+
+33
+00:01:41,449 --> 00:01:42,727
+n tới một triệu.
+
+34
+00:01:42,767 --> 00:01:43,247
+Ví dụ:
+
+35
+00:01:43,287 --> 00:01:47,327
+n bằng 7, mỗi bước nhảy
+2 hoặc 3 đá. Có 3 cách.
+
+36
+00:01:47,367 --> 00:01:48,860
+Cách: 2, 2, 3.
+
+37
+00:01:48,900 --> 00:01:50,393
+Cách: 2, 3, 2.
+
+38
+00:01:50,433 --> 00:01:51,927
+Cách: 3, 2, 2.
+
+39
+00:01:53,167 --> 00:01:56,734
+Theo đúng lập luận bước
+cuối cùng của Bài 1:
+
+40
+00:01:56,774 --> 00:01:59,440
+bước cuối có độ dài d từ L đến R,
+
+41
+00:01:59,480 --> 00:02:03,293
+nên f của i bằng tổng f
+từ i trừ R đến i trừ L.
+
+42
+00:02:03,333 --> 00:02:06,327
+f của 0 bằng 1, bỏ
+qua các chỉ số âm.
+
+43
+00:02:06,367 --> 00:02:09,380
+Với L bằng 2, R bằng
+3: điền lần lượt.
+
+44
+00:02:09,420 --> 00:02:12,593
+f của 1 bằng 0, vì
+không bước nào dài 1.
+
+45
+00:02:12,633 --> 00:02:16,627
+f của 2 bằng tổng của
+đoạn từ 0 đến 0, bằng 1.
+
+46
+00:02:16,667 --> 00:02:20,660
+f của 3 bằng tổng của
+đoạn từ 0 đến 1, bằng 1.
+
+47
+00:02:20,700 --> 00:02:24,693
+f của 4 bằng tổng của
+đoạn từ 1 đến 2, bằng 1.
+
+48
+00:02:24,733 --> 00:02:28,727
+f của 5 bằng tổng của
+đoạn từ 2 đến 3, bằng 2.
+
+49
+00:02:28,767 --> 00:02:32,760
+f của 6 bằng tổng của
+đoạn từ 3 đến 4, bằng 2.
+
+50
+00:02:32,800 --> 00:02:37,627
+f của 7 bằng f của 4 cộng f
+của 5, bằng 3. Đúng ba cách.
+
+51
+00:02:37,667 --> 00:02:40,362
+Mỗi ô cộng R trừ L cộng 1 số hạng.
+
+52
+00:02:40,402 --> 00:02:44,707
+Với n bằng một triệu, L bằng
+1, R bằng năm trăm nghìn:
+
+53
+00:02:44,747 --> 00:02:46,960
+khoảng 5 nhân 10 mũ 11 phép.
+
+54
+00:02:48,700 --> 00:02:50,060
+Bế tắc nằm ở đâu?
+
+55
+00:02:50,100 --> 00:02:55,493
+f của i và f của i cộng 1 là tổng
+của hai đoạn gần như trùng nhau.
+
+56
+00:02:55,533 --> 00:02:59,633
+Mỗi lần ta lại cộng lại từ
+đầu gần như cùng các số ấy.
+
+57
+00:02:59,673 --> 00:03:03,160
+Chúng chỉ khác nhau ở
+một ô đầu và một ô cuối.
+
+58
+00:03:04,400 --> 00:03:05,280
+Phá bế tắc:
+
+59
+00:03:05,320 --> 00:03:10,797
+gọi S của i là tổng f của 0 đến f
+của i trừ 1, với S của 0 bằng 0.
+
+60
+00:03:10,837 --> 00:03:15,060
+Tổng của một đoạn bất kì
+là hiệu của hai giá trị S.
+
+61
+00:03:15,100 --> 00:03:21,593
+Vậy f của i bằng S của i trừ L cộng
+1, trừ S của max của 0 và i trừ R.
+
+62
+00:03:21,633 --> 00:03:22,646
+Điểm mấu chốt:
+
+63
+00:03:22,686 --> 00:03:25,427
+mảng S được xây đồng
+thời với bảng f.
+
+64
+00:03:25,467 --> 00:03:29,260
+Tính xong f của i, ta cập
+nhật ngay S của i cộng 1.
+
+65
+00:03:29,300 --> 00:03:34,693
+Ban đầu f của 0 bằng 1, S của
+0 bằng 0 và S của 1 bằng 1.
+
+66
+00:03:34,733 --> 00:03:37,893
+f của 1 bằng 0, vì i trừ L âm.
+
+67
+00:03:37,933 --> 00:03:43,060
+f của 2 bằng S của 1 trừ S
+của 0, bằng 1 trừ 0, bằng 1.
+
+68
+00:03:43,100 --> 00:03:48,227
+f của 3 bằng S của 2 trừ S
+của 0, bằng 1 trừ 0, bằng 1.
+
+69
+00:03:48,267 --> 00:03:53,393
+f của 4 bằng S của 3 trừ S
+của 1, bằng 2 trừ 1, bằng 1.
+
+70
+00:03:53,433 --> 00:03:58,560
+f của 5 bằng S của 4 trừ S
+của 2, bằng 3 trừ 1, bằng 2.
+
+71
+00:03:58,600 --> 00:04:03,727
+f của 6 bằng S của 5 trừ S
+của 3, bằng 4 trừ 2, bằng 2.
+
+72
+00:04:03,767 --> 00:04:08,212
+f của 7 bằng S của 6 trừ S
+của 4, bằng 6 trừ 3, bằng 3.
+
+73
+00:04:08,252 --> 00:04:11,393
+Chỉ một phép trừ,
+thay vì cộng cả đoạn!
+
+74
+00:04:11,433 --> 00:04:14,626
+Khi tính f của i, mọi
+giá trị S cần dùng,
+
+75
+00:04:14,666 --> 00:04:19,593
+với chỉ số tới i trừ L cộng 1,
+không vượt quá i, đều đã có sẵn.
+
+76
+00:04:20,833 --> 00:04:21,135
+Code:
+
+77
+00:04:21,175 --> 00:04:23,390
+mảng ways là f, mảng prefix là S.
+
+78
+00:04:23,430 --> 00:04:25,644
+Với mỗi i, tính đoạn from đến to;
+
+79
+00:04:25,684 --> 00:04:29,129
+nếu to không âm thì f bằng
+hiệu hai giá trị prefix;
+
+80
+00:04:29,169 --> 00:04:31,793
+cuối cùng cập nhật
+prefix của i cộng 1.
+
+81
+00:04:31,833 --> 00:04:32,247
+Chú ý:
+
+82
+00:04:32,287 --> 00:04:36,181
+phép trừ trong số học đồng
+dư có thể cho kết quả âm,
+
+83
+00:04:36,221 --> 00:04:39,812
+vì S của 6 lấy dư có thể
+nhỏ hơn S của 4 lấy dư.
+
+84
+00:04:39,852 --> 00:04:42,384
+Ta cộng thêm MOD trước khi lấy dư.
+
+85
+00:04:42,424 --> 00:04:46,393
+Đây là lỗi kinh điển khi
+kết hợp cộng dồn với lấy dư.
+
+86
+00:04:46,433 --> 00:04:48,518
+Mỗi ô O của 1, tổng O của n:
+
+87
+00:04:48,558 --> 00:04:51,630
+với n bằng một triệu,
+chỉ vài triệu phép,
+
+88
+00:04:51,670 --> 00:04:54,893
+nhanh hơn cách ngây
+thơ khoảng 10 mũ 5 lần.
